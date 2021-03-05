@@ -1,0 +1,56 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TBLYAZAR>
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Yazarlar</title>
+</head>
+<body>
+    <h1>Yazar Sayfası</h1>
+    <br /><br />
+    @using (@Html.BeginForm("Index", "Yazar", FormMethod.Get))
+    {
+        <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+            @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+            <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+        </div>
+    }
+    <div class="pull-right">
+        <a href="/Yazar/YazarEkle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Yazar Ekle</a>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Yazar Adı</th>
+                <th scope="col">Yazar Soyadı</th>
+                <th scope="col"> Detay</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.AD</td>
+                    <td>@x.SOYAD</td>
+                    <td>@x.DETAY</td>
+                    <td><a href="/Yazar/YazarGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
+                    <td>@Html.ActionLink("Sil", "YazarSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</body>
+</html>

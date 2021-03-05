@@ -1,0 +1,43 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLUYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <h2>Uye Güncelleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.ID)
+    <label style="margin-bottom:10px;">Adı</label>
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <label style="margin-bottom:10px;">Soyad</label>
+    @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <label style="margin-bottom:10px;">Mail Adresi</label>
+    @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.MAIL, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <label style="margin-bottom:10px;">Kullanıcı Adı</label>
+    @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
+    <br />
+    <label style="margin-bottom:10px;">Şifre</label>
+    @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control" })
+    <br />
+    <label style="margin-bottom:10px;">Telefon</label>
+    @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control" })
+    <br />
+    <label style="margin-bottom:10px;">Okul</label>
+    @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control" })
+    <br />
+    <label style="margin-bottom:10px;">Fotoğraf</label>
+    @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+}

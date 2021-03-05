@@ -1,0 +1,55 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TBLHAREKET>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ödünç Al</title>
+</head>
+<body>
+    <h1>İadesi Alınan Kitaplar</h1>
+    <br /><br />
+    @using (@Html.BeginForm("Index", "Islem", FormMethod.Get))
+    {
+        <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex;margin-bottom:20px">
+            @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+            <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+        </div>
+    }
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Kitap Adı</th>
+                <th scope="col">Üye</th>
+                <th scope="col">Personel</th>
+                <th scope="col">Alış Tarihi</th>
+                <th scope="col">Üye İade Tarihi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.TBLKITAP.AD</td>
+                    <td>@x.TBLUYELER.AD  @x.TBLUYELER.SOYAD</td>
+                    <td>@x.TBLPERSONEL.PERSONEL</td>
+                    <td>@Convert.ToDateTime(x.ALISTARIHI).ToString("MM/dd/yyyy")</td>
+                    <td>@Convert.ToDateTime(x.UYEGETIRTARIH).ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</body>
+</html>
+

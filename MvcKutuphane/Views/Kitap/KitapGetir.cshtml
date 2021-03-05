@@ -1,0 +1,37 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLKITAP
+@{
+    ViewBag.Title = "KitapGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("KitapGuncelle", "Kitap", FormMethod.Post))
+{
+    <h2>Kitap Güncelleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.ID)
+    <label style="margin-bottom:10px;">Adı</label>
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <label style="margin-bottom:10px;">Kategori</label>
+    @Html.DropDownListFor(k => k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.ktg2, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <label style="margin-bottom:10px;">Yazar</label>
+    @Html.DropDownListFor(k => k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.yz2, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <label style="margin-bottom:10px;">Basım Yılı</label>
+    @Html.TextBoxFor(x => x.BASIMYIL, new { @class = "form-control" })
+    <br />
+    <label style="margin-bottom:10px;">Yayınevi</label>
+    @Html.TextBoxFor(x => x.YAYINEVI, new { @class = "form-control" })
+    <br />
+    <label style="margin-bottom:10px;">Sayfa Sayısı</label>
+    @Html.TextBoxFor(x => x.SAYFA, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+}

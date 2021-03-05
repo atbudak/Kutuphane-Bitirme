@@ -1,0 +1,56 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TBLPERSONEL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Personeller</title>
+</head>
+<body>
+    <h1>Personel Sayfası</h1>
+    <br /><br />
+    @using (@Html.BeginForm("Index", "Personel", FormMethod.Get))
+    {
+        <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+            @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+            <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+        </div>
+    }
+    <div class="pull-right">
+        <a href="/Personel/PersonelEkle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Personel Ekle</a>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Personel</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.PERSONEL</td>
+                    <td><a href="/Personel/PersonelGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
+                    <td>@Html.ActionLink("Sil", "PersonelSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</body>
+</html>
+
+

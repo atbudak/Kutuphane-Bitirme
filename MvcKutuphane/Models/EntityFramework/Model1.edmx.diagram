@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63c44e3c9c97464bae8b24b76c41ddd9" Name="Diagram1">
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLCEZALAR" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLHAREKET" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLKASA" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLKATEGORI" Width="1.5" PointX="1.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLKITAP" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLPERSONEL" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLUYELER" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLYAZAR" Width="1.5" PointX="1.5" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLCEZALAR_TBLHAREKET" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLCEZALAR_TBLUYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLKITAP" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLUYELER" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLKITAP_TBLKATEGORI" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLKITAP_TBLYAZAR" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLPERSONEL1" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLILETISIM" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

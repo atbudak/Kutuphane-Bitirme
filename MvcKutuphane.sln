@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcKutuphane", "MvcKutuphane\MvcKutuphane.csproj", "{16A5FA62-81BF-4512-BCFB-E0D0A3716255}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16A5FA62-81BF-4512-BCFB-E0D0A3716255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A5FA62-81BF-4512-BCFB-E0D0A3716255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A5FA62-81BF-4512-BCFB-E0D0A3716255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A5FA62-81BF-4512-BCFB-E0D0A3716255}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CDAEE50-A41D-42E2-9AF5-D69BA7354949}
+	EndGlobalSection
+EndGlobal

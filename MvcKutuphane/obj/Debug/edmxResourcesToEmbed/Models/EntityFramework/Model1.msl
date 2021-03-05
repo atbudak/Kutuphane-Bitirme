@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBLIBRARYModelStoreContainer" CdmEntityContainer="DBLIBRARYEntities">
+    <EntitySetMapping Name="TBLCEZALAR">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLCEZALAR">
+        <MappingFragment StoreEntitySet="TBLCEZALAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UYE" ColumnName="UYE" />
+          <ScalarProperty Name="BASLANGIC" ColumnName="BASLANGIC" />
+          <ScalarProperty Name="BITIS" ColumnName="BITIS" />
+          <ScalarProperty Name="PARA" ColumnName="PARA" />
+          <ScalarProperty Name="HAREKET" ColumnName="HAREKET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLHAREKET">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLHAREKET">
+        <MappingFragment StoreEntitySet="TBLHAREKET">
+          <ScalarProperty Name="UYEGETIRTARIH" ColumnName="UYEGETIRTARIH" />
+          <ScalarProperty Name="ISLEMDURUM" ColumnName="ISLEMDURUM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KITAP" ColumnName="KITAP" />
+          <ScalarProperty Name="UYE" ColumnName="UYE" />
+          <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+          <ScalarProperty Name="ALISTARIHI" ColumnName="ALISTARIHI" />
+          <ScalarProperty Name="IADETARIH" ColumnName="IADETARIH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKASA">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLKASA">
+        <MappingFragment StoreEntitySet="TBLKASA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AY" ColumnName="AY" />
+          <ScalarProperty Name="TUTAR" ColumnName="TUTAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKATEGORI">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLKATEGORI">
+        <MappingFragment StoreEntitySet="TBLKATEGORI">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKITAP">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLKITAP">
+        <MappingFragment StoreEntitySet="TBLKITAP">
+          <ScalarProperty Name="KITAPRESIM" ColumnName="KITAPRESIM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+          <ScalarProperty Name="YAZAR" ColumnName="YAZAR" />
+          <ScalarProperty Name="BASIMYIL" ColumnName="BASIMYIL" />
+          <ScalarProperty Name="YAYINEVI" ColumnName="YAYINEVI" />
+          <ScalarProperty Name="SAYFA" ColumnName="SAYFA" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLPERSONEL">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLPERSONEL">
+        <MappingFragment StoreEntitySet="TBLPERSONEL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLUYELER">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLUYELER">
+        <MappingFragment StoreEntitySet="TBLUYELER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="OKUL" ColumnName="OKUL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLYAZAR">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLYAZAR">
+        <MappingFragment StoreEntitySet="TBLYAZAR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="DETAY" ColumnName="DETAY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLHAKKIMIZDA">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLHAKKIMIZDA">
+        <MappingFragment StoreEntitySet="TBLHAKKIMIZDA">
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLILETISIM">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLILETISIM">
+        <MappingFragment StoreEntitySet="TBLILETISIM">
+          <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

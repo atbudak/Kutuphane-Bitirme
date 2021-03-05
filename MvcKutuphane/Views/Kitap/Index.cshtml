@@ -1,0 +1,65 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TBLKITAP>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kitaplar</title>
+</head>
+<body>
+    <h1>Kitaplar Sayfası</h1>
+    <br /><br />
+    @using (@Html.BeginForm("Index", "Kitap", FormMethod.Get))
+    {
+        <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+            @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+            <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+        </div>
+    }
+    <div class="pull-right">
+        <a href="/Kitap/KitapEkle" class="btn btn-success " style="margin-bottom:15px">Yeni Kitap Ekle</a>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Kitap Adı</th>
+                <th scope="col">Kitap Yazarı</th>
+                <th scope="col">Kategorisi</th>
+                <th scope="col">Basım Yılı</th>
+                <th scope="col">Yayınevi</th>
+                <th scope="col">Sayfa</th>
+                <th scope="col">Durum</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {               
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.AD</td>
+                    <td>@x.TBLYAZAR.AD  @x.TBLYAZAR.SOYAD</td>
+                    <td>@x.TBLKATEGORI.AD</td>
+                    <td>@x.BASIMYIL</td>
+                    <td>@x.YAYINEVI</td>
+                    <td>@x.SAYFA</td>
+                    <td>@x.DURUM</td>
+                    <td><a href="/Kitap/KitapGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
+                    <td>@Html.ActionLink("Sil", "KitapSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLKATEGORI
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kategori Ekle Sayfası</h2>
+<br />
+<br />
+
+<form method="post">
+    <label style="margin-bottom:10px;">Kategori Adı</label>
+    <input type="text" name="AD" class="form-control form-control" placeholder="Kategori adı giriniz.." /><br />
+    @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
+    <br />
+    <button class="btn btn-success" style="margin:10px 0">Ekle</button>
+</form>
