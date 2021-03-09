@@ -20,5 +20,6 @@ namespace MvcKutuphane.Models.EntityFramework
         public string MAIL { get; set; }
         public string KONU { get; set; }
         public string MESAJ { get; set; }
+        public Nullable<bool> DURUM { get; set; }
     }
 }

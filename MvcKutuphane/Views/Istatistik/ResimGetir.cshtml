@@ -1,0 +1,26 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLRESIMLER
+@{
+    ViewBag.Title = "ResimGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("ResimGuncelle", "Istatistik", FormMethod.Post))
+{
+    <h2>Resim Bilgi Güncelleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.ID)
+    <br />
+    @Html.Label("Resim Yolu")
+    @Html.TextBoxFor(x => x.RESIMYOLU, new { @class = "form-control", @readonly = "" })
+    <br />
+    @Html.Label("Resim Detayı")
+    @Html.TextBoxFor(x => x.RESIMDETAY, new { @class = "form-control", required = "" })
+    <br />
+    @Html.Label("Slidera Eklenecek Mi?")
+    @Html.CheckBox("DURUM", true, new { @class = "form-check-label ml-2" })
+    <br />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+}

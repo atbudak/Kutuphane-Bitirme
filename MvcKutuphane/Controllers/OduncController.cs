@@ -24,24 +24,31 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult OduncVer()
         {
-            //List<SelectListItem> per = (from x in db.TBLPERSONEL.ToList() select new  SelectListItem{ Text=x.PERSONEL,Value=x.ID.ToString() }).ToList();
-            //ViewBag.per1 = per;
-            return View();
+            List<SelectListItem> per = (from x in db.TBLPERSONEL.ToList() select new SelectListItem { Text = x.PERSONEL, Value = x.ID.ToString() }).ToList();
+            ViewBag.per1 = per;
+            List<SelectListItem> uye = (from x in db.TBLUYELER.ToList() select new SelectListItem { Text = x.AD +" " + x.SOYAD, Value = x.ID.ToString() }).ToList();
+            ViewBag.uye1 = uye;
+            List<SelectListItem> ktp = (from x in db.TBLKITAP.Where(x=>x.DURUM == true).ToList() select new SelectListItem { Text = x.AD, Value = x.ID.ToString() }).ToList();
+            ViewBag.ktp1 = ktp;
+            TBLHAREKET t = new TBLHAREKET();
+            return View(t);
         }
         [HttpPost]
         public ActionResult OduncVer(TBLHAREKET h)  
         {
-            //var per = db.TBLPERSONEL.Where(x => x.ID == h.TBLPERSONEL.ID).FirstOrDefault();
-            //h.TBLPERSONEL = per;
             h.ISLEMDURUM = false;
             db.TBLHAREKET.Add(h);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public ActionResult OduncIade(int id)
-        {
-            var ts = db.TBLHAREKET.Find(id);
+        public ActionResult OduncIade(TBLHAREKET t)
+        {      
+            var ts = db.TBLHAREKET.Find(t.ID);
+            DateTime d1 = DateTime.Parse(ts.IADETARIH.ToString());
+            DateTime d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            TimeSpan d3 = d2 - d1;
+            ViewBag.dgr = d3.TotalDays;
             return View("OduncIade",ts);
         }
         public ActionResult OduncGuncelle(TBLHAREKET h)

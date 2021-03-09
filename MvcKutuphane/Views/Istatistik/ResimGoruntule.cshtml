@@ -1,0 +1,52 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<MvcKutuphane.Models.EntityFramework.TBLRESIMLER>
+@{
+    ViewBag.Title = "ResimGoruntule";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+    <div class="mw-500 text-center bg-transparent">
+        <h1 class="sketchy text-center">Resimler Sayfası</h1>
+    </div>
+    <br /><br />
+    @using (@Html.BeginForm("ResimGoruntule", "Istatistik", FormMethod.Get))
+    {
+        <div class="pull-right">
+            <a href="/Istatistik/SliderResimYukle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Resim Ekle</a>
+        </div>
+        <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+            @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+            <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+        </div>
+    }
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Resim Yolu</th>
+                <th scope="col">Detay</th>
+                <th scope="col">Durum</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>~/web/slider_img/@x.RESIMYOLU</td>
+                    <td>@x.RESIMDETAY</td>
+                    <td>@x.DURUM</td>
+                    <td><a href="/Istatistik/ResimGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
+                    <td>@Html.ActionLink("Sil", "ResimYoluSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+

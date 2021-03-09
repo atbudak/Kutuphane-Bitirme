@@ -35,5 +35,6 @@ namespace MvcKutuphane.Models.EntityFramework
         public virtual DbSet<TBLYAZAR> TBLYAZAR { get; set; }
         public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
         public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
+        public virtual DbSet<TBLRESIMLER> TBLRESIMLER { get; set; }
     }
 }

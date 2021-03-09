@@ -33,7 +33,8 @@ namespace MvcKutuphane.Controllers
             List<SelectListItem> yz = (from x in db.TBLYAZAR.ToList()
                                        select new SelectListItem { Text = x.AD + " " + x.SOYAD, Value = x.ID.ToString() }).ToList();
             ViewBag.yz1 = yz;
-            return View();
+            TBLKITAP k = new TBLKITAP();
+            return View(k);
         }
         [HttpPost]
         public ActionResult KitapEkle(TBLKITAP k)

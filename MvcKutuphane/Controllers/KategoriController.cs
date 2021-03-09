@@ -25,7 +25,8 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult KategoriEkle()
         {
-            return View();
+            TBLKATEGORI t = new TBLKATEGORI();
+            return View(t);
         }
         [HttpPost]
         public ActionResult KategoriEkle(TBLKATEGORI p)

@@ -10,7 +10,7 @@
 
 <form method="post">
     <label style="margin-bottom:10px;">Kategori Adı</label>
-    <input type="text" name="AD" class="form-control form-control" placeholder="Kategori adı giriniz.." /><br />
+    <input type="text" name="AD" class="form-control form-control" placeholder="Kategori adı giriniz.."  required /><br />
     @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <button class="btn btn-success" style="margin:10px 0">Ekle</button>

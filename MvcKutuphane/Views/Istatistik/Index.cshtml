@@ -3,16 +3,23 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-
+<script src="~/web2/js/Chart1.js"></script>
 <link href="~/web2/css/style.css" rel="stylesheet" />
+<link href="~/sidebar-01/css/style.css" rel="stylesheet" />
+<script>
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+</script>
+
 <div class="list_of_members">
     <div class="sales">
         <div class="icon">
-            <i class="dollar"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="max-width: 50px;" xml:space="preserve">
+            <path style="fill:white;" d="M99.293,300c-1.22-0.465-2.441-0.929-3.939-1.499c0-49.116,0-98.213,0-147.988   c-19.08,6.791-37.661,13.405-57.045,20.305c0-7.805-0.162-15.027,0.166-22.229c0.052-1.15,2.119-2.694,3.56-3.223   c15.463-5.664,30.893-11.45,46.544-16.551c5.591-1.822,7.951-4.465,6.935-10.197c-0.255-1.44-0.038-2.965-0.038-5.188   c-19.097,6.851-37.72,13.53-57.167,20.506c0-8.283-0.159-15.549,0.17-22.793c0.05-1.1,2.206-2.547,3.662-3.071   c16.433-5.914,32.913-11.699,49.4-17.465c2.321-0.812,4.026-1.539,4.006-4.683C95.361,57.283,95.353,28.642,95.293,0   c10,0,20,0,30,0c0.146,3.479,0.41,6.959,0.417,10.438c0.04,20.499,0.02,40.999,0.02,61.498c0,1.786,0,3.572,0,6.139   c30.883-11.156,60.988-22.032,91.594-33.089c0,7.676,0.225,14.674-0.187,21.635c-0.083,1.409-2.331,3.311-3.975,3.915   c-25.935,9.541-51.928,18.922-77.919,28.306c-10.515,3.796-10.528,3.759-9.006,16.177c30.284-10.922,60.37-21.771,91.063-32.842   c0,7.627,0.229,14.897-0.213,22.127c-0.079,1.293-2.767,2.898-4.546,3.543c-26.133,9.479-52.324,18.796-78.481,28.207   c-10.277,3.698-8.275,2.308-8.296,11.795c-0.084,37.999-0.035,75.997-0.035,113.996c0,1.968,0,3.936,0,5.901   c37.367-0.613,104.812-40.261,105.166-117.639c9.893,0,19.793,0,30.835,0c-0.971,8.817-1.304,17.619-2.98,26.158   c-13.035,66.404-64.793,114.586-131.636,122.908c-0.959,0.119-1.881,0.544-2.82,0.826C115.96,300,107.626,300,99.293,300   L99.293,300z" />                
+</svg>
         </div>
         <div class="icon-text">
-            <h3>15896</h3>
-            <p>Sales</p>
+            <h3>@ViewBag.dgr4</h3>
+            <p>Kasa Tutarı</p>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -21,7 +28,7 @@
             <i class="user1"></i>
         </div>
         <div class="icon-text">
-            <h3>530</h3>
+            <h3>@ViewBag.dgr1</h3>
             <p>Toplam Üye</p>
         </div>
         <div class="clearfix"></div>
@@ -31,7 +38,7 @@
             <i class="order"></i>
         </div>
         <div class="icon-text">
-            <h3>268</h3>
+            <h3>@ViewBag.dgr2</h3>
             <p>Kitap Sayısı</p>
         </div>
         <div class="clearfix"></div>
@@ -41,10 +48,109 @@
             <i class="visit"></i>
         </div>
         <div class="icon-text">
-            <h3>85k</h3>
-            <p>Emanet</p>
+            <h3>@ViewBag.dgr3</h3>
+            <p>Emanet Kitap</p>
         </div>
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
 </div>
+
+
+<div class="total-sales">
+    <div class="user-trends">
+
+        <canvas id="bar" height="340" width="780" style="width: 780px; height: 340px;"></canvas>
+        <script>
+
+            var barChartData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        fillColor: "rgba(255, 137, 167, 0.78)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        data: [65, 59, 90, 81, 56, 55, 40]
+                    },
+                    {
+                        fillColor: "rgba(140, 145, 255, 0.69)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        data: [28, 48, 40, 19, 96, 27, 100]
+                    }
+                ]
+
+            }
+
+            var myLine = new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+
+        </script>
+    </div>
+    <div class="to-do">
+        <h3>Yapılacaklar Listesi</h3>
+        <div class="checkbox-form">
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Yayınevini Ara.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Emanet Kitap Kontrol Edilecek.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Kasayı Kontrol Edilecek.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Haftasonu Revize Edilecek.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Üye Mesajları Kontrol Edilecek.</label>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
+<div class="total-world">
+    <div class="world-map ">
+        <div class="col-md-12 mb-2">
+            <a class="weatherwidget-io" href="https://forecast7.com/tr/41d0128d98/istanbul/" data-label_1="İSTANBUL" data-label_2="Hava Durumu" data-theme="original">İSTANBUL Hava Durumu</a>
+        </div>
+        <div class="col-md-12 mb-2">
+            <a class="weatherwidget-io" href="https://forecast7.com/tr/40d7730d39/sakarya/" data-label_1="SAKARYA" data-label_2="Hava Durumu" data-theme="original">SAKARYA Hava Durumu</a>
+        </div>
+        <div class="col-md-12 mb-2">
+            <a class="weatherwidget-io" href="https://forecast7.com/tr/39d9332d86/ankara/" data-label_1="ANKARA" data-label_2="Hava Durumu" data-theme="original">ANKARA Hava Durumu</a>
+        </div>
+        <div class="col-md-12">
+            <a class="weatherwidget-io" href="https://forecast7.com/tr/38d4227d14/izmir/" data-label_1="İZMIR" data-label_2="Hava Durumu" data-theme="original">İZMIR Hava Durumu</a>
+              </div>
+    </div>
+    <div class="site-report">
+        <h3>Sistem Raporları</h3>
+        <div class="skills-top">
+            <h5>Memnuniyet</h5>
+            <h4>97%</h4>
+            <div class="clearfix"></div>
+            <div class="skills">
+                <div class="skill" style="width:97%"></div>
+            </div>
+        </div>
+        <div class="skills-top">
+            <h5>Güvenilirlik</h5>
+            <h4>99%</h4>
+            <div class="clearfix"></div>
+            <div class="skills">
+                <div class="skill1" style="width:99%"></div>
+            </div>
+        </div>
+        <div class="skills-top">
+            <h5>Haftanın Geri Dönüşü</h5>
+            <h4>89%</h4>
+            <div class="clearfix"></div>
+            <div class="skills">
+                <div class="skill2" style="width:89%"></div>
+            </div>
+        </div>
+        <p>Kütüphane Yönetim Sistemi Projemizin admin paneli kısmındasınız. Kütüphane sistemi size iyi okumalar diler.</p>
+    </div>
+    <div class="clearfix"></div>
+</div>
+

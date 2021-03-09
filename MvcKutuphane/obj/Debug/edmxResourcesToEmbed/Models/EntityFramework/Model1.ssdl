@@ -41,6 +41,7 @@
     <Property Name="MAIL" Type="varchar" MaxLength="50" />
     <Property Name="KONU" Type="varchar" MaxLength="50" />
     <Property Name="MESAJ" Type="varchar" MaxLength="1000" />
+    <Property Name="DURUM" Type="bit" />
   </EntityType>
   <EntityType Name="TBLKASA">
     <Key>
@@ -77,6 +78,15 @@
     </Key>
     <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PERSONEL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLRESIMLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RESIMYOLU" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RESIMDETAY" Type="varchar" MaxLength="250" />
+    <Property Name="DURUM" Type="bit" />
   </EntityType>
   <EntityType Name="TBLUYELER">
     <Key>
@@ -194,6 +204,7 @@
     <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLKITAP" EntityType="Self.TBLKITAP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLRESIMLER" EntityType="Self.TBLRESIMLER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLUYELER" EntityType="Self.TBLUYELER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLYAZAR" EntityType="Self.TBLYAZAR" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_TBLCEZALAR_TBLHAREKET" Association="Self.FK_TBLCEZALAR_TBLHAREKET">

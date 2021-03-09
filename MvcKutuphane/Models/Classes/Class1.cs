@@ -10,5 +10,6 @@ namespace MvcKutuphane.Models.Classes
     {
         public IEnumerable<TBLKITAP>  Kitap1 { get; set; }
         public IEnumerable<TBLHAKKIMIZDA> hakkimizda1 { get; set; }
+        public IEnumerable<TBLRESIMLER> slider1 { get; set; }
     }
 }

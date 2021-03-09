@@ -24,7 +24,8 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult PersonelEkle()
         {
-            return View();
+            TBLPERSONEL p = new TBLPERSONEL();
+            return View(p);
         }
         [HttpPost]
         public ActionResult PersonelEkle(TBLPERSONEL p)

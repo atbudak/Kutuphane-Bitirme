@@ -16,7 +16,7 @@ namespace MvcKutuphane
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Kategori", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Istatistik", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

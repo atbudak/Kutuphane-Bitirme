@@ -18,12 +18,14 @@ namespace MvcKutuphane.Controllers
             Class1 cs = new Class1();
             cs.Kitap1 = db.TBLKITAP.ToList();
             cs.hakkimizda1 = db.TBLHAKKIMIZDA.ToList();
+            cs.slider1 = db.TBLRESIMLER.ToList();
             return View(cs);
         }
         [HttpPost]
         public ActionResult Index(TBLILETISIM t)
         {
-            db.TBLILETISIM.Add(t);
+            var tr = db.TBLILETISIM.Add(t);
+            tr.DURUM = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

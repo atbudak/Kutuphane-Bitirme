@@ -19,14 +19,15 @@
     <br /><br />
     @using (@Html.BeginForm("Index", "Kitap", FormMethod.Get))
     {
+        <div class="pull-right">
+            <a href="/Kitap/KitapEkle" class="btn btn-success " style="margin-bottom:15px">Yeni Kitap Ekle</a>
+        </div>
         <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
             @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
             <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
         </div>
     }
-    <div class="pull-right">
-        <a href="/Kitap/KitapEkle" class="btn btn-success " style="margin-bottom:15px">Yeni Kitap Ekle</a>
-    </div>
+
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -44,7 +45,7 @@
         </thead>
         <tbody>
             @foreach (var x in Model)
-            {               
+            {
                 <tr>
                     <td>@x.ID</td>
                     <td>@x.AD</td>

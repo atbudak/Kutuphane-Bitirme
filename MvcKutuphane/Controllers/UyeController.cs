@@ -25,7 +25,8 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult UyeEkle()
         {
-            return View();
+            TBLUYELER u = new TBLUYELER();
+            return View(u);
         }
         [HttpPost]
         public ActionResult UyeEkle(TBLUYELER u)

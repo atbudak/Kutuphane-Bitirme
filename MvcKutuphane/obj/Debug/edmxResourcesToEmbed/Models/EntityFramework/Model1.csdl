@@ -208,6 +208,7 @@
     </AssociationSet>
     <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" />
     <EntitySet Name="TBLILETISIM" EntityType="DBLIBRARYModel.TBLILETISIM" />
+    <EntitySet Name="TBLRESIMLER" EntityType="DBLIBRARYModel.TBLRESIMLER" />
   </EntityContainer>
   <Association Name="FK_TBLHAREKET_TBLPERSONEL1">
     <End Type="DBLIBRARYModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -238,5 +239,15 @@
     <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MESAJ" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="DURUM" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBLRESIMLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RESIMYOLU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RESIMDETAY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
 </Schema>

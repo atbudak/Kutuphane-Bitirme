@@ -26,7 +26,8 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult YazarEkle()
         {
-            return View();
+            TBLYAZAR y = new TBLYAZAR();
+            return View(y);
         }
         [HttpPost]
         public ActionResult YazarEkle(TBLYAZAR y)

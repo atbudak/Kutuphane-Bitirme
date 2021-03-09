@@ -724,6 +724,7 @@ i.dollar {
 .icon {
 	float:left;
 	margin-right:5%;
+	max-width:25%;
 }
 .icon-text {
 	float:left;
@@ -1137,9 +1138,9 @@ div#vmap {
 .world-map {
 	width: 64%;
 	float: left;
-	background: #4597a8;
-	position:relative;
-	padding:2em 2em 0 2em;
+	background: #E7F3FA;
+	position: relative;
+	padding: 1.5em;
 }
 .world-map h3 {
 	float:left;
@@ -2108,17 +2109,19 @@ button#focus-single,button#focus-multiple,button#focus-coords,button#focus-init 
 	.footer {
 		padding: 1.5em 0;
 	}
-	.sales,.orders {
+	.sales, .orders {
 		padding: 1em 0.5em 0.7em 0.5em;
-		width:48%;
-		margin-top:2%;
+		width: 48%;
+		margin-top: 2%;
+		max-height: 110px;
 	}
-	.new-users ,.visitors {
-		width:48%;
-		margin-left:1%;
-		margin-right:0;
+	.new-users, .visitors {
+		width: 48%;
+		margin-left: 1%;
+		margin-right: 0;
 		padding: 1em 0.5em 0.7em 0.5em;
-		margin-top:2%;
+		margin-top: 2%;
+		max-height: 110px;
 	}
 	.visitors h3, .sales h3, .users h3 {
 		font-size: 2em;
@@ -2263,11 +2266,13 @@ button#focus-single,button#focus-multiple,button#focus-coords,button#focus-init 
 		margin-right: 0;
 		padding: 1em 0.5em 0.7em 3.5em;
 		margin-top: 2%;
+		max-height: 110px;
 	}
 	.sales, .orders {
 		padding: 1em 0.5em 0.7em 3.5em;
 		width: 100%;
 		margin-top: 2%;
+		max-height: 110px;
 	}
 	.member, .search, .view {
 		min-height: 85px;

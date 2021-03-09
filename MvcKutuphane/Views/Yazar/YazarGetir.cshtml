@@ -12,11 +12,11 @@
     @Html.HiddenFor(x => x.ID)
     <br />
     @Html.Label("Yazar Adı")
-    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" , required=""})
     @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     @Html.Label("Yazar Soyadı")
-    @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control", required = "" })
     @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     @Html.Label("Detay")

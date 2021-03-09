@@ -22,6 +22,7 @@
         <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLPERSONEL1" />
         <EntityTypeShape EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="DBLIBRARYModel.TBLILETISIM" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLRESIMLER" Width="1.5" PointX="8.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

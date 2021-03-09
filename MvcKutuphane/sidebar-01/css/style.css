@@ -4,6 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+label{color:black}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8138,13 +8139,12 @@ body {
   line-height: 1.8;
   font-weight: normal;
   background: #fafafa;
-  color: gray; }
+  color: white; }
 
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
-  transition: .3s all ease;
-  color: #f8b739; }
+  transition: .3s all ease;}
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;

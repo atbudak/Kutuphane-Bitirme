@@ -103,11 +103,22 @@
     <EntitySetMapping Name="TBLILETISIM">
       <EntityTypeMapping TypeName="DBLIBRARYModel.TBLILETISIM">
         <MappingFragment StoreEntitySet="TBLILETISIM">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
           <ScalarProperty Name="KONU" ColumnName="KONU" />
           <ScalarProperty Name="MAIL" ColumnName="MAIL" />
           <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
           <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLRESIMLER">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLRESIMLER">
+        <MappingFragment StoreEntitySet="TBLRESIMLER">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="RESIMDETAY" ColumnName="RESIMDETAY" />
+          <ScalarProperty Name="RESIMYOLU" ColumnName="RESIMYOLU" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

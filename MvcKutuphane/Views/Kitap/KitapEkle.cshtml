@@ -11,7 +11,7 @@
 <form method="post">
     @Html.HiddenFor(x => x.ID)
     <label style="margin-bottom:10px;">Adı</label>
-    @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control", required = "" })
     @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Kategori</label>
@@ -23,13 +23,13 @@
     @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Basım Yılı</label>
-    @Html.TextBoxFor(x => x.BASIMYIL, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.BASIMYIL, new { @class = "form-control", required = "" ,Type="date"})
     <br />
     <label style="margin-bottom:10px;">Yayınevi</label>
-    @Html.TextBoxFor(x => x.YAYINEVI, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.YAYINEVI, new { @class = "form-control", required = "" })
     <br />
     <label style="margin-bottom:10px;">Sayfa Sayısı</label>
-    @Html.TextBoxFor(x => x.SAYFA, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.SAYFA, new { @class = "form-control", required = "", Type = "number", min = "1" })
     <br />
     <button class="btn btn-success" style="margin:10px 0">Ekle</button>
 </form>

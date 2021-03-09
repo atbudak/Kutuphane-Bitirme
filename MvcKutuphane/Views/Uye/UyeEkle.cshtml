@@ -9,23 +9,23 @@
 <br />
 <form method="post">
     <label style="margin-bottom:10px;">Adı</label>
-    @Html.TextBoxFor(x => x.AD, new { @class = "form-control", placeholder = "adı giriniz..." })
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control", placeholder = "adı giriniz..." , required="required"})
     @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Soyadı</label>
-    @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control", placeholder = "soyadını giriniz..." })
+    @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control", placeholder = "soyadını giriniz...", required = "required" })
     @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Mail Adresi</label>
-    @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control", placeholder = "mail adresi giriniz..." })
+    @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control", placeholder = "mail adresi giriniz...", required = "required" })
     @*@Html.ValidationMessageFor(x => x.MAIL, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Kullanıcı Adı</label>
-    @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control", placeholder = "kullanıcı adı giriniz..." })
+    @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control", placeholder = "kullanıcı adı giriniz...", required = "required" })
     @*@Html.ValidationMessageFor(x => x.KULLANICIADI, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Şifre</label>
-    @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control", placeholder = "şifre giriniz..." })
+    @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control", placeholder = "şifre giriniz...", required = "required" })
     @*@Html.ValidationMessageFor(x => x.SIFRE, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Telefon</label>

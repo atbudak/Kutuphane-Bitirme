@@ -10,11 +10,11 @@
 
 <form method="post">
     <label style="margin-bottom:10px;">Yazar Adı</label>
-    <input type="text" name="AD" class="form-control form-control" placeholder="yazar adını giriniz.." /><br />
+    <input type="text" name="AD" class="form-control form-control" placeholder="yazar adını giriniz.." required/><br />
     @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Yazar Soyadı</label>
-    <input type="text" name="SOYAD" class="form-control form-control" placeholder="yazar soyadını giriniz.." /><br />
+    <input type="text" name="SOYAD" class="form-control form-control" placeholder="yazar soyadını giriniz.." required/><br />
     @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Detay</label>

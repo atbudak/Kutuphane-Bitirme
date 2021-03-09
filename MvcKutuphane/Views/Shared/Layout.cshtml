@@ -8,12 +8,11 @@
 <!doctype html>
 <html lang="tr">
 <head>
-    <title>Sidebar 01</title>
+    <title>Kütüphane Admin Paneli</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="~/sidebar-01/css/style.css" rel="stylesheet" />
 </head>
@@ -22,8 +21,11 @@
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
             <div class="p-4 pt-5">
-                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/sidebar-01/images/logo.jpg);"></a>
+                <a href="/Istatistik/Index" class="img logo rounded-circle mb-5" style="background-image: url(/sidebar-01/images/logo.png);"></a>
                 <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="/Istatistik/Index">Anasayfa</a>
+                    </li>
                     <li>
                         <a href="/Uye/Index">Üye</a>
                     </li>
@@ -39,28 +41,34 @@
                     <li>
                         <a href="/Kategori/Index">Kategoriler</a>
                     </li>
-                    <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ödünç Kitap İşlemleri</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a href="/Odunc/OduncVer">Ödünç Kitap Ver</a>
-                            </li>
-                            <li>
-                                <a href="/Odunc/Index">Ödünç Kitap İade</a>
-                            </li>
-                            <li>
-                                <a href="/Islem/Index">İşlemler</a>
-                            </li>
-                        </ul>
+                    @*<li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ödünç Kitap İşlemleri</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="/Odunc/OduncVer">Ödünç Kitap Ver</a>
+                </li>
+                <li>
+                    <a href="/Odunc/Index">Ödünç Kitap İade</a>
+                </li>
+                <li>
+                    <a href="/Islem/Index">İşlemler</a>
+                </li>
+            </ul>
+        </li>*@
+                    <li>
+                        <a href="/Odunc/OduncVer">Ödünç Kitap Ver</a>
                     </li>
                     <li>
-                        <a href="/Istatistik/Index">İstatistikler</a>
+                        <a href="/Odunc/Index">Ödünç Kitap İade</a>
                     </li>
                     <li>
-                        <a href="#">Kasa</a>
+                        <a href="/Islem/Index">İşlemler</a>
                     </li>
                     <li>
-                        <a href="#">Galeri</a>
+                        <a href="/BizeUlasin/Index">Bize Ulaşın</a>
+                    </li>
+                    <li>
+                        <a href="/Istatistik/ResimGoruntule">Resim Yükle</a>
                     </li>
                     <li>
                         <a href="/Vitrin/Index" target="_blank">Vitrin</a>
@@ -101,7 +109,7 @@
 
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">
                         <i class="fa fa-bars"></i>
-                        <span class="sr-only">Toggle Menu</span>
+                        <span class="sr-only">Menü</span>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
@@ -110,16 +118,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="/Istatistik/Index">Anasayfa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="/Odunc/OduncVer">Ödünç Ver</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Portfolio</a>
+                                <a class="nav-link" href="/Kitap/Index">Kitap</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#">Çıkış</a>
                             </li>
                         </ul>
                     </div>

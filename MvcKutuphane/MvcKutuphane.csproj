@@ -140,6 +140,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BizeUlasinController.cs" />
     <Compile Include="Controllers\IslemController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
@@ -192,6 +193,9 @@
     <Compile Include="Models\EntityFramework\TBLPERSONEL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityFramework\TBLRESIMLER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EntityFramework\TBLUYELER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -222,7 +226,6 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="sidebar-01\css\bootstrap.min.css" />
     <Content Include="sidebar-01\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="sidebar-01\css\bootstrap\mixins\_screen-reader.css" />
     <Content Include="sidebar-01\css\bootstrap\mixins\_visibility.css" />
@@ -275,6 +278,13 @@
     <Content Include="web2\resimler\book5.jpg" />
     <Content Include="web2\resimler\img1.jpg" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="webhava\css\style.css" />
+    <Content Include="webhava\images\bg.jpg" />
+    <Content Include="webhava\images\img1.jpg" />
+    <Content Include="webhava\index.html" />
+    <Content Include="webhava\js\jquery-2.1.4.min.js" />
+    <Content Include="webhava\js\skycons.js" />
+    <Content Include="webhava\w3layouts-License.txt" />
     <Content Include="web\css\freelancer.css" />
     <Content Include="web\css\freelancer.min.css" />
     <Content Include="web\gulpfile.js" />
@@ -298,6 +308,12 @@
     <Content Include="web\js\jqBootstrapValidation.js" />
     <Content Include="web\js\jqBootstrapValidation.min.js" />
     <Content Include="web\mail\contact_me.php" />
+    <Content Include="web\slider_img\default.jpg" />
+    <Content Include="web\slider_img\s1.jpg" />
+    <Content Include="web\slider_img\s2.jpg" />
+    <Content Include="web\slider_img\s3.jpg" />
+    <Content Include="web\slider_img\s4.jpg" />
+    <Content Include="web\slider_img\s5.jpg" />
     <Content Include="web\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="web\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="web\vendor\bootstrap\js\bootstrap.js" />
@@ -510,6 +526,14 @@
     <Content Include="sidebar-01\scss\bootstrap\_utilities.scss" />
     <Content Include="sidebar-01\scss\bootstrap\_variables.scss" />
     <Content Include="sidebar-01\scss\style.scss" />
+    <Content Include="Views\Istatistik\Hava.cshtml" />
+    <Content Include="Views\Istatistik\SliderResimYukle.cshtml" />
+    <Content Include="Views\Istatistik\ResimGoruntule.cshtml" />
+    <Content Include="Views\Istatistik\ResimGetir.cshtml" />
+    <Content Include="Views\BizeUlasin\Index.cshtml" />
+    <Content Include="Views\BizeUlasin\TumMesajlar.cshtml" />
+    <Content Include="Views\BizeUlasin\MesajGetir.cshtml" />
+    <Content Include="Views\Istatistik\LinqKartlar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
