@@ -94,6 +94,35 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult LinqKartlar()
         {
+            var deger1 = db.TBLKITAP.Count();
+            ViewBag.d1 = deger1;
+            var deger2 = db.TBLUYELER.Count();
+            ViewBag.d2 = deger2;
+            var deger3 = db.TBLCEZALAR.Sum(x=>x.PARA);
+            ViewBag.d3 = deger3;
+            var deger4 = db.TBLKITAP.Where(x => x.DURUM==false).Count();
+            ViewBag.d4 = deger4;
+            var deger5 = db.TBLKATEGORI.Count();
+            ViewBag.d5 = deger5;
+            var deger6 = db.TBLPERSONEL.Count();
+            ViewBag.d6 = deger6;
+            var deger7 = db.TercihEdilenKitap().FirstOrDefault();
+            ViewBag.d7 = deger7;
+            var deger8 = db.EnFazlaKitapYazar().FirstOrDefault();
+            ViewBag.d8 = deger8;
+            //Linq sorgusu ile veritabanından değer çekmek
+            //var deger9 = db.TBLKITAP.GroupBy(x => x.YAYINEVI).OrderByDescending(z => z.Count()).Select(z => new { z.Key }).FirstOrDefault();
+            //ViewBag.d9 = deger9;
+            var deger9 = db.EnCokYayınevi().FirstOrDefault();
+            ViewBag.d9 = deger9;
+            var deger10 = db.EnAktifUye().FirstOrDefault();
+            ViewBag.d10 = deger10;
+            var deger11 = db.TBLILETISIM.Count();
+            ViewBag.d11 = deger11;
+            var deger12 = db.BasariliPersonel().FirstOrDefault();
+            ViewBag.d12 = deger12;
+
+
             return View();
         }
     }

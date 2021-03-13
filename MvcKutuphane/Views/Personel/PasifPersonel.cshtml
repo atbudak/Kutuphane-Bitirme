@@ -1,0 +1,49 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TBLPERSONEL>
+
+@{
+    ViewBag.Title = "PasifPersonel";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="mw-500 text-center bg-transparent">
+    <h1 class="sketchy text-center">Pasif Personeller</h1>
+</div>
+<br />
+<br />
+@using (@Html.BeginForm("PasifPersonel", "Personel", FormMethod.Get))
+{
+<div class="pull-right">
+    <a href="/Personel/PersonelEkle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Personel Ekle</a>
+    <a href="/Personel/Index" class="btn btn-info pull-right mr-3" style="margin-bottom:15px">Personeller</a>
+</div>
+    <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+        @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+        <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+    </div>
+}
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Personel</th>
+            <th scope="col">AktifEt</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.PERSONEL</td>
+                <td><a href="/Personel/AktifEt/@x.ID" class="btn btn-info text-center">Aktif Et</a></td>
+           </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("PasifPersonel", new { page }))

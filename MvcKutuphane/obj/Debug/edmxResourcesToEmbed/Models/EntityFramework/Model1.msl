@@ -39,6 +39,7 @@
     <EntitySetMapping Name="TBLKATEGORI">
       <EntityTypeMapping TypeName="DBLIBRARYModel.TBLKATEGORI">
         <MappingFragment StoreEntitySet="TBLKATEGORI">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AD" ColumnName="AD" />
         </MappingFragment>
@@ -62,6 +63,7 @@
     <EntitySetMapping Name="TBLPERSONEL">
       <EntityTypeMapping TypeName="DBLIBRARYModel.TBLPERSONEL">
         <MappingFragment StoreEntitySet="TBLPERSONEL">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
         </MappingFragment>
@@ -70,6 +72,7 @@
     <EntitySetMapping Name="TBLUYELER">
       <EntityTypeMapping TypeName="DBLIBRARYModel.TBLUYELER">
         <MappingFragment StoreEntitySet="TBLUYELER">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AD" ColumnName="AD" />
           <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
@@ -85,6 +88,7 @@
     <EntitySetMapping Name="TBLYAZAR">
       <EntityTypeMapping TypeName="DBLIBRARYModel.TBLYAZAR">
         <MappingFragment StoreEntitySet="TBLYAZAR">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AD" ColumnName="AD" />
           <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
@@ -119,6 +123,35 @@
           <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="RESIMDETAY" ColumnName="RESIMDETAY" />
           <ScalarProperty Name="RESIMYOLU" ColumnName="RESIMYOLU" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EnFazlaKitapYazar" FunctionName="DBLIBRARYModel.Store.EnFazlaKitapYazar" />
+    <FunctionImportMapping FunctionImportName="EnCokYayınevi" FunctionName="DBLIBRARYModel.Store.EnCokYayınevi" />
+    <FunctionImportMapping FunctionImportName="EnAktifUye" FunctionName="DBLIBRARYModel.Store.EnAktifUye" />
+    <FunctionImportMapping FunctionImportName="TercihEdilenKitap" FunctionName="DBLIBRARYModel.Store.TercihEdilenKitap" />
+    <FunctionImportMapping FunctionImportName="BasariliPersonel" FunctionName="DBLIBRARYModel.Store.BasariliPersonel" />
+    <EntitySetMapping Name="TBLMESAJ">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLMESAJ">
+        <MappingFragment StoreEntitySet="TBLMESAJ">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+          <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+          <ScalarProperty Name="GONDEREN" ColumnName="GONDEREN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLDUYURULAR">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLDUYURULAR">
+        <MappingFragment StoreEntitySet="TBLDUYURULAR">
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
+          <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

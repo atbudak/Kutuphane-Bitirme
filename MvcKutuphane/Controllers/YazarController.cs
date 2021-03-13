@@ -14,13 +14,30 @@ namespace MvcKutuphane.Controllers
         DBLIBRARYEntities db = new DBLIBRARYEntities();
         // GET: Yazar
         public ActionResult Index(string search, int page = 1)
-        {          
+        {
             var yz = from x in db.TBLYAZAR select x;
             if (!string.IsNullOrEmpty(search))
             {
-                yz = yz.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) || x.SOYAD.ToUpper().Contains(search.ToUpper()));
+                yz = yz.Where(x => x.DURUM == true && x.AD.ToUpper().Contains(search.ToUpper()) || x.SOYAD.ToUpper().Contains(search.ToUpper()));
             }
-            return View(yz.ToList().ToPagedList(page, 10));
+            return View(yz.Where(x=>x.DURUM==true).ToList().ToPagedList(page, 10));
+        }
+
+        public ActionResult PasifYazar(string search, int page = 1)
+        {
+            var yz = from x in db.TBLYAZAR select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                yz = yz.Where(x => x.DURUM == false && x.AD.ToUpper().Contains(search.ToUpper()) || x.SOYAD.ToUpper().Contains(search.ToUpper()));
+            }
+            return View(yz.Where(x => x.DURUM == false).ToList().ToPagedList(page, 10));
+        }
+        public ActionResult AktifEt(int id)
+        {
+            var ktg = db.TBLYAZAR.Find(id);
+            ktg.DURUM = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -33,8 +50,10 @@ namespace MvcKutuphane.Controllers
         public ActionResult YazarEkle(TBLYAZAR y)
         {
             db.TBLYAZAR.Add(y);
+            y.DURUM = true;
             db.SaveChanges();
             return RedirectToAction("Index");
+
         }
         public ActionResult YazarGetir(int id)
         {
@@ -54,9 +73,21 @@ namespace MvcKutuphane.Controllers
         public ActionResult YazarSil(int id)
         {
             var yz = db.TBLYAZAR.Find(id);
-            db.TBLYAZAR.Remove(yz);
+            yz.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult YazarKitap(int id,string search, int page = 1)
+        {
+            var yzrad = db.TBLYAZAR.Where(e => e.ID == id).Select(s => s.AD + " " + s.SOYAD).FirstOrDefault();
+            ViewBag.y1 = yzrad;
+            var yz = from x in db.TBLKITAP select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                yz = yz.Where(x => x.DURUM == true && x.YAZAR==id && x.AD.ToUpper().Contains(search.ToUpper()));
+            }
+            return View(yz.Where(x => x.DURUM == true && x.YAZAR == id).ToList().ToPagedList(page, 10));
         }
     }
 }

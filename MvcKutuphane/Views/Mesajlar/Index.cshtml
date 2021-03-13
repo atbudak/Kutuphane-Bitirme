@@ -1,0 +1,49 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TBLMESAJ>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mt-5 mb-5">
+    <h1 class="sketchy text-center">Gelen Mesajlar</h1>
+</div>
+
+@using (@Html.BeginForm("Index", "Mesajlar", FormMethod.Get))
+{
+<div style="float:right;">
+    <a href="/Mesajlar/YeniMesaj" class="btn btn-success " style="margin-bottom:15px">Mesaj Gönder</a>
+    <a href="/Mesajlar/Giden" class="btn btn-secondary " style="margin-bottom:15px">Gönderilen   Mesajlar</a>
+</div>
+    <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+        @Html.TextBox("search", "", new { placeholder = "Gönderene göre ara..", @class = "form-control", style = "margin-right:5px" })
+        <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+    </div>
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Yollanma Tarihi</th>
+        <th>İşlemler</th>
+    </tr>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.GONDEREN</td>
+                <td>@x.KONU</td>
+                <td>@x.ICERIK</td>
+                <td>@Convert.ToDateTime(x.TARIH).ToString("MM.dd.yyyy")</td>           
+            <td class="d-flex justify-content-center"><a href="/Mesajlar/MesajGetir/@x.ID" class="btn btn-info text-center mr-3">Mesaj Görüntüle</a>
+            @Html.ActionLink("Sil", "MesajSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+        </tr>
+    }
+    </tbody>
+    
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))

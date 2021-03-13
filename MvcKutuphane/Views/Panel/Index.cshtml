@@ -1,0 +1,56 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLUYELER  
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mt-5">
+    <h1 class="sketchy text-center">Üye Profil Bilgileri</h1>
+</div>
+
+@using (Html.BeginForm("Index2", "Panel", FormMethod.Post))
+{
+    <div style="max-width:1200px;margin:50px auto">
+        <table class="table table-bordered table-hover table-responsive-lg">
+            <tr>
+                <td class="font-weight-bold">Öğrenci ID</td>
+                <td>@Html.DisplayFor(x => x.ID)</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Mail Adresi</td>
+                <td>@HttpContext.Current.User.Identity.Name</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Adı</td>
+                <td>@Html.TextBoxFor(x => x.AD, new { style = "border-color:transparent" })</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Soyadı</td>
+                <td>@Html.TextBoxFor(x => x.SOYAD, new { style = "border-color:transparent" })</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Kullanıcı Adı</td>
+                <td>@Html.TextBoxFor(x => x.KULLANICIADI, new { style = "border-color:transparent" })</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Şifre</td>
+                <td>@Html.TextBoxFor(x => x.SIFRE, new { Type = "password", style = "border-color:transparent" })</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Telefon Numarası</td>
+                <td>@Html.TextBoxFor(x => x.TELEFON, new { style = "border-color:transparent" })</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Okul</td>
+                <td>@Html.TextBoxFor(x => x.OKUL, new { style = "border-color:transparent" })</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">Fotoğraf Linki</td>
+                <td>@Html.TextBoxFor(x => x.FOTOGRAF, new { style = "border-color:transparent" })</td>
+            </tr>
+        </table>
+        <div class="text-right">
+            <button class="btn btn-info"> Bilgi Güncelle</button>
+        </div>
+    </div>
+}

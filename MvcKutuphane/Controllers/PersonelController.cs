@@ -17,9 +17,25 @@ namespace MvcKutuphane.Controllers
             var kt = from x in db.TBLPERSONEL select x;
             if (!string.IsNullOrEmpty(search))
             {
-                kt = kt.Where(x => x.PERSONEL.ToUpper().Contains(search.ToUpper()));
+                kt = kt.Where(x => x.DURUM==true && x.PERSONEL.ToUpper().Contains(search.ToUpper()));
             }
-            return View(kt.ToList().ToPagedList(page, 10));
+            return View(kt.Where(x => x.DURUM == true).ToList().ToPagedList(page, 10));
+        }
+        public ActionResult PasifPersonel(string search, int page = 1)
+        {
+            var kt = from x in db.TBLPERSONEL select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                kt = kt.Where(x => x.DURUM == false && x.PERSONEL.ToUpper().Contains(search.ToUpper()));
+            }
+            return View(kt.Where(x => x.DURUM == false).ToList().ToPagedList(page, 10));
+        }
+        public ActionResult AktifEt(int id)
+        {
+            var ktg = db.TBLPERSONEL.Find(id);
+            ktg.DURUM = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult PersonelEkle()
@@ -31,6 +47,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult PersonelEkle(TBLPERSONEL p)
         {
             db.TBLPERSONEL.Add(p);
+            p.DURUM = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -50,7 +67,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult PersonelSil(int id)
         {
             var per = db.TBLPERSONEL.Find(id);
-            db.TBLPERSONEL.Remove(per);
+            per.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

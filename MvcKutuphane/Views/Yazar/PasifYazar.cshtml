@@ -1,0 +1,51 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<MvcKutuphane.Models.EntityFramework.TBLYAZAR>
+@{
+    ViewBag.Title = "PasifYazar";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent">
+    <h1 class="sketchy text-center">Pasif Yazar Sayfası</h1>
+</div>
+<br />
+<br />
+@using (@Html.BeginForm("PasifYazar", "Yazar", FormMethod.Get))
+{
+    <div class="pull-right">
+        <a href="/Yazar/YazarEkle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Yazar Ekle</a>
+        <a href="/Yazar/Index" class="btn btn-info pull-right mr-3" style="margin-bottom:15px">Aktif Yazarlar</a>
+    </div>
+    <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+        @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+        <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+    </div>
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Yazar Adı</th>
+            <th scope="col">Yazar Soyadı</th>
+            <th scope="col">Detay</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AD</td>
+            <td>@x.SOYAD</td>
+            <td>@x.DETAY</td>
+            <td><a href="/Yazar/AktifEt/@x.ID" class="btn btn-success text-center">Aktif Et</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("PasifYazar", new { page }))
+
+

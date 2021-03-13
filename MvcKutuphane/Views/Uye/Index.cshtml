@@ -16,12 +16,15 @@
     <title>Üyleler</title>
 </head>
 <body>
-    <h1>Üye Sayfası</h1>
+    <div class="mw-500 text-center bg-transparent">
+        <h1 class="sketchy text-center">Üyeler</h1>
+    </div>
     <br /><br />
     @using (@Html.BeginForm("Index", "Uye", FormMethod.Get))
     {
         <div class="pull-right">
             <a href="/Uye/UyeEkle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Üye Ekle</a>
+            <a href="/Uye/PasifUye" class="btn btn-info pull-right mr-3" style="margin-bottom:15px">Pasif Üye</a>
         </div>
         <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
             @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
@@ -36,13 +39,11 @@
                 <th scope="col">ID</th>
                 <th scope="col">Adı</th>
                 <th scope="col">Soyadı</th>
-                <th scope="col">Mail Adresi</th>
-                <th scope="col">Kullanıcı Adı</th>
-                <th scope="col">Şifre</th>
                 <th scope="col">Telefon</th>
                 <th scope="col">Okul</th>
                 <th scope="col">Güncelle</th>
                 <th scope="col">Sil</th>
+                <th scope="col">Kitap Geçmişi</th>
             </tr>
         </thead>
         <tbody>
@@ -52,13 +53,11 @@
                     <td>@x.ID</td>
                     <td>@x.AD</td>
                     <td>@x.SOYAD</td>
-                    <td>@x.MAIL</td>
-                    <td>@x.KULLANICIADI</td>
-                    <td>@x.SIFRE</td>
                     <td>@x.TELEFON</td>
                     <td>@x.OKUL</td>
                     <td><a href="/Uye/UyeGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
                     <td>@Html.ActionLink("Sil", "UyeSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                    <td><a href="/Uye/UyeKitapGecmisi/@x.ID" class="btn btn-default text-center" style="background-color:#ffc000;color:white">Görüntüle</a></td>
                 </tr>
             }
         </tbody>

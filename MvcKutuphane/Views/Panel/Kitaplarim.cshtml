@@ -1,0 +1,54 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TBLHAREKET>
+@{
+    ViewBag.Title = "Kitaplarim";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mt-5 mb-5">
+    <h1 class="sketchy text-center">Kitap Geçmişim</h1>
+</div>
+
+
+@using (@Html.BeginForm("Kitaplarim", "Panel", FormMethod.Get))
+{
+    <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex;margin-bottom:20px">
+        @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+        <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+    </div>
+}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+
+            <th scope="col">Kitap Adı</th>
+            <th scope="col">Personel</th>
+            <th scope="col">Alış Tarihi</th>
+            <th scope="col">İşlem Durumu</th>
+            <th scope="col">Üye İade Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.TBLKITAP.AD</td>
+                <td>@x.TBLPERSONEL.PERSONEL</td>
+                <td>@Convert.ToDateTime(x.ALISTARIHI).ToString("MM/dd/yyyy")</td>
+                <td>@if (x.ISLEMDURUM == true)
+                {<p class="text-success font-weight-bold">Teslim Edildi.</p> }
+                else
+                {<p class="text-warning font-weight-bold"> Teslim Edilmedi.</p>}</td>
+                <td>
+                    @if (x.ISLEMDURUM == true)
+                    {<p>@Convert.ToDateTime(x.UYEGETIRTARIH).ToString("MM/dd/yyyy")</p>}
+                else
+                { <p class="txt-center" style="color:gray">Bekleniyor...</p>}
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Kitaplarim", new { page }))

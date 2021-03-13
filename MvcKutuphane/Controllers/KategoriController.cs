@@ -18,9 +18,25 @@ namespace MvcKutuphane.Controllers
             var ara = from x in db.TBLKATEGORI select x;
             if (!string.IsNullOrEmpty(search))
             {
-                ara = ara.Where(x => x.AD.ToUpper().Contains(search.ToUpper()));
+                ara = ara.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) && x.DURUM==true);
             }
-            return View(ara.ToList().ToPagedList(page,10));
+            return View(ara.Where(X=>X.DURUM==true).ToList().ToPagedList(page,10));
+        }
+        public ActionResult PasifKategori(string search, int page = 1)
+        {
+            var ara = from x in db.TBLKATEGORI select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                ara = ara.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) && x.DURUM == false);
+            }
+            return View(ara.Where(X => X.DURUM == false).ToList().ToPagedList(page, 10));
+        }
+        public ActionResult AktifEt(int id)
+        {
+            var ktg = db.TBLKATEGORI.Find(id);
+            ktg.DURUM = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult KategoriEkle()
@@ -32,13 +48,14 @@ namespace MvcKutuphane.Controllers
         public ActionResult KategoriEkle(TBLKATEGORI p)
         {
             db.TBLKATEGORI.Add(p);
+            p.DURUM = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult KategoriSil(int id)
         {
             var ktg = db.TBLKATEGORI.Find(id);
-            db.TBLKATEGORI.Remove(ktg);
+            ktg.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

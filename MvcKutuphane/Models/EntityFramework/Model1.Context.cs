@@ -12,6 +12,8 @@ namespace MvcKutuphane.Models.EntityFramework
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DBLIBRARYEntities : DbContext
     {
@@ -36,5 +38,32 @@ namespace MvcKutuphane.Models.EntityFramework
         public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
         public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
         public virtual DbSet<TBLRESIMLER> TBLRESIMLER { get; set; }
+        public virtual DbSet<TBLMESAJ> TBLMESAJ { get; set; }
+        public virtual DbSet<TBLDUYURULAR> TBLDUYURULAR { get; set; }
+    
+        public virtual ObjectResult<string> EnFazlaKitapYazar()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("EnFazlaKitapYazar");
+        }
+    
+        public virtual ObjectResult<string> EnCokYayınevi()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("EnCokYayınevi");
+        }
+    
+        public virtual ObjectResult<string> EnAktifUye()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("EnAktifUye");
+        }
+    
+        public virtual ObjectResult<string> TercihEdilenKitap()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("TercihEdilenKitap");
+        }
+    
+        public virtual ObjectResult<string> BasariliPersonel()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("BasariliPersonel");
+        }
     }
 }

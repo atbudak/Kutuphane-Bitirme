@@ -45,6 +45,7 @@
     <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLKITAP_TBLKATEGORI" FromRole="TBLKATEGORI" ToRole="TBLKITAP" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
   <EntityType Name="TBLKITAP">
     <Key>
@@ -70,6 +71,7 @@
     <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PERSONEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TBLHAREKET" Relationship="DBLIBRARYModel.FK_TBLHAREKET_TBLPERSONEL1" FromRole="TBLPERSONEL" ToRole="TBLHAREKET" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
   <EntityType Name="TBLUYELER">
     <Key>
@@ -86,6 +88,7 @@
     <Property Name="OKUL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TBLCEZALAR" Relationship="Self.FK_TBLCEZALAR_TBLUYELER" FromRole="TBLUYELER" ToRole="TBLCEZALAR" />
     <NavigationProperty Name="TBLHAREKET" Relationship="Self.FK_TBLHAREKET_TBLUYELER" FromRole="TBLUYELER" ToRole="TBLHAREKET" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
   <EntityType Name="TBLYAZAR">
     <Key>
@@ -96,6 +99,7 @@
     <Property Name="SOYAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="DETAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLKITAP_TBLYAZAR" FromRole="TBLYAZAR" ToRole="TBLKITAP" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
   <Association Name="FK_TBLCEZALAR_TBLHAREKET">
     <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="0..1" />
@@ -209,6 +213,13 @@
     <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" />
     <EntitySet Name="TBLILETISIM" EntityType="DBLIBRARYModel.TBLILETISIM" />
     <EntitySet Name="TBLRESIMLER" EntityType="DBLIBRARYModel.TBLRESIMLER" />
+    <FunctionImport Name="EnFazlaKitapYazar" ReturnType="Collection(String)" />
+    <FunctionImport Name="EnCokYayınevi" ReturnType="Collection(String)" />
+    <FunctionImport Name="EnAktifUye" ReturnType="Collection(String)" />
+    <FunctionImport Name="TercihEdilenKitap" ReturnType="Collection(String)" />
+    <FunctionImport Name="BasariliPersonel" ReturnType="Collection(String)" />
+    <EntitySet Name="TBLMESAJ" EntityType="DBLIBRARYModel.TBLMESAJ" />
+    <EntitySet Name="TBLDUYURULAR" EntityType="DBLIBRARYModel.TBLDUYURULAR" />
   </EntityContainer>
   <Association Name="FK_TBLHAREKET_TBLPERSONEL1">
     <End Type="DBLIBRARYModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -249,5 +260,27 @@
     <Property Name="RESIMYOLU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="RESIMDETAY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="DURUM" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBLMESAJ">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GONDEREN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ALICI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TARIH" Type="DateTime" Precision="0" />
+    <Property Name="DURUM" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBLDUYURULAR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KATEGORI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DURUM" Type="Boolean" />
+    <Property Name="TARIH" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

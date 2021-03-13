@@ -1,0 +1,49 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<MvcKutuphane.Models.EntityFramework.TBLKATEGORI>
+@{
+    ViewBag.Title = "PasifKategori";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent">
+    <h1 class="sketchy text-center">Pasif Kategori Sayfası</h1>
+</div>
+<br />
+<br />
+@using (@Html.BeginForm("PasifKategori", "Kategori", FormMethod.Get))
+{
+    <div class="pull-right">
+        <a href="/Kategori/KategoriEkle" class="btn btn-success pull-right" style="margin-bottom:15px">Yeni Kategori Ekle</a>
+        <a href="/Kategori/Index" class="btn btn-info pull-right mr-3" style="margin-bottom:15px">Aktif Kategoriler</a>
+    </div>
+    <div class="Search-Container col-lg-4 col-lg-offset-0" style="display:flex">
+        @Html.TextBox("search", "", new { placeholder = "Search", @class = "form-control", style = "margin-right:5px" })
+        <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
+    </div>
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Kategori Adı</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.AD</td>
+
+                <td><a href="/Kategori/AktifEt/@x.ID" class="btn btn-success text-center">Aktif Et</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("PasifKategori", new { page }))
+
+

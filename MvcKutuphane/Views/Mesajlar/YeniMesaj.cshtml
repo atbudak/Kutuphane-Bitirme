@@ -1,0 +1,35 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLMESAJ
+@{
+    ViewBag.Title = "YeniMesaj";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mt-5 mb-5">
+    <h1 class="sketchy text-center">Yeni Mesaj</h1>
+</div>
+@using (Html.BeginForm("YeniMesaj", "Mesajlar", FormMethod.Post))
+{
+    <div class="d-flex col-md-10 m-auto">
+        @Html.HiddenFor(x => x.ID)
+        <div class="col-md-6">
+            @Html.Label("Mesaj Gönderen")
+            <label class="form-control mt-1 mb-3">@HttpContext.Current.User.Identity.Name</label>
+            @Html.Label("Alıcı")
+            @Html.TextBoxFor(x => x.ALICI, new { @class = "form-control mt-1 mb-3", placeholder = "Alıcıyı giriniz." })
+        </div>
+        <div class="col-md-6">
+            @Html.Label("Tarih")
+            <label class="form-control mt-1 mb-3">@DateTime.Now.ToShortDateString()</label>
+            @Html.Label("Mesajın Konusu")
+            @Html.TextBoxFor(x => x.KONU, new { @class = "form-control mt-1 mb-3", placeholder = "Konuyu giriniz." })
+        </div>
+    </div>
+    <div class="col-md-10 m-auto" style="max-width:81.3%">
+        @Html.Label("Mesaj")
+        @Html.TextAreaFor(x => x.ICERIK, new { @class = "form-control mt-1 mb-3", placeholder = "Mesajı giriniz." })
+        <button class="btn btn-success mt-2 pl-4 pr-4 float-lg-right">Mesaj Gönder</button>
+    </div>
+
+
+
+}

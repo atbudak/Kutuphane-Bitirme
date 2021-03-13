@@ -16,6 +16,16 @@
           <Property Name="PARA" Type="decimal" Precision="18" Scale="2" />
           <Property Name="HAREKET" Type="int" />
         </EntityType>
+        <EntityType Name="TBLDUYURULAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KATEGORI" Type="varchar" MaxLength="50" />
+          <Property Name="ICERIK" Type="varchar(max)" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
         <EntityType Name="TBLHAKKIMIZDA">
           <Key>
             <PropertyRef Name="ID" />
@@ -62,6 +72,7 @@
           </Key>
           <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AD" Type="varchar" MaxLength="20" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBLKITAP">
           <Key>
@@ -77,12 +88,25 @@
           <Property Name="DURUM" Type="bit" />
           <Property Name="KITAPRESIM" Type="varchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="TBLMESAJ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GONDEREN" Type="varchar" MaxLength="50" />
+          <Property Name="ALICI" Type="varchar" MaxLength="50" />
+          <Property Name="KONU" Type="varchar" MaxLength="50" />
+          <Property Name="ICERIK" Type="varchar(max)" />
+          <Property Name="TARIH" Type="smalldatetime" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
         <EntityType Name="TBLPERSONEL">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PERSONEL" Type="varchar" MaxLength="50" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBLRESIMLER">
           <Key>
@@ -106,6 +130,7 @@
           <Property Name="FOTOGRAF" Type="varchar" MaxLength="250" />
           <Property Name="TELEFON" Type="varchar" MaxLength="20" />
           <Property Name="OKUL" Type="varchar" MaxLength="100" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBLYAZAR">
           <Key>
@@ -115,6 +140,7 @@
           <Property Name="AD" Type="varchar" MaxLength="30" />
           <Property Name="SOYAD" Type="varchar" MaxLength="30" />
           <Property Name="DETAY" Type="varchar(max)" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <Association Name="FK_TBLCEZALAR_TBLHAREKET">
           <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="0..1" />
@@ -200,14 +226,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="BasariliPersonel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="EnAktifUye" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="EnCokYayınevi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="EnFazlaKitapYazar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TercihEdilenKitap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DBLIBRARYModelStoreContainer">
           <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLDUYURULAR" EntityType="Self.TBLDUYURULAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLHAREKET" EntityType="Self.TBLHAREKET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKASA" EntityType="Self.TBLKASA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKITAP" EntityType="Self.TBLKITAP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMESAJ" EntityType="Self.TBLMESAJ" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLRESIMLER" EntityType="Self.TBLRESIMLER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLUYELER" EntityType="Self.TBLUYELER" Schema="dbo" store:Type="Tables" />
@@ -290,6 +323,7 @@
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLKITAP_TBLKATEGORI" FromRole="TBLKATEGORI" ToRole="TBLKITAP" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBLKITAP">
           <Key>
@@ -315,6 +349,7 @@
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PERSONEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLHAREKET" Relationship="DBLIBRARYModel.FK_TBLHAREKET_TBLPERSONEL1" FromRole="TBLPERSONEL" ToRole="TBLHAREKET" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBLUYELER">
           <Key>
@@ -331,6 +366,7 @@
           <Property Name="OKUL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLCEZALAR" Relationship="Self.FK_TBLCEZALAR_TBLUYELER" FromRole="TBLUYELER" ToRole="TBLCEZALAR" />
           <NavigationProperty Name="TBLHAREKET" Relationship="Self.FK_TBLHAREKET_TBLUYELER" FromRole="TBLUYELER" ToRole="TBLHAREKET" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBLYAZAR">
           <Key>
@@ -341,6 +377,7 @@
           <Property Name="SOYAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="DETAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLKITAP" Relationship="Self.FK_TBLKITAP_TBLYAZAR" FromRole="TBLYAZAR" ToRole="TBLKITAP" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <Association Name="FK_TBLCEZALAR_TBLHAREKET">
           <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="0..1" />
@@ -454,6 +491,13 @@
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" />
           <EntitySet Name="TBLILETISIM" EntityType="DBLIBRARYModel.TBLILETISIM" />
           <EntitySet Name="TBLRESIMLER" EntityType="DBLIBRARYModel.TBLRESIMLER" />
+          <FunctionImport Name="EnFazlaKitapYazar" ReturnType="Collection(String)" />
+          <FunctionImport Name="EnCokYayınevi" ReturnType="Collection(String)" />
+          <FunctionImport Name="EnAktifUye" ReturnType="Collection(String)" />
+          <FunctionImport Name="TercihEdilenKitap" ReturnType="Collection(String)" />
+          <FunctionImport Name="BasariliPersonel" ReturnType="Collection(String)" />
+          <EntitySet Name="TBLMESAJ" EntityType="DBLIBRARYModel.TBLMESAJ" />
+          <EntitySet Name="TBLDUYURULAR" EntityType="DBLIBRARYModel.TBLDUYURULAR" />
         </EntityContainer>
         <Association Name="FK_TBLHAREKET_TBLPERSONEL1">
           <End Type="DBLIBRARYModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -494,6 +538,28 @@
           <Property Name="RESIMYOLU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="RESIMDETAY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="DURUM" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TBLMESAJ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GONDEREN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALICI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+          <Property Name="DURUM" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TBLDUYURULAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KATEGORI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DURUM" Type="Boolean" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -539,6 +605,7 @@
           <EntitySetMapping Name="TBLKATEGORI">
             <EntityTypeMapping TypeName="DBLIBRARYModel.TBLKATEGORI">
               <MappingFragment StoreEntitySet="TBLKATEGORI">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
               </MappingFragment>
@@ -562,6 +629,7 @@
           <EntitySetMapping Name="TBLPERSONEL">
             <EntityTypeMapping TypeName="DBLIBRARYModel.TBLPERSONEL">
               <MappingFragment StoreEntitySet="TBLPERSONEL">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
               </MappingFragment>
@@ -570,6 +638,7 @@
           <EntitySetMapping Name="TBLUYELER">
             <EntityTypeMapping TypeName="DBLIBRARYModel.TBLUYELER">
               <MappingFragment StoreEntitySet="TBLUYELER">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
                 <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
@@ -585,6 +654,7 @@
           <EntitySetMapping Name="TBLYAZAR">
             <EntityTypeMapping TypeName="DBLIBRARYModel.TBLYAZAR">
               <MappingFragment StoreEntitySet="TBLYAZAR">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
                 <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
@@ -619,6 +689,35 @@
                 <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="RESIMDETAY" ColumnName="RESIMDETAY" />
                 <ScalarProperty Name="RESIMYOLU" ColumnName="RESIMYOLU" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="EnFazlaKitapYazar" FunctionName="DBLIBRARYModel.Store.EnFazlaKitapYazar" />
+          <FunctionImportMapping FunctionImportName="EnCokYayınevi" FunctionName="DBLIBRARYModel.Store.EnCokYayınevi" />
+          <FunctionImportMapping FunctionImportName="EnAktifUye" FunctionName="DBLIBRARYModel.Store.EnAktifUye" />
+          <FunctionImportMapping FunctionImportName="TercihEdilenKitap" FunctionName="DBLIBRARYModel.Store.TercihEdilenKitap" />
+          <FunctionImportMapping FunctionImportName="BasariliPersonel" FunctionName="DBLIBRARYModel.Store.BasariliPersonel" />
+          <EntitySetMapping Name="TBLMESAJ">
+            <EntityTypeMapping TypeName="DBLIBRARYModel.TBLMESAJ">
+              <MappingFragment StoreEntitySet="TBLMESAJ">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
+                <ScalarProperty Name="KONU" ColumnName="KONU" />
+                <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+                <ScalarProperty Name="GONDEREN" ColumnName="GONDEREN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLDUYURULAR">
+            <EntityTypeMapping TypeName="DBLIBRARYModel.TBLDUYURULAR">
+              <MappingFragment StoreEntitySet="TBLDUYURULAR">
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
+                <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

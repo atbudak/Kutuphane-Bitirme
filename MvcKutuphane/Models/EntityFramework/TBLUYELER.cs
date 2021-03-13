@@ -30,6 +30,7 @@ namespace MvcKutuphane.Models.EntityFramework
         public string FOTOGRAF { get; set; }
         public string TELEFON { get; set; }
         public string OKUL { get; set; }
+        public Nullable<bool> DURUM { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLCEZALAR> TBLCEZALAR { get; set; }

@@ -18,10 +18,27 @@ namespace MvcKutuphane.Controllers
             var uye = from x in db.TBLUYELER select x;
             if (!string.IsNullOrEmpty(search))
             {
-                uye = uye.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) || x.SOYAD.ToUpper().Contains(search.ToUpper()));
+                uye = uye.Where(x => x.DURUM == true && x.AD.ToUpper().Contains(search.ToUpper()) || x.SOYAD.ToUpper().Contains(search.ToUpper()));
             }
-            return View(uye.ToList().ToPagedList(page, 10));
+            return View(uye.Where(x=>x.DURUM==true).ToList().ToPagedList(page, 10));
         }
+        public ActionResult PasifUye(string search, int page = 1)
+        {
+            var uye = from x in db.TBLUYELER select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                uye = uye.Where(x => x.DURUM == false && x.AD.ToUpper().Contains(search.ToUpper()) || x.SOYAD.ToUpper().Contains(search.ToUpper()));
+            }
+            return View(uye.Where(X => X.DURUM == false).ToList().ToPagedList(page, 10));
+        }
+        public ActionResult AktifEt(int id)
+        {
+            var ktg = db.TBLUYELER.Find(id);
+            ktg.DURUM = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         [HttpGet]
         public ActionResult UyeEkle()
         {
@@ -32,13 +49,14 @@ namespace MvcKutuphane.Controllers
         public ActionResult UyeEkle(TBLUYELER u)
         {
             db.TBLUYELER.Add(u);
+            u.DURUM = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult UyeSil(int id)
         {
             var uye = db.TBLUYELER.Find(id);
-            db.TBLUYELER.Remove(uye);
+            uye.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -61,6 +79,17 @@ namespace MvcKutuphane.Controllers
             uye.OKUL = p.OKUL;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult UyeKitapGecmisi(int id, string search, int page = 1)
+        {
+            var uyeadi = db.TBLUYELER.Where(e => e.ID == id).Select(s => s.AD + " " + s.SOYAD).FirstOrDefault();
+            ViewBag.uye1 = uyeadi;
+            var uye = from x in db.TBLHAREKET select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                uye = uye.Where(x => x.TBLUYELER.DURUM == true && x.TBLKITAP.AD.ToUpper().Contains(search.ToUpper()) || x.TBLPERSONEL.PERSONEL.ToUpper().Contains(search.ToUpper()));
+            }
+            return View(uye.Where(x => x.TBLUYELER.DURUM == true && x.UYE==id).ToList().ToPagedList(page, 10));
         }
     }
 }

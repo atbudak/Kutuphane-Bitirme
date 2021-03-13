@@ -18,7 +18,7 @@ namespace MvcKutuphane.Controllers
             var ktp = from x in db.TBLKITAP select x;
             if (!string.IsNullOrEmpty(search))
             {
-                ktp = ktp.Where(x => x.AD.ToUpper().Contains(search.ToUpper()));
+                ktp = ktp.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) || x.TBLYAZAR.AD.ToUpper().Contains(search.ToUpper()) || x.TBLYAZAR.SOYAD.ToUpper().Contains(search.ToUpper()));
             }
             return View(ktp.ToList().ToPagedList(page,10));
         }

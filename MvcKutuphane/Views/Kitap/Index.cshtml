@@ -54,7 +54,7 @@
                     <td>@x.BASIMYIL</td>
                     <td>@x.YAYINEVI</td>
                     <td>@x.SAYFA</td>
-                    <td>@x.DURUM</td>
+                    <td>@if (x.DURUM == true) { <p class="text-success font-weight-bold">Mevcut</p>}else{<p class="text-danger font-weight-bold">Mevcut Değil</p>}</td>
                     <td><a href="/Kitap/KitapGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
                     <td>@Html.ActionLink("Sil", "KitapSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
                 </tr>

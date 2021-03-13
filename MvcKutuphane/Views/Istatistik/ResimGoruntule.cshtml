@@ -29,7 +29,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Resim Yolu</th>
                 <th scope="col">Detay</th>
-                <th scope="col">Durum</th>
+                <th scope="col">Sliderda Gözüküyor Mu?</th>
                 <th scope="col">Güncelle</th>
                 <th scope="col">Sil</th>
             </tr>
@@ -41,7 +41,7 @@
                     <td>@x.ID</td>
                     <td>~/web/slider_img/@x.RESIMYOLU</td>
                     <td>@x.RESIMDETAY</td>
-                    <td>@x.DURUM</td>
+                    <td>@if (x.DURUM == true) { <p class="text-success font-weight-bold">Gözüküyor</p>}else{<p class="text-danger font-weight-bold">Gözükmüyor</p>}</td>
                     <td><a href="/Istatistik/ResimGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
                     <td>@Html.ActionLink("Sil", "ResimYoluSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
                 </tr>
