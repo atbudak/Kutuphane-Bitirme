@@ -7,11 +7,10 @@
 }
 
 
-<div class="mw-500 text-center bg-transparent">
+<div class="mw-500 text-center bg-transparent mb-4">
     <h1 class="sketchy text-center">Bize Ulaşın Gelen Mesajlar</h1>
 </div>
-<br />
-<br />
+
 @using (@Html.BeginForm("Index", "BizeUlasin", FormMethod.Get))
 {
     <div class="pull-right">
@@ -22,34 +21,35 @@
         <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
     </div>
 }
-
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Adı</th>
-            <th scope="col">Soyadı</th>
-            <th scope="col">Mail Adresi</th>
-            <th scope="col">Konu</th>
-            <th scope="col">Mesaj</th>
-            <th scope="col">Cevapla</th>
-            <th scope="col">Sil</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var x in Model.Where(x => x.DURUM == true))
-        {
+<div class="overflow-auto col-lg-12">
+    <table class="table">
+        <thead class="thead-dark">
             <tr>
-                <td>@x.ID</td>
-                <td>@x.AD</td>
-                <td>@x.SOYAD</td>
-                <td>@x.MAIL</td>
-                <td>@x.KONU</td>
-                <td>@x.MESAJ</td>
-                <td><a href="/BizeUlasin/MesajGetir/@x.ID" class="btn btn-success text-center">Cevapla</a></td>
-                <td>@Html.ActionLink("Sil", "MesajSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                <th scope="col">ID</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Soyadı</th>
+                <th scope="col">Mail Adresi</th>
+                <th scope="col">Konu</th>
+                <th scope="col">Mesaj</th>
+                <th scope="col">Cevapla</th>
+                <th scope="col">Sil</th>
             </tr>
-        }
-    </tbody>
-</table>
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+        </thead>
+        <tbody>
+            @foreach (var x in Model.Where(x => x.DURUM == true))
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.AD</td>
+                    <td>@x.SOYAD</td>
+                    <td>@x.MAIL</td>
+                    <td>@x.KONU</td>
+                    <td>@x.MESAJ</td>
+                    <td><a href="/BizeUlasin/MesajGetir/@x.ID" class="btn btn-success text-center">Cevapla</a></td>
+                    <td>@Html.ActionLink("Sil", "MesajSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</div>

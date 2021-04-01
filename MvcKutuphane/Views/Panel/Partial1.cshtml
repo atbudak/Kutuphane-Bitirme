@@ -1,0 +1,34 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@model List<TBLDUYURULAR>
+
+@{ 
+    var renk = "";
+}
+
+@foreach (var x in Model.Take(7))
+{
+
+    if (x.KATEGORI == "Yeni Kitap") { renk = "text-success"; }else if (x.KATEGORI=="Kitap Teslim Tarihleri") { renk = "text-warning "; }
+    else if (x.KATEGORI == "İletişim") { renk = "text-info"; } else if (x.KATEGORI == "Üye Bilgileri") { renk = "text-secondary "; }
+    else if (x.KATEGORI == "Diğer") { renk = " text-fuchsia "; } else { renk = "text-blue "; }
+    <!-- Post -->
+    <div class="post">
+        <div class="user-block">
+            <img class="img-circle img-bordered-sm" src="/webpanel/css/megaphone.png" alt="user image">
+            <span class="username">
+                <a href="#" class="@renk">@x.KATEGORI</a>
+            </span>
+            <span class="description">@Convert.ToDateTime(x.TARIH).ToString("dd MMMM yyyy")</span>
+        </div>
+        <!-- /.user-block -->
+        <p>
+            Duyuru :
+            @x.ICERIK
+
+        </p>
+
+    </div>
+
+    <!-- /.post -->
+
+}

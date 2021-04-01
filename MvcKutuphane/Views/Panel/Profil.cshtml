@@ -1,0 +1,307 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLUYELER
+@{
+    ViewBag.Title = "Profil";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+    var defaultresim = "/webpanel/css/default-profile.jpg";
+    var resim = "";
+}
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    @*<link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">*@
+    @*<link href="~/webpanel/Profil/all.min.css" rel="stylesheet" />*@
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Theme style -->
+
+    <link href="~/webpanel/Profil/adminlte.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- Navbar -->
+    <!-- Content Wrapper. Contains page content -->
+    <!-- Content Header (Page header) -->
+
+ 
+
+
+    <!-- Main content -->
+
+    <section class="content mt-5">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+
+
+                    <!-- Profile Image -->
+
+                    <div class="card card-primary card-outline">
+
+                        <div class="card-body box-profile">
+
+                            <div class="text-center">
+                                @if(ViewBag.dg7== null) { resim = defaultresim; } else { resim = ViewBag.dg7; }
+                                <img class="profile-user-img img-fluid img-circle"
+                                     src="@resim"
+                                     alt="Kullanıcı profil resmi"
+                                     style="width:172px;">
+                                    
+                            </div>
+
+
+
+                            <h3 class="profile-username text-center">@ViewBag.dg1 @ViewBag.dg2</h3>
+
+
+
+                            <p class="text-muted text-center">Kütüphane Üyesi</p>
+
+
+
+                            <ul class="list-group list-group-unbordered mb-3">
+
+                                <li class="list-group-item">
+
+                                    <b>Alınan Kitap</b> <a class="float-right">@ViewBag.dg8</a>
+
+                                </li>
+
+                                <li class="list-group-item">
+
+                                    <b>Gelen Mesaj Sayısı</b> <a class="float-right">@ViewBag.dg9</a>
+
+                                </li>
+
+                                <li class="list-group-item">
+
+                                    <b>Duyuru Sayısı</b> <a class="float-right">@ViewBag.dg10</a>
+
+                                </li>
+
+                            </ul>
+
+
+
+                            <a href="/Panel/Index" class="btn btn-primary btn-block"><b>Hesabım</b></a>
+
+                        </div>
+
+                        <!-- /.card-body -->
+
+                    </div>
+
+                    <!-- /.card -->
+                    <!-- About Me Box -->
+
+                    <div class="card card-primary">
+
+                        <div class="card-header">
+
+                            <h3 class="card-title">Hakkımda</h3>
+
+                        </div>
+
+                        <!-- /.card-header -->
+
+                        <div class="card-body">
+
+                            <strong><i class="fa fa-book mr-1"></i> Okul</strong>
+
+
+
+                            <p class="text-muted">
+
+                                @ViewBag.dg3
+
+                            </p>
+
+                            <hr>
+                            <strong><i class="fa fa-map-marker mr-1"></i> Telefon</strong>
+                            <p class="text-muted">@ViewBag.dg4</p>
+                            <hr>
+                            <strong><i class="fa fa-pencil mr-1"></i> Kullanıcı Adı</strong>
+
+                            <p class="text-muted">
+
+                                @ViewBag.dg5
+
+                            </p>
+
+                            <hr>
+
+                            <strong><i class="fa fa-envelope-o mr-1"></i> Mail Adresi</strong>
+                            <p class="text-muted">
+                                @ViewBag.dg6
+                            </p>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+
+                <!-- /.col -->
+
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Duyuru</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Profil Bilgisi</a></li>
+                            </ul>
+
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="active tab-pane" id="activity">
+                                    @Html.Action("Partial1", "Panel")
+                                </div>
+                                    <div class="tab-pane" id="settings">
+
+                                        <form class="form-horizontal">
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Ad</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.AD)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Soyad</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.SOYAD)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Kullanıcı Adı</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.KULLANICIADI)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Mail Adresi</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.MAIL)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Telefon</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.TELEFON)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Fotoğraf</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.FOTOGRAF)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Okul</label>
+                                                <div class="col-sm-10">
+                                                    <label class="form-control">
+                                                        @Html.DisplayFor(x => x.OKUL)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="offset-sm-2 col-sm-10">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            Güncelleme yapmak için Ayarlar -> Hesabım sayfasını ziyaret ediniz.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="offset-sm-2 col-sm-10">
+                                                    <a href="/Panel/Index" class="btn btn-danger">Hesabım</a>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                    <!-- /.tab-pane -->
+
+                                </div>
+
+                                <!-- /.tab-content -->
+
+                            </div><!-- /.card-body -->
+
+                    </div>
+
+                    <!-- /.nav-tabs-custom -->
+
+                </div>
+
+                <!-- /.col -->
+
+            </div>
+
+            <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+    <!-- /.content -->
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+
+    <!-- /.control-sidebar -->
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    @*<script src="../../plugins/jquery/jquery.min.js"></script>*@
+    <script src="~/webpanel/Profil/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    @*<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+    <script src="~/webpanel/Profil/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    @*<script src="../../dist/js/adminlte.min.js"></script>*@
+    <script src="~/webpanel/Profil/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    @*<script src="../../dist/js/demo.js"></script>*@
+    <script src="~/webpanel/Profil/demo.js"></script>
+</body>
+</html>
+

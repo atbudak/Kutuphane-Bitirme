@@ -7,7 +7,7 @@ using System.Web.Security;
 using MvcKutuphane.Models.EntityFramework;
 
 namespace MvcKutuphane.Controllers
-{
+{   [AllowAnonymous]
     public class LoginController : Controller
     {
         DBLIBRARYEntities db = new DBLIBRARYEntities();
@@ -27,7 +27,7 @@ namespace MvcKutuphane.Controllers
                 Session["Ad"] = bilgiler.AD.ToString();
                 Session["Soyad"] = bilgiler.SOYAD.ToString();
 
-                return RedirectToAction("Index", "Panel");
+                return RedirectToAction("Profil", "Panel");
             }
             else
             {

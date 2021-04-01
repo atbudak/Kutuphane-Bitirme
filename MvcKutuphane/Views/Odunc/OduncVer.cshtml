@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Ödünç Verme Sayfası</h2>
-<br />
-<br />
+<div class="mw-500 text-center bg-transparent mt-5 mb-5">
+    <h1 class="sketchy text-center">Ödünç Verme Sayfası</h1>
+</div>
 
 @using (Html.BeginForm("OduncVer", "Odunc", FormMethod.Post))
 {
@@ -21,7 +21,7 @@
     @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Personel</label>
-    @Html.DropDownListFor(x=>x.PERSONEL,(List<SelectListItem>)ViewBag.per1, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.PERSONEL, (List<SelectListItem>)ViewBag.per1, new { @class = "form-control" })
     @*@Html.TextBoxFor(x => x.PERSONEL, new { @class = "form-control" })*@
     @*@Html.ValidationMessageFor(x => x.PERSONEL, "", new { @style = "color:black;opacity:.7" })*@
     <br />

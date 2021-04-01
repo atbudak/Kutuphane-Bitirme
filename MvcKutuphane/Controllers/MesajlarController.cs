@@ -22,7 +22,7 @@ namespace MvcKutuphane.Controllers
             {
                 ktp = ktp.Where(x => x.GONDEREN.ToUpper().Contains(search.ToUpper()) && x.ALICI == uyemail);
             }
-            return View(ktp.Where(x=>x.ALICI==uyemail).ToList().ToPagedList(page, 10));
+            return View(ktp.Where(x => x.ALICI == uyemail).ToList().ToPagedList(page, 10));
         }
         public ActionResult Giden(string search, int page = 1)
         {
@@ -50,6 +50,16 @@ namespace MvcKutuphane.Controllers
             m.TARIH = date;
             db.SaveChanges();
             return RedirectToAction("Giden","Mesajlar");
+        }
+
+        public PartialViewResult Partial1()
+        {
+            var uyemail = (string)Session["Mail"];
+            var gelensayisi = db.TBLMESAJ.Where(x => x.ALICI == uyemail).Count();
+            var gidensayisi = db.TBLMESAJ.Where(x => x.GONDEREN == uyemail).Count();
+            ViewBag.g1 = gelensayisi;
+            ViewBag.g2 = gidensayisi;
+            return PartialView();
         }
     }
 }

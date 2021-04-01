@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DBLIBRARYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULLANICIADI" Type="varchar" MaxLength="30" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="30" />
+          <Property Name="SIFREDOGRULA" Type="varchar" MaxLength="30" />
+          <Property Name="MAIL" Type="varchar" MaxLength="50" />
+          <Property Name="ROLES" Type="varchar" MaxLength="5" />
+          <Property Name="DURUM" Type="bit" />
+        </EntityType>
         <EntityType Name="TBLCEZALAR">
           <Key>
             <PropertyRef Name="ID" />
@@ -232,6 +244,7 @@
         <Function Name="EnFazlaKitapYazar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="TercihEdilenKitap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DBLIBRARYModelStoreContainer">
+          <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLCEZALAR" EntityType="Self.TBLCEZALAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLDUYURULAR" EntityType="Self.TBLDUYURULAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
@@ -498,6 +511,7 @@
           <FunctionImport Name="BasariliPersonel" ReturnType="Collection(String)" />
           <EntitySet Name="TBLMESAJ" EntityType="DBLIBRARYModel.TBLMESAJ" />
           <EntitySet Name="TBLDUYURULAR" EntityType="DBLIBRARYModel.TBLDUYURULAR" />
+          <EntitySet Name="TBLADMIN" EntityType="DBLIBRARYModel.TBLADMIN" />
         </EntityContainer>
         <Association Name="FK_TBLHAREKET_TBLPERSONEL1">
           <End Type="DBLIBRARYModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -560,6 +574,18 @@
           <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="DURUM" Type="Boolean" />
           <Property Name="TARIH" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TBLADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULLANICIADI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SIFREDOGRULA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROLES" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -718,6 +744,19 @@
                 <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
                 <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLADMIN">
+            <EntityTypeMapping TypeName="DBLIBRARYModel.TBLADMIN">
+              <MappingFragment StoreEntitySet="TBLADMIN">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+                <ScalarProperty Name="ROLES" ColumnName="ROLES" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="SIFREDOGRULA" ColumnName="SIFREDOGRULA" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

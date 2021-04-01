@@ -11,15 +11,13 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class TBLDUYURULAR
     {
         public int ID { get; set; }
         public string KATEGORI { get; set; }
         public string ICERIK { get; set; }
         public Nullable<bool> DURUM { get; set; }
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public Nullable<System.DateTime> TARIH { get; set; }
     }
 }

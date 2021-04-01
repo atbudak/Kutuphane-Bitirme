@@ -23,27 +23,28 @@
         <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
     </div>
 }
-
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Kitap Adı</th>
-            <th scope="col">Personel</th>
-            <th scope="col">Alış Tarihi</th>
-            <th scope="col">İade Tarihi</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var x in Model)
-        {
+<div class="overflow-auto col-lg-12">
+    <table class="table">
+        <thead class="thead-dark">
             <tr>
-                <td>@x.TBLKITAP.AD</td>
-                <td>@x.TBLPERSONEL.PERSONEL</td>
-                <td>@Convert.ToDateTime(x.ALISTARIHI).ToString("MM/dd/yyyy")</td>
-                <td>@Convert.ToDateTime(x.UYEGETIRTARIH).ToString("MM/dd/yyyy")</td>
-
+                <th scope="col">Kitap Adı</th>
+                <th scope="col">Personel</th>
+                <th scope="col">Alış Tarihi</th>
+                <th scope="col">İade Tarihi</th>
             </tr>
-        }
-    </tbody>
-</table>
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("UyeKitapGecmisi", new { page }))
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.TBLKITAP.AD</td>
+                    <td>@x.TBLPERSONEL.PERSONEL</td>
+                    <td>@Convert.ToDateTime(x.ALISTARIHI).ToString("MM/dd/yyyy")</td>
+                    <td>@Convert.ToDateTime(x.UYEGETIRTARIH).ToString("MM/dd/yyyy")</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("UyeKitapGecmisi", new { page }))
+</div>
