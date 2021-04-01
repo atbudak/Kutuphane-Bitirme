@@ -6,11 +6,10 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="mw-500 text-center bg-transparent">
+<div class="mw-500 text-center bg-transparent mb-4">
     <h1 class="sketchy text-center">Duyurularımız</h1>
 </div>
-<br />
-<br />
+
 @using (@Html.BeginForm("Index", "Duyuru", FormMethod.Get))
 {
     <div class="pull-right">
@@ -21,28 +20,29 @@
         <input type="submit" class="btn btn-default btn-group-lg" name="search" value="Ara">
     </div>
 }
-
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Duyuru No</th>
-            <th scope="col">Kategori</th>
-            <th scope="col">Tarih</th>
-            <th scope="col">İçerik</th>
-            <th scope="col">Sil</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var x in Model)
-        {
+<div class="overflow-auto col-lg-12">
+    <table class="table">
+        <thead class="thead-dark">
             <tr>
-                <td>@x.ID</td>
-                <td>@x.KATEGORI</td>
-                <td>@Convert.ToDateTime(x.TARIH).ToString("MM.dd.yyyy")</td>
-                <td><a href="/Duyuru/DuyuruDetay/@x.ID" class="btn btn-default btn-outline-dark text-center">Detay</a></td>
-                <td>@Html.ActionLink("Sil", "DuyuruSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                <th scope="col">Duyuru No</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">İçerik</th>
+                <th scope="col">Sil</th>
             </tr>
-        }
-    </tbody>
-</table>
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.KATEGORI</td>
+                    <td>@Convert.ToDateTime(x.TARIH).ToString("MM.dd.yyyy")</td>
+                    <td><a href="/Duyuru/DuyuruDetay/@x.ID" class="btn btn-default btn-outline-dark text-center">Detay</a></td>
+                    <td>@Html.ActionLink("Sil", "DuyuruSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</div>

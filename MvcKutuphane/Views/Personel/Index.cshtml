@@ -3,7 +3,7 @@
 @using PagedList.Mvc;
 @model PagedList.IPagedList<TBLPERSONEL>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Personeller";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
@@ -12,13 +12,12 @@
 <html lang="tr">
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Personeller</title>
 </head>
 <body>
-    <div class="mw-500 text-center bg-transparent">
+    <div class="mw-500 text-center bg-transparent mb-4 mt-2">
         <h1 class="sketchy text-center">Personeller</h1>
     </div>
-    <br /><br />
+
     @using (@Html.BeginForm("Index", "Personel", FormMethod.Get))
     {
         <div class="pull-right">
@@ -31,29 +30,30 @@
         </div>
     }
 
-
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Personel</th>
-                <th scope="col">Güncelle</th>
-                <th scope="col">Sil</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var x in Model)
-            {
+    <div class="overflow-auto col-lg-12">
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <td>@x.ID</td>
-                    <td>@x.PERSONEL</td>
-                    <td><a href="/Personel/PersonelGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
-                    <td>@Html.ActionLink("Sil", "PersonelSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                    <th scope="col">ID</th>
+                    <th scope="col">Personel</th>
+                    <th scope="col">Güncelle</th>
+                    <th scope="col">Sil</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.ID</td>
+                        <td>@x.PERSONEL</td>
+                        <td><a href="/Personel/PersonelGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
+                        <td>@Html.ActionLink("Sil", "PersonelSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+    </div>
 </body>
 </html>
 

@@ -7,7 +7,7 @@ using MvcKutuphane.Models.EntityFramework;
 using MvcKutuphane.Models.Classes;
 
 namespace MvcKutuphane.Controllers
-{
+{   [AllowAnonymous]
     public class VitrinController : Controller
     {
         DBLIBRARYEntities db = new DBLIBRARYEntities();
@@ -22,6 +22,7 @@ namespace MvcKutuphane.Controllers
             return View(cs);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index(TBLILETISIM t)
         {
             var tr = db.TBLILETISIM.Add(t);

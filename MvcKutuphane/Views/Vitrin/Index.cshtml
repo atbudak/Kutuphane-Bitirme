@@ -12,11 +12,11 @@
             <img class="d-block w-100" src="~/web/slider_img/default.jpg" style="max-height:1000px">
         </div>
         @foreach (var a in Model.slider1.Where(x => x.DURUM == true))
-            {
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="~/web/slider_img/@a.RESIMYOLU" style="max-height:1000px">
-                </div>
-            }
+        {
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/web/slider_img/@a.RESIMYOLU" style="max-height:1000px">
+            </div>
+        }
 
     </div>
     <a class="carousel-control-prev" style="width:10% !important" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -47,7 +47,7 @@
 
         <!-- Portfolio Grid Items -->
         <div class="row">
-            @foreach (var x in Model.Kitap1)
+            @foreach (var x in Model.Kitap1.Take(9))
             {
                 <!-- Portfolio Item 1 -->
                 <div class="col-md-6 col-lg-4">
@@ -120,6 +120,7 @@
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                 @using (Html.BeginForm("Index", "Vitrin", FormMethod.Post))
                 {
+                    @Html.AntiForgeryToken()
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -161,9 +162,12 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Gönder</button>
                         </div>
-                        <div class="col-md-8 m-auto" style="visibility:hidden">
+
+                        <div class="col-md-8 m-auto invisible">
                             <p class="text-center text-success"> Mesajınız Başarıyla Yollanmıştır.</p>
                         </div>
+
+
                     </form>
                 }
             </div>

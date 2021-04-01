@@ -220,6 +220,7 @@
     <FunctionImport Name="BasariliPersonel" ReturnType="Collection(String)" />
     <EntitySet Name="TBLMESAJ" EntityType="DBLIBRARYModel.TBLMESAJ" />
     <EntitySet Name="TBLDUYURULAR" EntityType="DBLIBRARYModel.TBLDUYURULAR" />
+    <EntitySet Name="TBLADMIN" EntityType="DBLIBRARYModel.TBLADMIN" />
   </EntityContainer>
   <Association Name="FK_TBLHAREKET_TBLPERSONEL1">
     <End Type="DBLIBRARYModel.TBLPERSONEL" Role="TBLPERSONEL" Multiplicity="0..1" />
@@ -282,5 +283,17 @@
     <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="DURUM" Type="Boolean" />
     <Property Name="TARIH" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBLADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KULLANICIADI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SIFREDOGRULA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ROLES" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DURUM" Type="Boolean" />
   </EntityType>
 </Schema>

@@ -8,11 +8,10 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="mw-500 text-center bg-transparent">
+<div class="mw-500 text-center bg-transparent mb-4">
     <h1 class="sketchy text-center">Pasif Üyeler</h1>
 </div>
-<br />
-<br />
+
 @using (@Html.BeginForm("PasifUye", "Uye", FormMethod.Get))
 {
     <div class="pull-right">
@@ -25,30 +24,31 @@
     </div>
 }
 
-
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Adı</th>
-            <th scope="col">Soyadı</th>
-            <th scope="col">Telefon</th>
-            <th scope="col">Okul</th>
-            <th scope="col">Güncelle</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var x in Model)
-        {
+<div class="overflow-auto col-lg-12">
+    <table class="table">
+        <thead class="thead-dark">
             <tr>
-                <td>@x.ID</td>
-                <td>@x.AD</td>
-                <td>@x.SOYAD</td>
-                <td>@x.TELEFON</td>
-                <td>@x.OKUL</td>
-                <td><a href="/Uye/AktifEt/@x.ID" class="btn btn-success text-center">Aktif Et</a></td>
+                <th scope="col">ID</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Soyadı</th>
+                <th scope="col">Telefon</th>
+                <th scope="col">Okul</th>
+                <th scope="col">Güncelle</th>
             </tr>
-        }
-    </tbody>
-</table>
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("PasifUye", new { page }))
+        </thead>
+        <tbody>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ID</td>
+                    <td>@x.AD</td>
+                    <td>@x.SOYAD</td>
+                    <td>@x.TELEFON</td>
+                    <td>@x.OKUL</td>
+                    <td><a href="/Uye/AktifEt/@x.ID" class="btn btn-success text-center">Aktif Et</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("PasifUye", new { page }))
+</div>

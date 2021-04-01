@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using MvcKutuphane.Models.EntityFramework;
 
 namespace MvcKutuphane.Controllers
-{
+{   [AllowAnonymous]
     public class KayitOlController : Controller
     {
         // GET: KayitOl

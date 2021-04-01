@@ -4,12 +4,12 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<h2>Üye Ekle</h2>
-<br />
-<br />
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Üye Ekle</h1>
+</div>
 <form method="post">
     <label style="margin-bottom:10px;">Adı</label>
-    @Html.TextBoxFor(x => x.AD, new { @class = "form-control", placeholder = "adı giriniz..." , required="required"})
+    @Html.TextBoxFor(x => x.AD, new { @class = "form-control", placeholder = "adı giriniz...", required = "required" })
     @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
     <br />
     <label style="margin-bottom:10px;">Soyadı</label>

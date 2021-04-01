@@ -13,13 +13,11 @@
 <html lang="tr">
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Üyleler</title>
 </head>
 <body>
-    <div class="mw-500 text-center bg-transparent">
+    <div class="mw-500 text-center bg-transparent mb-4">
         <h1 class="sketchy text-center">Üyeler</h1>
     </div>
-    <br /><br />
     @using (@Html.BeginForm("Index", "Uye", FormMethod.Get))
     {
         <div class="pull-right">
@@ -32,36 +30,37 @@
         </div>
     }
 
-
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Adı</th>
-                <th scope="col">Soyadı</th>
-                <th scope="col">Telefon</th>
-                <th scope="col">Okul</th>
-                <th scope="col">Güncelle</th>
-                <th scope="col">Sil</th>
-                <th scope="col">Kitap Geçmişi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var x in Model)
-            {
+    <div class="overflow-auto col-lg-12">
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <td>@x.ID</td>
-                    <td>@x.AD</td>
-                    <td>@x.SOYAD</td>
-                    <td>@x.TELEFON</td>
-                    <td>@x.OKUL</td>
-                    <td><a href="/Uye/UyeGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
-                    <td>@Html.ActionLink("Sil", "UyeSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
-                    <td><a href="/Uye/UyeKitapGecmisi/@x.ID" class="btn btn-default text-center" style="background-color:#ffc000;color:white">Görüntüle</a></td>
+                    <th scope="col">ID</th>
+                    <th scope="col">Adı</th>
+                    <th scope="col">Soyadı</th>
+                    <th scope="col">Telefon</th>
+                    <th scope="col">Okul</th>
+                    <th scope="col">Güncelle</th>
+                    <th scope="col">Sil</th>
+                    <th scope="col">Kitap Geçmişi</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.ID</td>
+                        <td>@x.AD</td>
+                        <td>@x.SOYAD</td>
+                        <td>@x.TELEFON</td>
+                        <td>@x.OKUL</td>
+                        <td><a href="/Uye/UyeGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
+                        <td>@Html.ActionLink("Sil", "UyeSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
+                        <td><a href="/Uye/UyeKitapGecmisi/@x.ID" class="btn btn-default text-center" style="background-color:#ffc000;color:white">Görüntüle</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+    </div>
 </body>
 </html>
