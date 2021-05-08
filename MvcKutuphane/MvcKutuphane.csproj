@@ -53,7 +53,25 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
@@ -142,8 +160,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\BizeUlasinController.cs" />
+    <Compile Include="Controllers\CanliDestekController.cs" />
     <Compile Include="Controllers\DuyuruController.cs" />
     <Compile Include="Controllers\IslemController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
@@ -161,6 +180,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChatHub.cs" />
     <Compile Include="Models\Classes\Class1.cs" />
     <Compile Include="Models\EntityFramework\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -176,9 +196,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EntityFramework\TBLADMIN.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntityFramework\TBLCEZALAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -219,6 +236,7 @@
     <Compile Include="Models\EntityFramework\TBLYAZAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +266,8 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.min.js" />
     <Content Include="sidebar-01\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="sidebar-01\css\bootstrap\mixins\_screen-reader.css" />
     <Content Include="sidebar-01\css\bootstrap\mixins\_visibility.css" />
@@ -463,11 +483,13 @@
     <Content Include="webregister\images\bg.jpg" />
     <Content Include="webregister\index.html" />
     <Content Include="webregister\w3layouts-License.txt" />
+    <Content Include="web\css\chat.css" />
     <Content Include="web\css\freelancer.css" />
     <Content Include="web\css\freelancer.min.css" />
     <Content Include="web\css\index.css" />
     <Content Include="web\gulpfile.js" />
     <Content Include="web\img\avataaars.svg" />
+    <Content Include="web\img\avatar.png" />
     <Content Include="web\img\BirYilbasiOykusu.jpg" />
     <Content Include="web\img\droxdeney.jpg" />
     <Content Include="web\img\hakkimizda.jpg" />
@@ -854,7 +876,8 @@
     <Content Include="Views\Panel\Profil.cshtml" />
     <Content Include="Views\Panel\Partial1.cshtml" />
     <Content Include="Views\Mesajlar\Partial1.cshtml" />
-    <Content Include="Views\AdminLogin\Login.cshtml" />
+    <Content Include="Views\CanliDestek\Anasayfa.cshtml" />
+    <Content Include="web\css\chatYetkili.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

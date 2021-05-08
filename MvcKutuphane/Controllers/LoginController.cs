@@ -7,15 +7,17 @@ using System.Web.Security;
 using MvcKutuphane.Models.EntityFramework;
 
 namespace MvcKutuphane.Controllers
-{   [AllowAnonymous]
+{
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         DBLIBRARYEntities db = new DBLIBRARYEntities();
         // GET: Login
         public ActionResult GirisYap()
-        {            
+        {
             return View();
         }
+
         [HttpPost]
         public ActionResult GirisYap(TBLUYELER t)
         {
@@ -27,7 +29,15 @@ namespace MvcKutuphane.Controllers
                 Session["Ad"] = bilgiler.AD.ToString();
                 Session["Soyad"] = bilgiler.SOYAD.ToString();
 
-                return RedirectToAction("Profil", "Panel");
+                if (bilgiler.YETKILER.Contains("Yetkili"))
+                {
+                    return RedirectToAction("Anasayfa", "CanliDestek");
+                }
+                else
+                {
+                    return RedirectToAction("Profil", "Panel");
+                }
+
             }
             else
             {

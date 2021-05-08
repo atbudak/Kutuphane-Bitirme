@@ -20,7 +20,7 @@ namespace MvcKutuphane.Controllers
             {
                 ara = ara.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) && x.DURUM==true);
             }
-            return View(ara.Where(X=>X.DURUM==true).ToList().ToPagedList(page,10));
+            return View(ara.Where(X=>X.DURUM==true).ToList().ToPagedList(page,5));
         }
         public ActionResult PasifKategori(string search, int page = 1)
         {

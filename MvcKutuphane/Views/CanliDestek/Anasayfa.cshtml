@@ -1,0 +1,227 @@
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+@section styles{
+
+    <link href="~/web/css/chatYetkili.css" rel="stylesheet" />
+
+}
+
+
+<div class="messaging">
+    <div class="inbox_msg">
+        <div class="inbox_people">
+            <div class="headind_srch">
+                <div class="recent_heading">
+                    <h4>Recent</h4>
+                </div>
+                @*<div class="srch_bar">
+                        <div class="stylish-input-group">
+                            <input type="text" class="search-bar" placeholder="Search">
+                            <span class="input-group-addon">
+                                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                            </span>
+                        </div>
+                    </div>*@
+            </div>
+            <div class="inbox_chat">
+                <div class="chat_list">
+                    <div class="chat_people">
+                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                        <div class="chat_ib"><h5>kk@kk</h5><p></p> </div>
+                    </div>
+                </div>
+                <div class="chat_list">
+                    <div class="chat_people">
+                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                        <div class="chat_ib"><h5>e@e</h5><p></p> </div>
+                    </div>
+                </div>
+                <div class="chat_list">
+                    <div class="chat_people">
+                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                        <div class="chat_ib"><h5>a@a</h5><p></p> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mesgs">
+            <div class="msg_history">
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                    <div class="received_msg">
+                        <div class="received_withd_msg">
+                            <p>
+                                Test which is a new approach to have all
+                                solutions
+                            </p>
+                            <span class="time_date"> 11:01 AM    |    June 9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outgoing_msg">
+                    <div class="sent_msg">
+                        <p>
+                            Test which is a new approach to have all
+                            solutions
+                        </p>
+                        <span class="time_date"> 11:01 AM    |    June 9</span>
+                    </div>
+                </div>
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                    <div class="received_msg">
+                        <div class="received_withd_msg">
+                            <p>Test, which is a new approach to have</p>
+                            <span class="time_date"> 11:01 AM    |    Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outgoing_msg">
+                    <div class="sent_msg">
+                        <p>Apollo University, Delhi, India Test</p>
+                        <span class="time_date"> 11:01 AM    |    Today</span>
+                    </div>
+                </div>
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                    <div class="received_msg">
+                        <div class="received_withd_msg">
+                            <p>
+                                We work directly with our designers and suppliers,
+                                and sell direct to you, which means quality, exclusive
+                                products, at a price anyone can afford.
+                            </p>
+                            <span class="time_date"> 11:01 AM    |    Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="type_msg">
+                <div class="input_msg_write">
+                    <input type="text" class="write_msg" placeholder="Type a message" />
+                    <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section scripts{
+
+        <!--Reference the SignalR library. -->
+        <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+        <!--Reference the autogenerated SignalR hub script. -->
+        <script src="~/signalr/hubs"></script>
+        <script>
+            var users = [];
+
+            $(document).ready(function () {
+
+
+                $(document).on("click", '.chat_list', function (e) {
+                    $('.chat_list').removeClass('active_chat');
+                    $(this).addClass('active_chat');
+
+                    userEmail = $(this).children().children().find('h5').html();
+                    console.log(userEmail);
+
+                    if (users.find(x => x.Email == userEmail) != undefined && users.find(x => x.Email == userEmail).Chat.length > 0) {
+
+                        users.find(x => x.Email == userEmail).Chat.forEach((item, index) => {
+
+                        });
+
+                    }
+                    else {
+                        $('.msg_history').html('');
+                    }
+
+                });
+
+            });
+
+        $(function () { //This section will run whenever we call Chat.cshtml page
+
+            var objHub = $.connection.chatHub;
+
+            loadClientMethods(objHub);
+
+            $.connection.hub.start().done(function () {
+
+                loadEvents(objHub);
+
+            });
+        });
+
+        function loadClientMethods(objHub) {
+
+            objHub.client.getUser = function (email) {
+
+                users.push({ Email: email, Chat: [] });
+
+                var gelenUser = $('<div class="chat_list"><div class="chat_people"><div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>' +
+                        '<div class="chat_ib"><h5>'+ email + '</h5><p></p> </div></div>');
+
+                $('.inbox_chat').append(gelenUser);
+            }
+
+            objHub.client.getMessageFromUser = function (email, message) {
+
+
+                var user = users.find(x => x.Email == email);
+
+                user.Chat.push({ FromMe: false, Message: message });
+
+            }
+
+            objHub.client.closeUserChat = function (email) {
+
+                var user = users.find(x => x.Email == email);
+
+                for (var i = 0; i < users.length; i++) {
+
+                    if (users[i] === user) {
+
+                        users.splice(i, 1);
+                    }
+                }
+
+                $('.chat_list').each((index, item) => {
+
+                    userEmail = $(item).children().children().find('h5').html();
+
+                    if (userEmail == email) {
+                        item.remove();
+                    }
+                });
+
+            }
+
+
+        }
+
+        function loadEvents(objHub) {
+
+            objHub.server.connect('@User.Identity.Name');
+
+            $('#btnSendMessage').click(function () {
+
+                var msg = $("#txtMessage").val();
+
+                if (msg.length > 0) {
+
+                    var userName = $('#hUserName').val();
+                    // <<<<<-- ***** Return to Server [  SendMessageToGroup  ] *****
+                    objHub.server.sendMessageToGroup(userName, msg);
+
+                }
+            });
+        }
+
+
+        </script>
+    }

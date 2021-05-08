@@ -10,6 +10,7 @@ using System.Web.Security;
 
 namespace MvcKutuphane.Controllers
 {
+    [Authorize]
     public class PanelController : Controller
     {
         DBLIBRARYEntities db = new DBLIBRARYEntities();
