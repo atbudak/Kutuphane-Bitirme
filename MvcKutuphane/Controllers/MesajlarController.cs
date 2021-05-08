@@ -13,7 +13,9 @@ namespace MvcKutuphane.Controllers
     public class MesajlarController : Controller
     {
         DBLIBRARYEntities db = new DBLIBRARYEntities();
+
         // GET: Mesajlar
+        [Authorize(Roles = "Admin,User")]
         public ActionResult Index(string search, int page = 1)
         {
             var ktp = from x in db.TBLMESAJ select x;
@@ -24,6 +26,8 @@ namespace MvcKutuphane.Controllers
             }
             return View(ktp.Where(x => x.ALICI == uyemail).ToList().ToPagedList(page, 10));
         }
+
+
         public ActionResult Giden(string search, int page = 1)
         {
             var ktp = from x in db.TBLMESAJ select x;

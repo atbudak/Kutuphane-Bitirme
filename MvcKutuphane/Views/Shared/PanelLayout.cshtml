@@ -28,6 +28,8 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
+    @RenderSection("styles", false)
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -61,33 +63,45 @@
 
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                        <li class="nav-item">
-                            <a href="/Panel/Profil" class="nav-link"><i class="nav-icon fa fa-user-circle-o"></i><p>Profilim</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Mesajlar/Index" class="nav-link"><i class="nav-icon fa fa-envelope"></i><p>Mesajlar</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Mesajlar/YeniMesaj" class="nav-link"><i class="nav-icon fa fa-envelope-open-o"></i><p>Yeni Mesaj</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Panel/Duyurular" class="nav-link"><i class="nav-icon fa fa-anchor"></i><p>Duyurular</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Panel/Kitaplarim" class="nav-link"><i class="nav-icon fa fa-book"></i><p>Kitaplarım</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Vitrin/Index" target="_blank" class="nav-link"><i class="nav-icon fa fa-image"></i><p>Vitrin</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Panel/Index" class="nav-link"><i class="nav-icon fa fa-user"></i><p>Hesabım</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="nav-icon fa fa-wrench"></i><p>Yardım</p></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Panel/Logout" class="nav-link"><i class="nav-icon fa fa-sign-out"></i><p>Çıkış</p></a>
-                        </li>
+
+                        @{ if (Request.IsAuthenticated && User.IsInRole("Yetkili"))
+                            {
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="nav-icon fa fa-headphones"></i><p>Canlı Destek Hattı</p></a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a href="/Panel/Profil" class="nav-link"><i class="nav-icon fa fa-user-circle-o"></i><p>Profilim</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Mesajlar/Index" class="nav-link"><i class="nav-icon fa fa-envelope"></i><p>Mesajlar</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Mesajlar/YeniMesaj" class="nav-link"><i class="nav-icon fa fa-envelope-open-o"></i><p>Yeni Mesaj</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Duyurular" class="nav-link"><i class="nav-icon fa fa-anchor"></i><p>Duyurular</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Kitaplarim" class="nav-link"><i class="nav-icon fa fa-book"></i><p>Kitaplarım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Vitrin/Index" target="_blank" class="nav-link"><i class="nav-icon fa fa-image"></i><p>Vitrin</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Index" class="nav-link"><i class="nav-icon fa fa-user"></i><p>Hesabım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="nav-icon fa fa-wrench"></i><p>Yardım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Logout" class="nav-link"><i class="nav-icon fa fa-sign-out"></i><p>Çıkış</p></a>
+                                </li>
+                            }
+                        }
+
                     </ul>
 
                 </nav>
@@ -170,6 +184,8 @@
         $.widget.bridge('uibutton', $.ui.button)
 
     </script>
+
+    @RenderSection("scripts", false)
 
 
 </body>

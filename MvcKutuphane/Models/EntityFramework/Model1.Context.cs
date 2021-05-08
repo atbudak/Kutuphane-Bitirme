@@ -27,20 +27,20 @@ namespace MvcKutuphane.Models.EntityFramework
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<TBLADMIN> TBLADMIN { get; set; }
         public virtual DbSet<TBLCEZALAR> TBLCEZALAR { get; set; }
+        public virtual DbSet<TBLDUYURULAR> TBLDUYURULAR { get; set; }
+        public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
         public virtual DbSet<TBLHAREKET> TBLHAREKET { get; set; }
+        public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
         public virtual DbSet<TBLKASA> TBLKASA { get; set; }
         public virtual DbSet<TBLKATEGORI> TBLKATEGORI { get; set; }
         public virtual DbSet<TBLKITAP> TBLKITAP { get; set; }
+        public virtual DbSet<TBLMESAJ> TBLMESAJ { get; set; }
         public virtual DbSet<TBLPERSONEL> TBLPERSONEL { get; set; }
+        public virtual DbSet<TBLRESIMLER> TBLRESIMLER { get; set; }
         public virtual DbSet<TBLUYELER> TBLUYELER { get; set; }
         public virtual DbSet<TBLYAZAR> TBLYAZAR { get; set; }
-        public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
-        public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
-        public virtual DbSet<TBLRESIMLER> TBLRESIMLER { get; set; }
-        public virtual DbSet<TBLMESAJ> TBLMESAJ { get; set; }
-        public virtual DbSet<TBLDUYURULAR> TBLDUYURULAR { get; set; }
-        public virtual DbSet<TBLADMIN> TBLADMIN { get; set; }
     
         public virtual ObjectResult<string> EnFazlaKitapYazar()
         {

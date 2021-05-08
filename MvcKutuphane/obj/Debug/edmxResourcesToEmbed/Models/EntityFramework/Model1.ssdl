@@ -138,6 +138,7 @@
     <Property Name="TELEFON" Type="varchar" MaxLength="20" />
     <Property Name="OKUL" Type="varchar" MaxLength="100" />
     <Property Name="DURUM" Type="bit" />
+    <Property Name="YETKILER" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="TBLYAZAR">
     <Key>

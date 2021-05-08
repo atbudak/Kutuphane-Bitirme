@@ -17,7 +17,7 @@ namespace MvcKutuphane.Models.EntityFramework
         public int ID { get; set; }
         public string KATEGORI { get; set; }
         public string ICERIK { get; set; }
-        public Nullable<bool> DURUM { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
+        public Nullable<bool> DURUM { get; set; }
     }
 }
