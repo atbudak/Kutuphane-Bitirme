@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Giriş</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/webpanel/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <!-- icheck bootstrap -->
+    <link href="~/webpanel/Profil/icheck-bootstrap.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/webpanel/Profil/adminlte.css" rel="stylesheet" />
+    <!-- summernote -->
+    <link href="~/webpanel/Profil/summernote-bs4.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <span><b>Admin</b>Giriş </span>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Panele erişmek için giriş yapınız.</p>
+                @using (Html.BeginForm("Login", "AdminLogin", FormMethod.Post)) {
+                    @Html.AntiForgeryToken()
+                    <div class="input-group mb-3">
+                        <input type="text" name="KULLANICIADI" class="form-control" placeholder="Mail Adresi">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fa fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" name="SIFRE" class="form-control" placeholder="Şifre">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fa fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                          
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+               
+                }
+                <!-- /.social-auth-links -->
+
+                <p class="mb-1">
+                    <a href="#">Şifremi Unuttum.</a>
+                </p>
+               
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+    <!-- /.login-box -->
+
+    <!-- jQuery -->
+
+    <script src="~/webpanel/Profil/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+
+    <script src="~/webpanel/Profil/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+
+    <script src="~/webpanel/Profil/adminlte.min.js"></script>
+
+</body>
+</html>

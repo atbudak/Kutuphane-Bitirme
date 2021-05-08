@@ -6,6 +6,10 @@
     <FunctionImport Name="EnAktifUye" ReturnType="Collection(String)" />
     <FunctionImport Name="TercihEdilenKitap" ReturnType="Collection(String)" />
     <FunctionImport Name="BasariliPersonel" ReturnType="Collection(String)" />
+<<<<<<< HEAD
+=======
+    <EntitySet Name="TBLADMIN" EntityType="DBLIBRARYModel.TBLADMIN" />
+>>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
     <EntitySet Name="TBLCEZALAR" EntityType="DBLIBRARYModel.TBLCEZALAR" />
     <EntitySet Name="TBLDUYURULAR" EntityType="DBLIBRARYModel.TBLDUYURULAR" />
     <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" />
@@ -48,6 +52,21 @@
       <End Role="TBLKITAP" EntitySet="TBLKITAP" />
     </AssociationSet>
   </EntityContainer>
+<<<<<<< HEAD
+=======
+  <EntityType Name="TBLADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KULLANICIADI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SIFREDOGRULA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ROLES" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DURUM" Type="Boolean" />
+  </EntityType>
+>>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
   <EntityType Name="TBLCEZALAR">
     <Key>
       <PropertyRef Name="ID" />

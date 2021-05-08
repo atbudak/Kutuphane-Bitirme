@@ -161,6 +161,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+ HEAD
+=======
+    <Compile Include="Controllers\AdminLoginController.cs" />
+>>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
     <Compile Include="Controllers\BizeUlasinController.cs" />
     <Compile Include="Controllers\CanliDestekController.cs" />
     <Compile Include="Controllers\DuyuruController.cs" />
@@ -876,6 +880,10 @@
     <Content Include="Views\Panel\Profil.cshtml" />
     <Content Include="Views\Panel\Partial1.cshtml" />
     <Content Include="Views\Mesajlar\Partial1.cshtml" />
+ HEAD
+=======
+    <Content Include="Views\AdminLogin\Login.cshtml" />
+>>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
     <Content Include="Views\CanliDestek\Anasayfa.cshtml" />
     <Content Include="web\css\chatYetkili.css" />
   </ItemGroup>

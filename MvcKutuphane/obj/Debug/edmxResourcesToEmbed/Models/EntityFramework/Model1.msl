@@ -6,6 +6,22 @@
     <FunctionImportMapping FunctionImportName="EnAktifUye" FunctionName="DBLIBRARYModel.Store.EnAktifUye" />
     <FunctionImportMapping FunctionImportName="TercihEdilenKitap" FunctionName="DBLIBRARYModel.Store.TercihEdilenKitap" />
     <FunctionImportMapping FunctionImportName="BasariliPersonel" FunctionName="DBLIBRARYModel.Store.BasariliPersonel" />
+<<<<<<< HEAD
+=======
+    <EntitySetMapping Name="TBLADMIN">
+      <EntityTypeMapping TypeName="DBLIBRARYModel.TBLADMIN">
+        <MappingFragment StoreEntitySet="TBLADMIN">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="ROLES" ColumnName="ROLES" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="SIFREDOGRULA" ColumnName="SIFREDOGRULA" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+>>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
     <EntitySetMapping Name="TBLCEZALAR">
       <EntityTypeMapping TypeName="DBLIBRARYModel.TBLCEZALAR">
         <MappingFragment StoreEntitySet="TBLCEZALAR">
