@@ -39,6 +39,7 @@
                     <th scope="col">Soyadı</th>
                     <th scope="col">Telefon</th>
                     <th scope="col">Okul</th>
+                    <th scope="col">Yetki</th>
                     <th scope="col">Güncelle</th>
                     <th scope="col">Sil</th>
                     <th scope="col">Kitap Geçmişi</th>
@@ -53,6 +54,7 @@
                         <td>@x.SOYAD</td>
                         <td>@x.TELEFON</td>
                         <td>@x.OKUL</td>
+                        <td>@x.YETKILER</td>
                         <td><a href="/Uye/UyeGetir/@x.ID" class="btn btn-info text-center">Güncelle</a></td>
                         <td>@Html.ActionLink("Sil", "UyeSil", new { id = x.ID }, new { @class = "btn btn-danger text-center", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz?')" })</td>
                         <td><a href="/Uye/UyeKitapGecmisi/@x.ID" class="btn btn-default text-center" style="background-color:#ffc000;color:white">Görüntüle</a></td>

@@ -1,6 +1,8 @@
 ﻿@model MvcKutuphane.Models.Classes.Class1
 @{
     Layout = "~/Views/Shared/VitrinLayout.cshtml";
+    var ms = TempData["mesaj"];
+    var img = "";
 }
 
 <link href="~/web/css/index.css" rel="stylesheet" />
@@ -49,16 +51,18 @@
         <div class="row">
             @foreach (var x in Model.Kitap1.Take(12))
             {
+                if (x.KITAPRESIM != null) { img = x.KITAPRESIM; }
+                else { img = "/Content/Galeri/assets/images/no-image.jpg"; }
                 <!-- Portfolio Item 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                    <div class="portfolio-item mx-auto" @*data-toggle="modal" data-target="#portfolioModal1"*@>
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
+                                <a href="/Vitrin/Galeri"><i class="fas fa-plus fa-3x" style="color: #1abc9c; filter: drop-shadow(6px 8px 3px #040404bf);" title="kitaplar"></i></a>
                             </div>
                         </div>
                         <div class="text-center">
-                            <img class="img-fluid" src="@x.KITAPRESIM" alt="">
+                            <img class="img-fluid" src="@img" alt="">
                         </div>
                     </div>
                 </div>
@@ -163,8 +167,8 @@
                             <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Gönder</button>
                         </div>
 
-                        <div class="col-md-8 m-auto invisible">
-                            <p class="text-center text-success"> Mesajınız Başarıyla Yollanmıştır.</p>
+                        <div class="col-md-8 m-auto">
+                            <p class="text-center text-success"> @ms</p>
                         </div>
 
 
@@ -225,10 +229,7 @@
         </button>
     </div>
     <div class="chatbox__body">
-        <div class="chatbox__body__message chatbox__body__message--left">
-            <img src="~/web/img/avatar.png" alt="Picture">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+
     </div>
     <form class="chatbox__credentials">
         <h6><a id="chatbox-info">Sisteme emailiniz ile kayıt olduktan sonra canlı destek hattından yararlanabilirsiniz..</a></h6>
@@ -298,6 +299,18 @@
                 $('.chatbox').removeClass('chatbox--empty');
             }
 
+            objHub.client.GetMessageFromEmployee = function (msg) {
+
+                var newMsgBody = $('<div class="chatbox__body__message chatbox__body__message--left">' +
+                    '<img src="/web/img/avatar.png" alt="Picture">' +
+                    '<p>' + msg + '</p>' +
+                    '</div >');
+
+                $('.chatbox__body').append(newMsgBody);
+
+                $(".chatbox__body").stop().animate({ scrollTop: $(".chatbox__body")[0].scrollHeight }, 1000);
+            }
+
             objHub.client.HasLostConnection = function () {
 
 
@@ -322,8 +335,22 @@
 
 
             $('#btnMessageSend').click(function () {
-                objHub.server.sendMessageToEmployee($('#canliDestekMessage').val().trim());
+                var msg = $('#canliDestekMessage').val().trim();
+
+                objHub.server.sendMessageToEmployee(msg);
+                $('#canliDestekMessage').val("");
+
+                var newMsgBody = $('<div class="chatbox__body__message chatbox__body__message--right">' +
+                    '<img src="/web/img/avatar.png" alt="Picture">' +
+                    '<p>' + msg + '</p>' +
+                    '</div >');
+
+                $('.chatbox__body').append(newMsgBody);
+
+                $(".chatbox__body").stop().animate({ scrollTop: $(".chatbox__body")[0].scrollHeight }, 1000);
+
             });
+
         }
 
 

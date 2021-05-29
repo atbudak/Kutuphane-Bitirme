@@ -84,7 +84,6 @@ C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\PagedList.dll
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\PagedList.Mvc.dll
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\PagedList.xml
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\PagedList.Mvc.xml
-C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csprojAssemblyReference.cache
 C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bin\MvcKutuphane.dll.config
 C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bin\MvcKutuphane.dll
 C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bin\MvcKutuphane.pdb
@@ -185,7 +184,6 @@ C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bi
 C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bin\Microsoft.Owin.xml
 C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Lenovo\Desktop\Kutuphane-Bitirme-main\Kutuphane-Bitirme\MvcKutuphane\bin\Microsoft.Owin.Security.xml
-<<<<<<< HEAD
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.Owin.dll
@@ -199,5 +197,4 @@ C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.AspNet.Signa
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.Owin.xml
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\bin\Microsoft.Owin.Security.xml
-=======
->>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
+C:\Users\ahmet\source\repos\MvcKutuphane\MvcKutuphane\obj\Debug\MvcKutuphane.csprojAssemblyReference.cache

@@ -161,13 +161,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
- HEAD
-=======
-    <Compile Include="Controllers\AdminLoginController.cs" />
->>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
     <Compile Include="Controllers\BizeUlasinController.cs" />
     <Compile Include="Controllers\CanliDestekController.cs" />
     <Compile Include="Controllers\DuyuruController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\IslemController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
@@ -248,6 +245,35 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\error-404\css\style.css" />
+    <Content Include="Content\error-404\img\bg.jpg" />
+    <Content Include="Content\error-404\index.html" />
+    <Content Include="Content\error-404\readme.txt" />
+    <Content Include="Content\Galeri\assets\css\flex-slider.css" />
+    <Content Include="Content\Galeri\assets\css\fontawesome.css" />
+    <Content Include="Content\Galeri\assets\css\owl.css" />
+    <Content Include="Content\Galeri\assets\css\templatemo-sixteen.css" />
+    <Content Include="Content\Galeri\assets\fonts\flexslider-icon.svg" />
+    <Content Include="Content\Galeri\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Galeri\assets\fonts\slick.svg" />
+    <Content Include="Content\Galeri\assets\images\galeri-heads.jpg" />
+    <Content Include="Content\Galeri\assets\images\no-image.jpg" />
+    <Content Include="Content\Galeri\assets\js\accordions.js" />
+    <Content Include="Content\Galeri\assets\js\custom.js" />
+    <Content Include="Content\Galeri\assets\js\isotope.js" />
+    <Content Include="Content\Galeri\assets\js\owl.js" />
+    <Content Include="Content\Galeri\assets\js\slick.js" />
+    <Content Include="Content\Galeri\products.html" />
+    <Content Include="Content\Galeri\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\Galeri\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Galeri\vendor\jquery\jquery.js" />
+    <Content Include="Content\Galeri\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\Galeri\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\Galeri\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\_Kitaplarim.css" />
     <Content Include="css\font-awesome.css" />
@@ -560,6 +586,26 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Galeri\assets\fonts\Flaticon.woff" />
+    <Content Include="Content\Galeri\assets\fonts\flexslider-icon.eot" />
+    <Content Include="Content\Galeri\assets\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\Galeri\assets\fonts\flexslider-icon.woff" />
+    <Content Include="Content\Galeri\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Galeri\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Galeri\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Galeri\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Galeri\assets\fonts\FontAwesome.otf" />
+    <Content Include="Content\Galeri\assets\fonts\slick.eot" />
+    <Content Include="Content\Galeri\assets\fonts\slick.ttf" />
+    <Content Include="Content\Galeri\assets\fonts\slick.woff" />
+    <Content Include="Content\Galeri\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\Galeri\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\Galeri\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\Galeri\vendor\jquery\jquery.min.map" />
+    <Content Include="Content\Galeri\vendor\jquery\jquery.slim.min.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -580,7 +626,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
     <Content Include="Views\Kategori\KategoriEkle.cshtml" />
     <Content Include="Views\Kategori\KategoriGetir.cshtml" />
@@ -880,12 +925,16 @@
     <Content Include="Views\Panel\Profil.cshtml" />
     <Content Include="Views\Panel\Partial1.cshtml" />
     <Content Include="Views\Mesajlar\Partial1.cshtml" />
- HEAD
-=======
-    <Content Include="Views\AdminLogin\Login.cshtml" />
->>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
     <Content Include="Views\CanliDestek\Anasayfa.cshtml" />
     <Content Include="web\css\chatYetkili.css" />
+    <Content Include="Views\Error\Page403.cshtml" />
+    <Content Include="Views\Error\Page404.cshtml" />
+    <Content Include="Views\Mesajlar\MesajGoruntule.cshtml" />
+    <Content Include="Views\Mesajlar\CopKutusuGetir.cshtml" />
+    <Content Include="Views\Mesajlar\TaslakGetir.cshtml" />
+    <Content Include="Views\Mesajlar\OnemliGetir.cshtml" />
+    <Content Include="Views\Vitrin\Galeri.cshtml" />
+    <Content Include="Views\Shared\Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

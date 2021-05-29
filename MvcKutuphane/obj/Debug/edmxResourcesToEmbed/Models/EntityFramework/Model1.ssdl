@@ -94,6 +94,8 @@
     <Property Name="ICERIK" Type="varchar(max)" />
     <Property Name="TARIH" Type="smalldatetime" />
     <Property Name="DURUM" Type="bit" />
+    <Property Name="G_DURUM" Type="varchar" MaxLength="25" />
+    <Property Name="A_DURUM" Type="varchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="TBLPERSONEL">
     <Key>

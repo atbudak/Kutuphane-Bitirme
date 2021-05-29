@@ -10,29 +10,43 @@
 
 @using (Html.BeginForm("OduncVer", "Odunc", FormMethod.Post))
 {
-    <label style="margin-bottom:10px;">Üye ID</label>
-    @*@Html.TextBoxFor(x => x.UYE, new { @class = "form-control" })*@
-    @Html.DropDownListFor(k => k.UYE, (List<SelectListItem>)ViewBag.uye1, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.UYE, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Kitap ID</label>
-    @*@Html.TextBoxFor(x => x.KITAP, new { @class = "form-control" })*@
-    @Html.DropDownListFor(k => k.KITAP, (List<SelectListItem>)ViewBag.ktp1, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Personel</label>
-    @Html.DropDownListFor(x => x.PERSONEL, (List<SelectListItem>)ViewBag.per1, new { @class = "form-control" })
-    @*@Html.TextBoxFor(x => x.PERSONEL, new { @class = "form-control" })*@
-    @*@Html.ValidationMessageFor(x => x.PERSONEL, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Kitap Alış Tarihi</label>
-    <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()" readonly="readonly" />
-    @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Kitap İade Tarihi</label>
-    <input type="text" class="form-control" name="IADETARIH" value="@DateTime.Now.AddDays(15).ToShortDateString()" readonly="readonly" />
-    @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <br />
-    <button class="btn btn-info" style="margin:10px 0">Kitabı Ödünç Ver</button>
+    <div class="flex_container" style="width:1300px;">
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Üye ID</label>
+            @*@Html.TextBoxFor(x => x.UYE, new { @class = "form-control" })*@
+            @Html.DropDownListFor(k => k.UYE, (List<SelectListItem>)ViewBag.uye1, new { @class = "form-control" })
+            @*@Html.ValidationMessageFor(x => x.UYE, "", new { @style = "color:black;opacity:.7" })*@
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Kitap ID</label>
+            @*@Html.TextBoxFor(x => x.KITAP, new { @class = "form-control" })*@
+            @Html.DropDownListFor(k => k.KITAP, (List<SelectListItem>)ViewBag.ktp1, new { @class = "form-control" })
+            @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Personel</label>
+            @Html.DropDownListFor(x => x.PERSONEL, (List<SelectListItem>)ViewBag.per1, new { @class = "form-control" })
+            @*@Html.TextBoxFor(x => x.PERSONEL, new { @class = "form-control" })*@
+            @*@Html.ValidationMessageFor(x => x.PERSONEL, "", new { @style = "color:black;opacity:.7" })*@
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Kitap Alış Tarihi</label>
+            <input type="text" class="form-control" name="ALISTARIHI" value="@DateTime.Now.ToShortDateString()" readonly="readonly" />
+            @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Kitap İade Tarihi</label>
+            <input type="text" class="form-control" name="IADETARIH" value="@DateTime.Now.AddDays(15).ToShortDateString()" readonly="readonly" />
+            @*@Html.ValidationMessageFor(x => x.KITAP, "", new { @style = "color:black;opacity:.7" })*@
+            <br />
+        </div>
+
+        <div class="flex_col_0">
+            <button class="btn btn-info mt-2 pl-4 pr-4 float-lg-right" style="margin:10px 0">Kitabı Ödünç Ver</button>
+        </div>
+    </div>
 }

@@ -41,8 +41,7 @@ namespace MvcKutuphane.Models
         static Queue<KeyValuePair<string, string>> users = new Queue<KeyValuePair<string, string>>();
         static Dictionary<string, Employee> employers = new Dictionary<string, Employee>();
 
-
-        //-->>>>> ***** Receive Request From Client [  Connect  ] *****
+        //-->>>>> ** Receive Request From Client [  Connect  ] **
         [AllowAnonymous]
         public void Connect(string name, string email)
         {
@@ -66,7 +65,7 @@ namespace MvcKutuphane.Models
             }
         }
 
-        [System.Web.Mvc.Authorize(Roles ="Yetkili")]
+        [System.Web.Mvc.Authorize(Roles = "Yetkili")]
         public void Connect(string emailOfEmployee)
         {
             Employee emp = new Employee(Context.ConnectionId);
@@ -92,11 +91,26 @@ namespace MvcKutuphane.Models
             }
         }
 
+        [System.Web.Mvc.Authorize(Roles = "Yetkili")]
+        public void SendMessageToUser(string email, string msg)
+        {
+            foreach (var emp in employers.Where(x => x.Key == Context.ConnectionId))
+            {
+                foreach (var usr in emp.Value.users)
+                {
+                    if (email == usr.Value)
+                    {
+                        Clients.Client(usr.Key).GetMessageFromEmployee(msg);
+                    }
+                }
+            }
+        }
+
         public override Task OnDisconnected(bool stopCalled)
         {
             if (employers.Count > 0 && employers.Where(x => x.Key == Context.ConnectionId).Any())
             {
-                var emp =  employers.Where(x => x.Key == Context.ConnectionId).First();
+                var emp = employers.Where(x => x.Key == Context.ConnectionId).First();
 
                 emp.Value.CutOffConnections(Clients);
 

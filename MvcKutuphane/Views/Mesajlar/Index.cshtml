@@ -63,23 +63,22 @@
                         <div class="mailbox-controls">
 
                             <!-- Check all button -->
+                            @*<button type="button" class="btn btn-default btn-sm checkbox-toggle">
 
-                            <button type="button" class="btn btn-default btn-sm checkbox-toggle">
-
-                                <i class="fa fa-square"></i>
+                                    <i class="fa fa-square"></i>
 
 
-                            </button>
+                                </button>
 
-                            <div class="btn-group">
+                                <div class="btn-group">
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
 
-                            </div>
+                                </div>*@
 
                             <!-- /.btn-group -->
 
@@ -133,28 +132,51 @@
                         <div class="table-responsive mailbox-messages">
 
                             <table class="table table-hover table-striped">
-
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>Sil</th>
+                                        <th>Taslak</th>
+                                        <th>Önemli</th>
+                                        <th>Gönderen</th>
+                                        <th>Konu</th>
+                                        <th>Tarih</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
-                                    
+
                                     @foreach (var x in Model)
-                                    {                                        
+                                    {
                                         <tr>
 
-                                            <td>
+                                            @*<td>
 
                                                 <div class="icheck-primary">
 
-                                                    <input type="checkbox" value="" id="check2">
+                                                        <input type="checkbox" value="" id="check2">
 
-                                                    <label for="check2"></label>
+                                                        <label for="check2"></label>
 
-                                                </div>
+                                                    </div>
 
+                                            </td>*@
+                                            <td>
+                                                <a href="/Mesajlar/Trash/@x.ID" title="Mesajı Sil"><i class="fa fa-trash text-danger"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/Mesajlar/Taslak/@x.ID" title="Taslağa Kaydet"><i class="fa fa-file"></i></a>
+                                            </td>
+                                           
+                                            <td class="mailbox-star">
+                                                <a href="/Mesajlar/Important/@x.ID">
+                                                    @if (x.G_DURUM == "1")
+                                                    {<i class="fa fa-star text-warning"></i>}
+                                                    else
+                                                    {<i class="fa fa-star-o text-warning"></i>}
+                                                </a>
                                             </td>
 
-                                            <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-warning"></i></a></td>
-
-                                            <td class="mailbox-name"><a href="#">@x.GONDEREN</a></td>
+                                            <td class="mailbox-name"><a href="/Mesajlar/MesajGoruntule/@x.ID">@x.GONDEREN</a></td>
 
                                             <td class="mailbox-subject">
 
@@ -162,7 +184,6 @@
 
                                             </td>
 
-                                            <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
 
                                             <td class="mailbox-date">@Convert.ToDateTime(x.TARIH).ToString("dd.MM.yyyy")</td>
 
@@ -188,22 +209,21 @@
                         <div class="mailbox-controls">
 
                             <!-- Check all button -->
+                            @*<button type="button" class="btn btn-default btn-sm checkbox-toggle">
 
-                            <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+                                    <i class="fa fa-square"></i>
 
-                                <i class="fa fa-square"></i>
+                                </button>
 
-                            </button>
+                                <div class="btn-group">
 
-                            <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
-
-                            </div>
+                                </div>*@
 
                             <!-- /.btn-group -->
 

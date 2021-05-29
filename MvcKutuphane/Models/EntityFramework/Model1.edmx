@@ -99,6 +99,8 @@
           <Property Name="ICERIK" Type="varchar(max)" />
           <Property Name="TARIH" Type="smalldatetime" />
           <Property Name="DURUM" Type="bit" />
+          <Property Name="G_DURUM" Type="varchar" MaxLength="25" />
+          <Property Name="A_DURUM" Type="varchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="TBLPERSONEL">
           <Key>
@@ -285,10 +287,6 @@
           <FunctionImport Name="EnAktifUye" ReturnType="Collection(String)" />
           <FunctionImport Name="TercihEdilenKitap" ReturnType="Collection(String)" />
           <FunctionImport Name="BasariliPersonel" ReturnType="Collection(String)" />
-<<<<<<< HEAD
-=======
-          <EntitySet Name="TBLADMIN" EntityType="DBLIBRARYModel.TBLADMIN" />
->>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
           <EntitySet Name="TBLCEZALAR" EntityType="DBLIBRARYModel.TBLCEZALAR" />
           <EntitySet Name="TBLDUYURULAR" EntityType="DBLIBRARYModel.TBLDUYURULAR" />
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" />
@@ -331,21 +329,6 @@
             <End Role="TBLKITAP" EntitySet="TBLKITAP" />
           </AssociationSet>
           </EntityContainer>
-<<<<<<< HEAD
-=======
-        <EntityType Name="TBLADMIN">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KULLANICIADI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="SIFRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="SIFREDOGRULA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ROLES" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="DURUM" Type="Boolean" />
-        </EntityType>
->>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
         <EntityType Name="TBLCEZALAR">
           <Key>
             <PropertyRef Name="ID" />
@@ -450,6 +433,8 @@
           <Property Name="ICERIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="TARIH" Type="DateTime" Precision="0" />
           <Property Name="DURUM" Type="Boolean" />
+          <Property Name="G_DURUM" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="A_DURUM" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TBLPERSONEL">
           <Key>
@@ -593,22 +578,6 @@
           <FunctionImportMapping FunctionImportName="EnAktifUye" FunctionName="DBLIBRARYModel.Store.EnAktifUye" />
           <FunctionImportMapping FunctionImportName="TercihEdilenKitap" FunctionName="DBLIBRARYModel.Store.TercihEdilenKitap" />
           <FunctionImportMapping FunctionImportName="BasariliPersonel" FunctionName="DBLIBRARYModel.Store.BasariliPersonel" />
-<<<<<<< HEAD
-=======
-          <EntitySetMapping Name="TBLADMIN">
-            <EntityTypeMapping TypeName="DBLIBRARYModel.TBLADMIN">
-              <MappingFragment StoreEntitySet="TBLADMIN">
-                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
-                <ScalarProperty Name="ROLES" ColumnName="ROLES" />
-                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
-                <ScalarProperty Name="SIFREDOGRULA" ColumnName="SIFREDOGRULA" />
-                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
-                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
->>>>>>> 960fca48ac0db175b9af28ca1fd75f516bee15ad
           <EntitySetMapping Name="TBLCEZALAR">
             <EntityTypeMapping TypeName="DBLIBRARYModel.TBLCEZALAR">
               <MappingFragment StoreEntitySet="TBLCEZALAR">
@@ -703,6 +672,8 @@
           <EntitySetMapping Name="TBLMESAJ">
             <EntityTypeMapping TypeName="DBLIBRARYModel.TBLMESAJ">
               <MappingFragment StoreEntitySet="TBLMESAJ">
+                <ScalarProperty Name="A_DURUM" ColumnName="A_DURUM" />
+                <ScalarProperty Name="G_DURUM" ColumnName="G_DURUM" />
                 <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />

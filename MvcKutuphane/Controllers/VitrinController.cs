@@ -27,8 +27,18 @@ namespace MvcKutuphane.Controllers
         {
             var tr = db.TBLILETISIM.Add(t);
             tr.DURUM = true;
+            TempData["mesaj"] = "Mesajınız bize ulaştı. En yakın zamanda size dönüş sağlayacağız.";
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult Galeri(string search)
+        {
+            var ktp = from x in db.TBLKITAP select x;
+            if (!string.IsNullOrEmpty(search))
+            {
+                ktp.Where(x => x.AD.ToUpper().Contains(search.ToUpper()));
+            }            
+            return View(ktp.ToList());
         }
     }
 }

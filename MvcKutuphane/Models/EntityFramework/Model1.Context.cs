@@ -27,7 +27,6 @@ namespace MvcKutuphane.Models.EntityFramework
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TBLADMIN> TBLADMIN { get; set; }
         public virtual DbSet<TBLCEZALAR> TBLCEZALAR { get; set; }
         public virtual DbSet<TBLDUYURULAR> TBLDUYURULAR { get; set; }
         public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }

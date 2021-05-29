@@ -50,6 +50,7 @@ namespace MvcKutuphane.Controllers
         {
             db.TBLUYELER.Add(u);
             u.DURUM = true;
+            u.YETKILER = "Kullanici";
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -77,6 +78,7 @@ namespace MvcKutuphane.Controllers
             uye.FOTOGRAF = p.FOTOGRAF;
             uye.TELEFON = p.TELEFON;
             uye.OKUL = p.OKUL;
+            uye.YETKILER = p.YETKILER;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

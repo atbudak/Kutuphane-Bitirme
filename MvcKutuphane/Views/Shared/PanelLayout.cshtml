@@ -69,9 +69,24 @@
                                 <li class="nav-item">
                                     <a href="#" class="nav-link"><i class="nav-icon fa fa-headphones"></i><p>Canlı Destek Hattı</p></a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Index" class="nav-link"><i class="nav-icon fa fa-user"></i><p>Hesabım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Vitrin/Index" target="_blank" class="nav-link"><i class="nav-icon fa fa-image"></i><p>Vitrin</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Logout" class="nav-link"><i class="nav-icon fa fa-sign-out"></i><p>Çıkış</p></a>
+                                </li>
                             }
                             else
                             {
+                                if (User.IsInRole("Admin"))
+                                {
+                                    <li class="nav-item">
+                                        <a href="/Istatistik/Index" class="nav-link"><i class="nav-icon fa fa-angle-double-up"></i><p>Admin Panel</p></a>
+                                    </li>
+                                }
                                 <li class="nav-item">
                                     <a href="/Panel/Profil" class="nav-link"><i class="nav-icon fa fa-user-circle-o"></i><p>Profilim</p></a>
                                 </li>
@@ -93,7 +108,7 @@
                                 <li class="nav-item">
                                     <a href="/Panel/Index" class="nav-link"><i class="nav-icon fa fa-user"></i><p>Hesabım</p></a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" data-toggle="modal" data-target="#portfolioModal1">
                                     <a href="#" class="nav-link"><i class="nav-icon fa fa-wrench"></i><p>Yardım</p></a>
                                 </li>
                                 <li class="nav-item">
@@ -187,6 +202,49 @@
 
     @RenderSection("scripts", false)
 
+
+    <!--pop-up-->
+
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="fa fa-times"></i>
+                    </span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Yardım Menüsü</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="~/web/img/portfolio/cabin.png" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">Öğrenci paneli sayfamızda almış olduğunuz kitapları takip edebilir, kütüphane personeli ya da diğer kullanıcılarımızla iletişime geçebilirsiniz.Vitrin kısmından kütüphanemizde halihazırda bulunan ve ödünçte bulunan kitapları görüntüleyebilirsiniz.Kütüphanemizde bulunan kitapların tamamı Galeri sayfasından ulaşabilirsiniz.</p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                                    <i class="fa fa-times fa-fw"></i>
+                                    Ekranı Kapat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop-up-->
 
 </body>
 

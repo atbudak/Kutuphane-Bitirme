@@ -1,8 +1,5 @@
-﻿
-@{
-    ViewBag.Title = "Anasayfa";
-    Layout = "~/Views/Shared/PanelLayout.cshtml";
-}
+﻿@{ ViewBag.Title = "Anasayfa";
+                Layout = "~/Views/Shared/PanelLayout.cshtml"; }
 
 @section styles{
 
@@ -28,78 +25,38 @@
                     </div>*@
             </div>
             <div class="inbox_chat">
-                <div class="chat_list">
-                    <div class="chat_people">
-                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                        <div class="chat_ib"><h5>kk@kk</h5><p></p> </div>
-                    </div>
-                </div>
-                <div class="chat_list">
-                    <div class="chat_people">
-                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                        <div class="chat_ib"><h5>e@e</h5><p></p> </div>
-                    </div>
-                </div>
-                <div class="chat_list">
-                    <div class="chat_people">
-                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                        <div class="chat_ib"><h5>a@a</h5><p></p> </div>
-                    </div>
-                </div>
+                @*<div class="chat_list">
+                        <div class="chat_people">
+                            <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                            <div class="chat_ib"><h5>kk@kk</h5><p></p> </div>
+                        </div>
+                    </div>*@
             </div>
         </div>
 
         <div class="mesgs">
             <div class="msg_history">
-                <div class="incoming_msg">
-                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                    <div class="received_msg">
-                        <div class="received_withd_msg">
+                @*<div class="incoming_msg">
+                        <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                        <div class="received_msg">
+                            <div class="received_withd_msg">
+                                <p>
+                                    Test which is a new approach to have all
+                                    solutions
+                                </p>
+                                <span class="time_date"> 11:01 AM    |    June 9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outgoing_msg">
+                        <div class="sent_msg">
                             <p>
                                 Test which is a new approach to have all
                                 solutions
                             </p>
                             <span class="time_date"> 11:01 AM    |    June 9</span>
                         </div>
-                    </div>
-                </div>
-                <div class="outgoing_msg">
-                    <div class="sent_msg">
-                        <p>
-                            Test which is a new approach to have all
-                            solutions
-                        </p>
-                        <span class="time_date"> 11:01 AM    |    June 9</span>
-                    </div>
-                </div>
-                <div class="incoming_msg">
-                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                    <div class="received_msg">
-                        <div class="received_withd_msg">
-                            <p>Test, which is a new approach to have</p>
-                            <span class="time_date"> 11:01 AM    |    Yesterday</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="outgoing_msg">
-                    <div class="sent_msg">
-                        <p>Apollo University, Delhi, India Test</p>
-                        <span class="time_date"> 11:01 AM    |    Today</span>
-                    </div>
-                </div>
-                <div class="incoming_msg">
-                    <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                    <div class="received_msg">
-                        <div class="received_withd_msg">
-                            <p>
-                                We work directly with our designers and suppliers,
-                                and sell direct to you, which means quality, exclusive
-                                products, at a price anyone can afford.
-                            </p>
-                            <span class="time_date"> 11:01 AM    |    Today</span>
-                        </div>
-                    </div>
-                </div>
+                    </div>*@
             </div>
             <div class="type_msg">
                 <div class="input_msg_write">
@@ -118,29 +75,43 @@
         <script src="~/signalr/hubs"></script>
         <script>
             var users = [];
+            var userEmail = "";
 
             $(document).ready(function () {
-
 
                 $(document).on("click", '.chat_list', function (e) {
                     $('.chat_list').removeClass('active_chat');
                     $(this).addClass('active_chat');
 
                     userEmail = $(this).children().children().find('h5').html();
-                    console.log(userEmail);
+
+                    $('.msg_history').html('');
 
                     if (users.find(x => x.Email == userEmail) != undefined && users.find(x => x.Email == userEmail).Chat.length > 0) {
 
                         users.find(x => x.Email == userEmail).Chat.forEach((item, index) => {
 
+                            if (!item.FromMe) {
+                                $('.msg_history').append('<div class= "incoming_msg">' +
+                                    '<div class="received_msg">' +
+                                    '<div class="received_withd_msg"><p>' + item.Message + '</p></div></div></div>');
+                            }
+                            else {
+                                $('.msg_history').append('<div class="outgoing_msg">' +
+                                    '<div class="sent_msg"><p>' + item.Message + '</p></div></div>');
+                            }
+
+
+                            $(".msg_history").stop().animate({ scrollTop: $(".msg_history")[0].scrollHeight }, 1000);
                         });
 
                     }
                     else {
                         $('.msg_history').html('');
                     }
-
                 });
+
+
 
             });
 
@@ -171,10 +142,27 @@
 
             objHub.client.getMessageFromUser = function (email, message) {
 
-
                 var user = users.find(x => x.Email == email);
-
                 user.Chat.push({ FromMe: false, Message: message });
+
+                if (userEmail == email) {
+
+                        var className1;
+
+                        if (true) {
+                            className1 = "incoming_msg";
+                        }
+                        else {
+                            className1 = "outgoing_msg";
+                        }
+
+                        $('.msg_history').append('<div class= "' + className1 + '">' +
+                            '<div class="received_msg">' +
+                            '<div class="received_withd_msg"><p>' + message + '</p></div></div></div>');
+
+                        $(".msg_history").stop().animate({ scrollTop: $(".msg_history")[0].scrollHeight }, 1000);
+
+                }
 
             }
 
@@ -208,18 +196,24 @@
 
             objHub.server.connect('@User.Identity.Name');
 
-            $('#btnSendMessage').click(function () {
+            $('.msg_send_btn').click(function (e) {
+                e.preventDefault();
+                var msg = $('.write_msg').val().trim();
 
-                var msg = $("#txtMessage").val();
+                objHub.server.sendMessageToUser(userEmail, msg);
+                $('.write_msg').val("");
 
-                if (msg.length > 0) {
+                var user = users.find(x => x.Email == userEmail);
+                user.Chat.push({ FromMe: true, Message: msg });
 
-                    var userName = $('#hUserName').val();
-                    // <<<<<-- ***** Return to Server [  SendMessageToGroup  ] *****
-                    objHub.server.sendMessageToGroup(userName, msg);
+                $('.msg_history').append('<div class="outgoing_msg">' +
+                    '<div class="sent_msg"><p>' + msg + '</p></div></div>');
 
-                }
+                $(".msg_history").stop().animate({ scrollTop: $(".msg_history")[0].scrollHeight }, 1000);
+
+                $(".chatbox_body").stop().animate({ scrollTop: $(".chatbox_body")[0].scrollHeight }, 1000);
             });
+
         }
 
 

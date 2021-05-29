@@ -11,15 +11,20 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web.Mvc;
+
     public partial class TBLMESAJ
     {
         public int ID { get; set; }
         public string GONDEREN { get; set; }
         public string ALICI { get; set; }
         public string KONU { get; set; }
+
+        [AllowHtml]
         public string ICERIK { get; set; }
         public Nullable<System.DateTime> TARIH { get; set; }
         public Nullable<bool> DURUM { get; set; }
+        public string G_DURUM { get; set; }
+        public string A_DURUM { get; set; }
     }
 }
