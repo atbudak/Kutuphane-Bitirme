@@ -11,7 +11,8 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLKITAP
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,11 +22,15 @@ namespace MvcKutuphane.Models.EntityFramework
         }
     
         public int ID { get; set; }
+
         public string AD { get; set; }
         public Nullable<byte> KATEGORI { get; set; }
         public Nullable<int> YAZAR { get; set; }
+
         public string BASIMYIL { get; set; }
+
         public string YAYINEVI { get; set; }
+
         public string SAYFA { get; set; }
         public Nullable<bool> DURUM { get; set; }
         public string KITAPRESIM { get; set; }

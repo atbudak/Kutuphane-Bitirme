@@ -11,12 +11,20 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLDUYURULAR
     {
         public int ID { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string KATEGORI { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string ICERIK { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
+        [DataType(DataType.Date , ErrorMessage = "Tarih formatýnda giriniz.")]
         public Nullable<System.DateTime> TARIH { get; set; }
         public Nullable<bool> DURUM { get; set; }
     }

@@ -8,22 +8,30 @@
     <h1 class="sketchy text-center">Duyuru Detay</h1>
 </div>
 
+<div class="flex_container">
+    <div class="flex_col_0">
+        <a href="/Duyuru/Index" class="btn btn-primary mt-2 ml-2 pl-4 pr-4 float-lg-right">Bütün Duyurular</a>
+        <a href="/Duyuru/YeniDuyuru" class="btn btn-success mt-2 pl-4 pr-4 float-lg-right">Duyuru Ekle</a>
+    </div>
+</div>
+
 @using (Html.BeginForm("DuyuruGuncelle", "Duyuru", FormMethod.Post))
 {
     <div class="d-flex">
         @Html.HiddenFor(x => x.ID)
         <div class="col-md-6">
             @Html.Label("Kategorisi")
-            @Html.TextBoxFor(x => x.KATEGORI, new { @class = "form-control mt-1 mb-3" })
-        </div><div class="col-md-6">
+            @Html.TextBoxFor(x => x.KATEGORI, new { @class = "form-control mt-1 mb-3", @readonly = "" })
+        </div>
+        <div class="col-md-6">
             @Html.Label("Tarihi")
-            @Html.TextBoxFor(x => x.TARIH, "{0:MM/dd/yyyy}", new { @class = "form-control mt-1 mb-3"})
+            @Html.TextBoxFor(x => x.TARIH, "{0:MM/dd/yyyy}", new { @class = "form-control mt-1 mb-3", required = "" })      
         </div>
     </div>
     <div class="col-md-12">
         @Html.Label("Mesaj")
-        @Html.TextAreaFor(x => x.ICERIK, new { @class = "form-control mt-1 mb-3" })
+        @Html.TextAreaFor(x => x.ICERIK, new { @class = "form-control mt-1 mb-3", required = "" })
     </div>
 
-    <button class="btn btn-success">Güncelle</button>
+    <button class="btn btn-success mt-2 pl-4 pr-4 float-lg-right">Güncelle</button>
 }

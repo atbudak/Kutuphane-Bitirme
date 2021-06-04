@@ -1,0 +1,32 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@model List<TBLHAKKIMIZDA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Hakkımızda</h1>
+</div>
+
+<div class="overflow-auto col-lg-12">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col" class="text-center">Açıklama</th>
+                <th scope="col">Detay</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in Model.Take(1))
+            {
+                <tr>
+                    <td style="vertical-align: inherit;">@x.ID</td>
+                    <td style="text-align:justify">@x.ACIKLAMA</td>
+                    <td style="vertical-align: inherit;"><a href="/Hakkimizda/HakkimizdaDetay/@x.ID" class="btn btn-default btn-outline-dark text-center">Detay</a></td> </tr>
+            }
+        </tbody>
+    </table>
+</div>

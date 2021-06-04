@@ -11,10 +11,13 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLHAKKIMIZDA
     {
         public byte ID { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string ACIKLAMA { get; set; }
     }
 }

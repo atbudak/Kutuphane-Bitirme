@@ -7,20 +7,32 @@
 
 @using (Html.BeginForm("ResimGuncelle", "Istatistik", FormMethod.Post))
 {
-    <h2>Resim Bilgi Güncelleme</h2>
-    <br />
-    @Html.HiddenFor(x => x.ID)
-    <br />
-    @Html.Label("Resim Yolu")
-    @Html.TextBoxFor(x => x.RESIMYOLU, new { @class = "form-control", @readonly = "" })
-    <br />
-    @Html.Label("Resim Detayı")
-    @Html.TextBoxFor(x => x.RESIMDETAY, new { @class = "form-control", required = "" })
-    <br />
-    @Html.Label("Slidera Eklenecek Mi?")
-    @Html.CheckBox("DURUM", true, new { @class = "form-check-label ml-2" })
-    <br />
-    <br />
-    <button class="btn btn-info">Güncelle</button>
 
+    <div class="mw-500 text-center bg-transparent mb-4 mt-2">
+        <h1 class="sketchy text-center">Resim Bilgi Güncelleme</h1>
+    </div>
+
+    <div class="flex_container" style="max-width:1300px">
+        @Html.HiddenFor(x => x.ID)
+        <br />
+        <div class="flex_col_1">
+            @Html.Label("Resim Yolu")
+            @Html.TextBoxFor(x => x.RESIMYOLU, new { @class = "form-control", @readonly = "" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            @Html.Label("Resim Detayı")
+            @Html.TextBoxFor(x => x.RESIMDETAY, new { @class = "form-control", required = "" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            @Html.Label("Slidera Eklenecek Mi?")
+            @Html.CheckBox("DURUM", true, new { @class = "form-check-label ml-2" })
+            <br />
+        </div>
+        <br />
+        <div class="flex_col_0">
+            <button class="btn btn-info mt-2 pl-4 pr-4 float-lg-right">Güncelle</button>
+        </div>
+    </div>
 }

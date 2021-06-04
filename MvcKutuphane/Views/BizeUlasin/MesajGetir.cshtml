@@ -31,11 +31,9 @@
 @using (Html.BeginForm("CevapYolla", "BizeUlasin", FormMethod.Post))
 {
     <div class="col-md-12 mt-lg-5">
-        <label>Cevabı Giriniz</label>
-        @Html.TextArea("CEVAP", new { @class = "form-control", required = "" })
+        <label>Cevabınızı Mail üzerinden yollayınız.</label>       
         <br />
-        <br />
-        <button class="btn btn-success" >Cevapla</button>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" class="btn btn-success" target="_blank" >Cevapla</a>
     </div>
 }
 

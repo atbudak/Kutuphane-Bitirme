@@ -10,28 +10,47 @@
 <br />
 <br />
 
+<div class="flex_container" style="max-width:1300px">
+    <div class="flex_col_0">
+        <a href="/Kitap/Index" class="btn btn-primary mt-2 ml-2 pl-4 pr-4 float-lg-right">Kitaplar</a>
+    </div>
+</div>
+
 <form method="post">
     @Html.HiddenFor(x => x.ID)
-    <label style="margin-bottom:10px;">Adı</label>
-    @Html.TextBoxFor(x => x.AD, new { @class = "form-control", required = "" })
-    @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Kategori</label>
-    @Html.DropDownListFor(k => k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.ktg1, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Yazar</label>
-    @Html.DropDownListFor(k => k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.yz1, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
-    <br />
-    <label style="margin-bottom:10px;">Basım Yılı</label>
-    @Html.TextBoxFor(x => x.BASIMYIL, new { @class = "form-control", required = "" })
-    <br />
-    <label style="margin-bottom:10px;">Yayınevi</label>
-    @Html.TextBoxFor(x => x.YAYINEVI, new { @class = "form-control", required = "" })
-    <br />
-    <label style="margin-bottom:10px;">Sayfa Sayısı</label>
-    @Html.TextBoxFor(x => x.SAYFA, new { @class = "form-control", required = "", Type = "number", min = "1" })
-    <br />
-    <button class="btn btn-success" style="margin:10px 0">Ekle</button>
+    <div class="flex_container" style="width:1300px;">
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Adı</label>
+            @Html.TextBoxFor(x => x.AD, new { @class = "form-control", required = "" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Kategori</label>
+            @Html.DropDownListFor(k => k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.ktg1, new { @class = "form-control"})
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Yazar</label>
+            @Html.DropDownListFor(k => k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.yz1, new { @class = "form-control"})
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Basım Yılı</label>
+            @Html.TextBoxFor(x => x.BASIMYIL, new { @class = "form-control", required = "" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Yayınevi</label>
+            @Html.TextBoxFor(x => x.YAYINEVI, new { @class = "form-control", required = "" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Sayfa Sayısı</label>
+            @Html.TextBoxFor(x => x.SAYFA, new { @class = "form-control", required = "", Type = "number", min = "1" })
+            <br />
+        </div>
+        <div class="flex_col_0">
+            <button class="btn btn-success mt-2 pl-4 pr-4 float-lg-right" style="margin:10px 0">Ekle</button>
+        </div>
+    </div>
 </form>

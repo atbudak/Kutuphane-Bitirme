@@ -49,6 +49,10 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult YazarEkle(TBLYAZAR y)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TBLYAZAR.Add(y);
             y.DURUM = true;
             db.SaveChanges();
@@ -63,6 +67,10 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult YazarGuncelle(TBLYAZAR y)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("YazarGetir/" + y.ID);
+            }
             var yz = db.TBLYAZAR.Find(y.ID);
             yz.AD = y.AD;
             yz.SOYAD = y.SOYAD;

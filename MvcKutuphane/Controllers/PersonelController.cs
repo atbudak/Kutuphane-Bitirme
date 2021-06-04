@@ -46,6 +46,10 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult PersonelEkle(TBLPERSONEL p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TBLPERSONEL.Add(p);
             p.DURUM = true;
             db.SaveChanges();
@@ -59,6 +63,10 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult PersonelGuncelle(TBLPERSONEL p)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("PersonelGetir/" + p.ID);
+            }
             var per = db.TBLPERSONEL.Find(p.ID);
             per.PERSONEL = p.PERSONEL;
             db.SaveChanges();

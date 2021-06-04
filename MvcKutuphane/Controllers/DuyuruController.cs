@@ -31,6 +31,10 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult YeniDuyuru(TBLDUYURULAR d)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TBLDUYURULAR.Add(d);
             d.DURUM = true;
             db.SaveChanges();
@@ -52,8 +56,11 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult DuyuruGuncelle(TBLDUYURULAR d)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("DuyuruDetay/" + d.ID);
+            }
             var duyuru = db.TBLDUYURULAR.Find(d.ID);
-            duyuru.KATEGORI = d.KATEGORI;
             duyuru.TARIH = d.TARIH;
             duyuru.ICERIK = d.ICERIK;
             db.SaveChanges();

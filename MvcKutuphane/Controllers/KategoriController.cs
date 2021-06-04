@@ -20,7 +20,7 @@ namespace MvcKutuphane.Controllers
             {
                 ara = ara.Where(x => x.AD.ToUpper().Contains(search.ToUpper()) && x.DURUM==true);
             }
-            return View(ara.Where(X=>X.DURUM==true).ToList().ToPagedList(page,5));
+            return View(ara.Where(X=>X.DURUM==true).ToList().ToPagedList(page,10));
         }
         public ActionResult PasifKategori(string search, int page = 1)
         {
@@ -47,6 +47,10 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult KategoriEkle(TBLKATEGORI p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TBLKATEGORI.Add(p);
             p.DURUM = true;
             db.SaveChanges();
@@ -66,6 +70,10 @@ namespace MvcKutuphane.Controllers
         }
         public ActionResult KategoriGuncelle(TBLKATEGORI k)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("KategoriGetir/" + k.ID);
+            }
             var kt = db.TBLKATEGORI.Find(k.ID);
             kt.AD = k.AD;
             db.SaveChanges();

@@ -41,6 +41,7 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult KitapEkle(TBLKITAP k)
         {
+          
             var ktg = db.TBLKATEGORI.Where(x => x.ID == k.TBLKATEGORI.ID).FirstOrDefault();
             var yz = db.TBLYAZAR.Where(x => x.ID == k.TBLYAZAR.ID).FirstOrDefault();
             k.DURUM = true;
@@ -69,6 +70,7 @@ namespace MvcKutuphane.Controllers
         }
         public ActionResult KitapGuncelle(TBLKITAP k)
         {
+         
             var bk = db.TBLKITAP.Find(k.ID);
             bk.AD = k.AD;
             bk.SAYFA = k.SAYFA;

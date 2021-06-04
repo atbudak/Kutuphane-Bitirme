@@ -11,7 +11,8 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLUYELER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,12 +23,24 @@ namespace MvcKutuphane.Models.EntityFramework
         }
     
         public int ID { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string AD { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string SOYAD { get; set; }
+
+        [DataType(DataType.Date, ErrorMessage = "Tarih formatýnda giriniz.")]
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string MAIL { get; set; }
         public string KULLANICIADI { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
+        [StringLength(maximumLength: 20, ErrorMessage = "Þifreniz 6 ile 20 karakter uzunluðunda olmalýdýr.", MinimumLength = 6)]
         public string SIFRE { get; set; }
         public string FOTOGRAF { get; set; }
+
+        [DataType(DataType.PhoneNumber, ErrorMessage = "Telefon Numarasý formatýnda giriniz.")]
         public string TELEFON { get; set; }
         public string OKUL { get; set; }
         public Nullable<bool> DURUM { get; set; }

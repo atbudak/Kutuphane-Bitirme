@@ -39,8 +39,13 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult Resimyukle(HttpPostedFileBase RESIMYOLU, TBLRESIMLER r)
         {
-            if(RESIMYOLU.ContentLength > 0)
+            
+            if (RESIMYOLU.ContentLength > 0)
             {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
                 string dosyayolu = Path.Combine(Server.MapPath("~/web/slider_img/"), Path.GetFileName(RESIMYOLU.FileName));
                 RESIMYOLU.SaveAs(dosyayolu);
                 r.RESIMYOLU = RESIMYOLU.FileName;

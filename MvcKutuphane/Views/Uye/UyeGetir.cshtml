@@ -10,39 +10,44 @@
     <div class="mw-500 text-center bg-transparent mb-4">
         <h1 class="sketchy text-center">Üye Güncelleme</h1>
     </div>
+
+    <div class="flex_container" style="max-width:1300px">
+        <div class="flex_col_0">
+            <a href="/Uye/Index" class="btn btn-primary mt-2 ml-2 pl-4 pr-4 float-lg-right">Üyeler</a>
+            <a href="/Uye/UyeEkle" class="btn btn-success mt-2 pl-4 pr-4 float-lg-right">Üye Ekle</a>
+        </div>
+    </div>
+
     <div class="flex_container" style="width:1300px;">
         <div class="flex_col_1">
             @Html.HiddenFor(x => x.ID)
             <label style="margin-bottom:10px;">Adı</label>
             @Html.TextBoxFor(x => x.AD, new { @class = "form-control", required = "required" })
-            @*@Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:black;opacity:.7" })*@
             <br />
         </div>
         <div class="flex_col_1">
             <label style="margin-bottom:10px;">Soyad</label>
             @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control", required = "required" })
-            @*@Html.ValidationMessageFor(x => x.SOYAD, "", new { @style = "color:black;opacity:.7" })*@
             <br />
         </div>
         <div class="flex_col_1">
             <label style="margin-bottom:10px;">Mail Adresi</label>
-            @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control", required = "required" })
-            @*@Html.ValidationMessageFor(x => x.MAIL, "", new { @style = "color:black;opacity:.7" })*@
+            @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control", required = "required", type = "email" })
             <br />
         </div>
         <div class="flex_col_1">
             <label style="margin-bottom:10px;">Kullanıcı Adı</label>
-            @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control", required = "required" })
+            @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
             <br />
         </div>
         <div class="flex_col_1">
             <label style="margin-bottom:10px;">Şifre</label>
-            @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control", required = "required" })
+            @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control", required = "required", minlength="6" , maxlength="20" })
             <br />
         </div>
         <div class="flex_col_1">
             <label style="margin-bottom:10px;">Telefon</label>
-            @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control" })
+            @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control", type = "number" })
             <br />
         </div>
         <div class="flex_col_1">
@@ -73,4 +78,4 @@
 }
 
 
-                
+

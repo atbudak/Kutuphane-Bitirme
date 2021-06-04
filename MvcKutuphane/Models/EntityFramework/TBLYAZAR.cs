@@ -11,7 +11,8 @@ namespace MvcKutuphane.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TBLYAZAR
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,8 +21,12 @@ namespace MvcKutuphane.Models.EntityFramework
             this.TBLKITAP = new HashSet<TBLKITAP>();
         }
     
-        public int ID { get; set; }
+        public int? ID { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string AD { get; set; }
+
+        [Required(ErrorMessage = " Bu alan zorunludur.")]
         public string SOYAD { get; set; }
         public string DETAY { get; set; }
         public Nullable<bool> DURUM { get; set; }

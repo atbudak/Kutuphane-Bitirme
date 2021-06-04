@@ -48,6 +48,10 @@ namespace MvcKutuphane.Controllers
         [HttpPost]
         public ActionResult UyeEkle(TBLUYELER u)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             db.TBLUYELER.Add(u);
             u.DURUM = true;
             u.YETKILER = "Kullanici";
@@ -69,6 +73,10 @@ namespace MvcKutuphane.Controllers
 
         public ActionResult UyeGuncelle(TBLUYELER p)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("UyeGetir/" + p.ID);
+            }
             var uye = db.TBLUYELER.Find(p.ID);
             uye.AD = p.AD;
             uye.SOYAD = p.SOYAD;
