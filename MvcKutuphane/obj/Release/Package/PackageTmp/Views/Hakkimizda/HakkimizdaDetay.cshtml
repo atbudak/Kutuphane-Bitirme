@@ -1,0 +1,31 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLHAKKIMIZDA
+@{
+    ViewBag.Title = "HakkimizdaDetay";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Hakkımızda Detay</h1>
+</div>
+
+<div class="flex_container">
+    <div class="flex_col_0">
+        <a href="/Hakkimizda/Index" class="btn btn-primary mt-2 ml-2 pl-4 pr-4 float-lg-right">Hakkımızda</a>
+    </div>
+</div>
+
+@using (Html.BeginForm("HakkimizdaGuncelle", "Hakkimizda", FormMethod.Post))
+{
+    <div class="d-flex">
+        @Html.HiddenFor(x => x.ID)
+        <div class="col-md-12">
+            @Html.Label("Hakkımızda", new { @style = "" })
+            @Html.TextAreaFor(x => x.ACIKLAMA, new { @class = "form-control mt-1 mb-3" , style="min-height:200px" , required = ""})
+        </div>
+    </div>
+
+    <button class="btn btn-success mt-2 mr-2 pl-4 pr-4 float-lg-right">Güncelle</button>
+}
+
+

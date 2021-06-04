@@ -1,0 +1,40 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLDUYURULAR
+@{
+    ViewBag.Title = "YeniDuyuru";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Yeni Duyuru</h1>
+</div>
+
+<div class="flex_container">
+    <div class="flex_col_0">
+        <a href="/Duyuru/Index" class="btn btn-primary mt-2 ml-2 mr-2 pl-4 pr-4 float-lg-right">Duyurular</a>
+    </div>
+</div>
+
+@using (Html.BeginForm("YeniDuyuru", "Duyuru", FormMethod.Post))
+{
+    <div class="d-flex">
+        @Html.HiddenFor(x => x.ID)
+        <div class="col-md-6">
+            <label style="margin-bottom:10px;">KATEGORİLER</label>
+            <select id="category2" required="" class="form-control" name="KATEGORI">
+                <option value="Yeni Kitap" selected>Yeni Kitap</option>
+                <option value="Kitap Teslim Tarihi">Kitap Teslim Tarihi</option>
+                <option value="Üye Bilgileri">Üye Bilgileri</option>
+                <option value="Diğer">Diğer</option>
+            </select>
+        </div><div class="col-md-6">
+            @Html.Label("Tarihi")
+            @Html.TextBoxFor(x => x.TARIH, new { @class = "form-control mt-1 mb-3", type = "date" , required = "" })
+        </div>
+    </div>
+    <div class="col-md-12">
+        @Html.Label("Mesaj")
+        @Html.TextAreaFor(x => x.ICERIK, new { @class = "form-control mt-1 mb-3" , required = "" })
+    </div>
+
+    <button class="btn btn-info mt-2 pl-4 pr-4 float-lg-right">Yayımla</button>
+}

@@ -1,0 +1,386 @@
+﻿@model MvcKutuphane.Models.Classes.Class1
+@{
+    Layout = "~/Views/Shared/VitrinLayout.cshtml";
+    var ms = TempData["mesaj"];
+    var img = "";
+}
+
+<link href="~/web/css/index.css" rel="stylesheet" />
+<!-- Slider Section -->
+<section id="carouselExampleIndicators" class="carousel slide slidehizala" data-ride="carousel">
+    <div class="carousel-inner" style="max-width:1903px; margin:0 auto;">
+
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="~/web/slider_img/default.jpg" style="max-height:1000px">
+        </div>
+        @foreach (var a in Model.slider1.Where(x => x.DURUM == true))
+        {
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/web/slider_img/@a.RESIMYOLU" style="max-height:1000px">
+            </div>
+        }
+
+    </div>
+    <a class="carousel-control-prev" style="width:10% !important" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" style="width:10% !important" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</section>
+
+<!-- Portfolio Section -->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+        <!-- Portfolio Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Kitaplar</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- Portfolio Grid Items -->
+        <div class="row">
+            @foreach (var x in Model.Kitap1.Take(12))
+            {
+                if (x.KITAPRESIM != null) { img = x.KITAPRESIM; }
+                else { img = "/Content/Galeri/assets/images/no-image.jpg"; }
+                <!-- Portfolio Item 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" @*data-toggle="modal" data-target="#portfolioModal1"*@>
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <a href="/Vitrin/Galeri"><i class="fas fa-plus fa-3x" style="color: #1abc9c; filter: drop-shadow(6px 8px 3px #040404bf);" title="kitaplar"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <img class="img-fluid" src="@img" alt="">
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <!-- /.row -->
+
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="page-section bg-primary text-white mb-0 hakkimizdaresim" id="about">
+    <div class="container">
+
+        <!-- About Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-white">Hakkımızda</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- About Section Content -->
+        <div class="row">
+            @foreach (var x in Model.hakkimizda1)
+            {
+                <div class="col-lg-12 m-auto">
+                    <p class="lead text-justify" style="font-family: 'Roboto', sans-serif;">@x.ACIKLAMA</p>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="page-section" id="contact">
+    <div class="container">
+
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Bize Ulaşın</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- Contact Section Form -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                @using (Html.BeginForm("Index", "Vitrin", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Ad</label>
+                                <input class="form-control" id="name" type="text" name="AD" placeholder="Adınız" required="required" data-validation-required-message="Lütfen adınızı giriniz.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Soyad</label>
+                                <input class="form-control" id="surname" type="text" name="SOYAD" placeholder="Soyadınız" required="required" data-validation-required-message="Lütfen soyadınızı giriniz.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Email Adresi</label>
+                                <input class="form-control" id="email" type="email" name="MAIL" placeholder="Email Adresiniz" required="required" data-validation-required-message="Lütfen mail adresinizi giriniz.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Konu</label>
+                                <input class="form-control" id="text" type="text" name="KONU" placeholder="Mesajın Konusu" required="required" data-validation-required-message="Lütfen mesajın konusunu giriniz.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Mesaj</label>
+                                <textarea class="form-control" id="message" rows="5" name="MESAJ" placeholder="Mesajınız" required="required" data-validation-required-message="Lütfen mesajınızı giriniz."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Gönder</button>
+                        </div>
+
+                        <div class="col-md-8 m-auto">
+                            <p class="text-center text-success"> @ms</p>
+                        </div>
+
+
+                    </form>
+                }
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Portfolio Modals -->
+<!-- Portfolio Modal 1 -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    <i class="fas fa-times"></i>
+                </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title -->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                            <!-- Icon Divider -->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image -->
+                            <img class="img-fluid rounded mb-5" src="~/web/img/portfolio/cabin.png" alt="">
+                            <!-- Portfolio Modal - Text -->
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                            <button class="btn btn-primary" href="#" data-dismiss="modal">
+                                <i class="fas fa-times fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="chatbox chatbox--tray chatbox--empty" style="z-index:99;">
+    <div class="chatbox__title">
+        <h5 style="color:#fff;">Canlı Destek</h5>
+        <button class="chatbox__title__tray">
+            <span></span>
+        </button>
+    </div>
+    <div class="chatbox__body">
+
+    </div>
+    <form class="chatbox__credentials">
+        <h6><a id="chatbox-info">Sisteme emailiniz ile kayıt olduktan sonra canlı destek hattından yararlanabilirsiniz..</a></h6>
+        <div class="form-group">
+            <label for="inputName">Name:</label>
+            <input type="text" class="form-control" id="inputName" required>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email:</label>
+            <input type="email" class="form-control" id="inputEmail" required>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Enter Chat</button>
+    </form>
+    <div style="height:50px;">
+        <textarea id="canliDestekMessage" class="chatbox__message" style="width:290px; float:left;" placeholder="Write something interesting"></textarea>
+        <button id="btnMessageSend" style="border: 1px solid #ddd; border-left:none; width:60px; height:50px; text-align:center; background-color:#fefefe;"><i class="fa fa-paper-plane fa-lg"></i></button>
+    </div>
+</div>
+
+@section scripts{
+    <!--Reference the SignalR library. -->
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () { //This section will run whenever we call Chat.cshtml page
+
+            var objHub = $.connection.chatHub;
+
+            loadClientMethods(objHub);
+
+            $.connection.hub.start().done(function () {
+
+                loadEvents(objHub);
+
+            });
+        });
+
+        function loadClientMethods(objHub) {
+
+            objHub.client.NoExistEmployee = function () {
+
+                $('.chatbox__message').prop('readonly', true);
+                $('#btnMessageSend').attr('disabled', true);
+
+                var divNoExist = $('<div class="chatbox__body__message chatbox__body__message--right">' +
+                    '<p>Üzgünüz şu anda talebinizi karşılayacak herhangi bir görevli mevcut değil..</p>' +
+                    '</div >');
+
+                $('.chatbox').removeClass('chatbox--empty');
+                $('.chatbox__body').append(divNoExist);
+
+            }
+
+            objHub.client.GetMessage = function (msg) {
+
+                $('.chatbox__message').prop('readonly', false);
+                $('#btnMessageSend').attr('disabled', false);
+
+                var newMsgBody = $('<div class="chatbox__body__message chatbox__body__message--left">' +
+                    '<img src="/web/img/avatar.png" alt="Picture">' +
+                    '<p>' + msg + '</p>' +
+                    '</div >');
+
+                $('.chatbox__body').append(newMsgBody);
+
+                $('.chatbox').removeClass('chatbox--empty');
+            }
+
+            objHub.client.GetMessageFromEmployee = function (msg) {
+
+                var newMsgBody = $('<div class="chatbox__body__message chatbox__body__message--left">' +
+                    '<img src="/web/img/avatar.png" alt="Picture">' +
+                    '<p>' + msg + '</p>' +
+                    '</div >');
+
+                $('.chatbox__body').append(newMsgBody);
+
+                $(".chatbox__body").stop().animate({ scrollTop: $(".chatbox__body")[0].scrollHeight }, 1000);
+            }
+
+            objHub.client.HasLostConnection = function () {
+
+
+                $('.chatbox__message').prop('readonly', true);
+                $('#btnMessageSend').attr('disabled', true);
+
+                $('#chatbox-info').val('Destek ekibimizin bağlantısı koptu. Lütfen tekrar giriş yapınız.');
+
+                $('.chatbox__body').html('');
+
+                $('.chatbox').addClass('chatbox--empty');
+
+            }
+        }
+
+        function loadEvents(objHub) {
+
+            $('.chatbox__credentials').on('submit', function (e) {
+                e.preventDefault();
+                objHub.server.connect($('#inputName').val(), $('#inputEmail').val());
+            });
+
+
+            $('#btnMessageSend').click(function () {
+                var msg = $('#canliDestekMessage').val().trim();
+
+                objHub.server.sendMessageToEmployee(msg);
+                $('#canliDestekMessage').val("");
+
+                var newMsgBody = $('<div class="chatbox__body__message chatbox__body__message--right">' +
+                    '<img src="/web/img/avatar.png" alt="Picture">' +
+                    '<p>' + msg + '</p>' +
+                    '</div >');
+
+                $('.chatbox__body').append(newMsgBody);
+
+                $(".chatbox__body").stop().animate({ scrollTop: $(".chatbox__body")[0].scrollHeight }, 1000);
+
+            });
+
+        }
+
+
+        $(document).ready(function () {
+
+            var $chatbox = $('.chatbox'),
+                $chatboxTitle = $('.chatbox__title'),
+                $chatboxTitleClose = $('.chatbox__title__close'),
+                $chatboxCredentials = $('.chatbox__credentials');
+            $chatboxTitle.on('click', function () {
+                $chatbox.toggleClass('chatbox--tray');
+            });
+            $chatboxTitleClose.on('click', function (e) {
+                e.stopPropagation();
+                $chatbox.addClass('chatbox--closed');
+            });
+            $chatbox.on('transitionend', function () {
+                if ($chatbox.hasClass('chatbox--closed')) $chatbox.remove();
+            });
+
+        });
+
+
+
+        // This optional function html-encodes messages for display in the page.
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+
+    </script>
+
+}

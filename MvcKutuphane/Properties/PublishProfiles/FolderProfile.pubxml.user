@@ -6,4 +6,2280 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\ahmet\Desktop\WebSite</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.pdb">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.pdb">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/MvcKutuphane.dll">
+      <publishTime>06/05/2021 00:15:47</publishTime>
+    </File>
+    <File Include="bin/MvcKutuphane.pdb">
+      <publishTime>06/05/2021 00:15:47</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/08/2021 15:48:41</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/08/2021 15:48:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/error-404/css/style.css">
+      <publishTime>05/10/2021 15:57:45</publishTime>
+    </File>
+    <File Include="Content/error-404/img/bg.jpg">
+      <publishTime>05/10/2021 15:57:45</publishTime>
+    </File>
+    <File Include="Content/error-404/index.html">
+      <publishTime>05/10/2021 15:57:45</publishTime>
+    </File>
+    <File Include="Content/error-404/readme.txt">
+      <publishTime>05/10/2021 15:57:45</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/css/flex-slider.css">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/css/fontawesome.css">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/css/owl.css">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/css/templatemo-sixteen.css">
+      <publishTime>05/12/2021 19:33:09</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/Flaticon.woff">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/flexslider-icon.eot">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/flexslider-icon.svg">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/flexslider-icon.ttf">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/flexslider-icon.woff">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/fontawesome-webfont.eot">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/fontawesome-webfont.svg">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/fontawesome-webfont.woff">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/FontAwesome.otf">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/slick.eot">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/slick.svg">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/slick.ttf">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/fonts/slick.woff">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/images/galeri-heads.jpg">
+      <publishTime>05/12/2021 19:26:55</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/images/no-image.jpg">
+      <publishTime>05/12/2021 21:24:14</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/js/accordions.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/js/custom.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/js/isotope.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/js/owl.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/assets/js/slick.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/products.html">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/css/bootstrap.css">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/css/bootstrap.css.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/css/bootstrap.min.css.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.bundle.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.js.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/bootstrap/js/bootstrap.min.js.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/jquery/jquery.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/jquery/jquery.min.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/jquery/jquery.min.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/jquery/jquery.slim.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/jquery/jquery.slim.min.js">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/Galeri/vendor/jquery/jquery.slim.min.map">
+      <publishTime>05/12/2021 18:12:54</publishTime>
+    </File>
+    <File Include="Content/PagedList.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Content/_Kitaplarim.css">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="css/font-awesome.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="login.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="Models/EntityFramework/Model1.edmx.diagram">
+      <publishTime>05/12/2021 14:18:57</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.4.1.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.4.1.min.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="sidebar-01/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/mixins/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/mixins/_border-radius.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/mixins/_screen-reader.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/mixins/_visibility.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/utilities/_stretched-link.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/bootstrap/_media.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/css/style.css">
+      <publishTime>05/29/2021 20:58:49</publishTime>
+    </File>
+    <File Include="sidebar-01/fonts/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/images/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/images/logo.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/js/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/js/bootstrap.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/js/jquery.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/js/main.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/js/popper.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/.DS_Store">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/bootstrap-grid.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/bootstrap-reboot.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/bootstrap.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_alert.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_background-variant.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_badge.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_border-radius.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_box-shadow.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_breakpoints.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_buttons.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_caret.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_clearfix.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_deprecate.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_float.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_forms.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_gradients.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_grid-framework.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_grid.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_hover.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_image.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_list-group.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_lists.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_nav-divider.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_pagination.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_reset-text.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_resize.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_screen-reader.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_size.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_table-row.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_text-emphasis.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_text-hide.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_text-truncate.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_transition.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/mixins/_visibility.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_align.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_background.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_borders.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_clearfix.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_display.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_embed.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_flex.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_float.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_overflow.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_position.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_screenreaders.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_shadows.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_sizing.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_spacing.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_stretched-link.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_text.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/utilities/_visibility.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/vendor/_rfs.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_alert.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_badge.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_breadcrumb.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_button-group.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_buttons.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_card.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_carousel.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_close.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_code.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_custom-forms.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_dropdown.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_forms.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_functions.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_grid.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_images.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_input-group.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_jumbotron.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_list-group.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_media.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_mixins.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_modal.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_nav.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_navbar.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_pagination.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_popover.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_print.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_progress.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_reboot.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_root.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_spinners.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_tables.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_toasts.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_tooltip.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_transitions.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_type.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_utilities.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/bootstrap/_variables.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="sidebar-01/scss/style.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="Views/BizeUlasin/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/BizeUlasin/MesajGetir.cshtml">
+      <publishTime>06/04/2021 23:46:14</publishTime>
+    </File>
+    <File Include="Views/BizeUlasin/TumMesajlar.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/CanliDestek/Anasayfa.cshtml">
+      <publishTime>05/27/2021 22:04:41</publishTime>
+    </File>
+    <File Include="Views/Duyuru/DuyuruDetay.cshtml">
+      <publishTime>06/03/2021 02:49:13</publishTime>
+    </File>
+    <File Include="Views/Duyuru/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Duyuru/YeniDuyuru.cshtml">
+      <publishTime>06/03/2021 02:47:47</publishTime>
+    </File>
+    <File Include="Views/Error/Page403.cshtml">
+      <publishTime>05/10/2021 15:56:56</publishTime>
+    </File>
+    <File Include="Views/Error/Page404.cshtml">
+      <publishTime>05/10/2021 15:58:30</publishTime>
+    </File>
+    <File Include="Views/Hakkimizda/HakkimizdaDetay.cshtml">
+      <publishTime>06/03/2021 01:38:09</publishTime>
+    </File>
+    <File Include="Views/Hakkimizda/Index.cshtml">
+      <publishTime>06/03/2021 01:22:08</publishTime>
+    </File>
+    <File Include="Views/Islem/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Istatistik/Hava.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Istatistik/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Istatistik/LinqKartlar.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Istatistik/ResimGetir.cshtml">
+      <publishTime>05/31/2021 18:38:14</publishTime>
+    </File>
+    <File Include="Views/Istatistik/ResimGoruntule.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Istatistik/SliderResimYukle.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Kategori/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Kategori/KategoriEkle.cshtml">
+      <publishTime>06/03/2021 02:29:45</publishTime>
+    </File>
+    <File Include="Views/Kategori/KategoriGetir.cshtml">
+      <publishTime>06/03/2021 02:32:27</publishTime>
+    </File>
+    <File Include="Views/Kategori/PasifKategori.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/KayitOl/Kaydol.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Kitap/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Kitap/KitapEkle.cshtml">
+      <publishTime>06/03/2021 03:49:56</publishTime>
+    </File>
+    <File Include="Views/Kitap/KitapGetir.cshtml">
+      <publishTime>06/03/2021 03:40:51</publishTime>
+    </File>
+    <File Include="Views/Login/GirisYap.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/CopKutusuGetir.cshtml">
+      <publishTime>05/12/2021 17:58:16</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/Giden.cshtml">
+      <publishTime>05/12/2021 17:00:15</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/Index.cshtml">
+      <publishTime>05/12/2021 17:00:00</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/MesajGoruntule.cshtml">
+      <publishTime>05/12/2021 15:23:07</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/OnemliGetir.cshtml">
+      <publishTime>05/12/2021 17:40:00</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/Partial1.cshtml">
+      <publishTime>05/12/2021 17:41:02</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/TaslakGetir.cshtml">
+      <publishTime>05/12/2021 17:58:08</publishTime>
+    </File>
+    <File Include="Views/Mesajlar/YeniMesaj.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Odunc/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Odunc/OduncIade.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Odunc/OduncVer.cshtml">
+      <publishTime>05/29/2021 22:45:59</publishTime>
+    </File>
+    <File Include="Views/Panel/Duyurular.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Panel/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Panel/Kitaplarim.cshtml">
+      <publishTime>05/15/2021 01:15:38</publishTime>
+    </File>
+    <File Include="Views/Panel/Partial1.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Panel/Profil.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Personel/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Personel/PasifPersonel.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Personel/PersonelEkle.cshtml">
+      <publishTime>06/03/2021 02:48:03</publishTime>
+    </File>
+    <File Include="Views/Personel/PersonelGetir.cshtml">
+      <publishTime>06/03/2021 02:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/Layout.cshtml">
+      <publishTime>06/03/2021 02:44:51</publishTime>
+    </File>
+    <File Include="Views/Shared/PanelLayout.cshtml">
+      <publishTime>05/27/2021 22:28:52</publishTime>
+    </File>
+    <File Include="Views/Shared/VitrinLayout.cshtml">
+      <publishTime>06/03/2021 01:02:57</publishTime>
+    </File>
+    <File Include="Views/Uye/Index.cshtml">
+      <publishTime>05/14/2021 20:57:22</publishTime>
+    </File>
+    <File Include="Views/Uye/PasifUye.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Uye/UyeEkle.cshtml">
+      <publishTime>06/03/2021 03:20:48</publishTime>
+    </File>
+    <File Include="Views/Uye/UyeGetir.cshtml">
+      <publishTime>06/03/2021 03:20:07</publishTime>
+    </File>
+    <File Include="Views/Uye/UyeKitapGecmisi.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Vitrin/Galeri.cshtml">
+      <publishTime>05/15/2021 00:15:26</publishTime>
+    </File>
+    <File Include="Views/Vitrin/Index.cshtml">
+      <publishTime>05/27/2021 22:48:22</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Yazar/Index.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Yazar/PasifYazar.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/Yazar/YazarEkle.cshtml">
+      <publishTime>06/03/2021 00:52:00</publishTime>
+    </File>
+    <File Include="Views/Yazar/YazarGetir.cshtml">
+      <publishTime>06/03/2021 00:54:10</publishTime>
+    </File>
+    <File Include="Views/Yazar/YazarKitap.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/08/2021 15:48:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/05/2021 00:04:33</publishTime>
+    </File>
+    <File Include="web/.browserslistrc">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/.gitignore">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/.travis.yml">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/css/chat.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/css/chatYetkili.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/css/freelancer.css">
+      <publishTime>05/14/2021 22:46:08</publishTime>
+    </File>
+    <File Include="web/css/freelancer.min.css">
+      <publishTime>05/14/2021 23:09:14</publishTime>
+    </File>
+    <File Include="web/css/index.css">
+      <publishTime>05/27/2021 22:34:12</publishTime>
+    </File>
+    <File Include="web/gulpfile.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/avataaars.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/avatar.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/BirYilbasiOykusu.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/droxdeney.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/hakkimizda.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/kasagi.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/library.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/library3.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/portfolio/cabin.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/portfolio/cake.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/portfolio/circus.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/portfolio/game.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/portfolio/safe.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/img/portfolio/submarine.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/js/contact_me.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/js/contact_me.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/js/freelancer.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/js/freelancer.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/js/jqBootstrapValidation.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/js/jqBootstrapValidation.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/LICENSE">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/mail/contact_me.php">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/package-lock.json">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/package.json">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/README.md">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/base/_page.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/base/_variables.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/components/_buttons.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/components/_divider.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/freelancer.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/layout/_contact.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/layout/_footer.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/layout/_masthead.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/layout/_navbar.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/scss/layout/_portfolio.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/slider_img/default.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/slider_img/s1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/slider_img/s2.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/slider_img/s3.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/slider_img/s4.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/slider_img/s5.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.bundle.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/bootstrap/js/bootstrap.min.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/all.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/all.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/brands.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/brands.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/fontawesome.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/fontawesome.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/regular.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/regular.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/solid.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/solid.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/svg-with-js.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/svg-with-js.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/v4-shims.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/css/v4-shims.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-brands-400.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-brands-400.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-brands-400.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-brands-400.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-brands-400.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-regular-400.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-regular-400.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-regular-400.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-regular-400.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-regular-400.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-solid-900.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-solid-900.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-solid-900.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-solid-900.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/fontawesome-free/webfonts/fa-solid-900.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery-easing/jquery.easing.compatibility.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery-easing/jquery.easing.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery-easing/jquery.easing.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery/jquery.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery/jquery.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery/jquery.min.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery/jquery.slim.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery/jquery.slim.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web/vendor/jquery/jquery.slim.min.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/css/bootstrap.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/css/clndr.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/css/jqvmap.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/css/nav.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/css/style.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/ar2.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/arrows.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/avatar.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/avatar1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/avatar2.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/img-sprite.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/into.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/into1.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/logo.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/pp.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/pp0.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/pp01.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/settings.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/images/tick-mark.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/Chart1.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/clndr.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/easyResponsiveTabs.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/jquery.easydropdown.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/jquery.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/jquery.nicescroll.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/jquery.vmap.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/jquery.vmap.sampledata.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/jquery.vmap.world.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/main.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/moment-2.2.1.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/site.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/js/underscore-min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/resimler/book1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/resimler/book2.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/resimler/book3.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/resimler/book4.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/resimler/book5.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/resimler/img1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web2/w3layouts-License.txt">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/404.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/blank.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/buttons.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/calendar.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/charts.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/basictable.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/bootstrap.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/circles.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/component.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/export.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/flipclock.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/font-awesome.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/jQuery-plugin-progressbar1.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/monthly.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/style.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/style_grid.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/css/table-style.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/faq.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/fontawesome-webfont.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/fontawesome-webfont.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/fontawesome-webfont.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/fontawesome-webfont.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/FontAwesome.otf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/grids.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/icons.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/a1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/a2.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/a3.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/a4.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/admin.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/bottom.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/overlay.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/pic.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/pic1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/profile.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/profile_bg.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/progress.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/images/Thumbs.db">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/input.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/amcharts.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/bars.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/bootstrap-3.1.1.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/Chart.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/circles.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/classie.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/contact_me.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/export.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/flipclock.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/gauge.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/gnmenu.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/jqBootstrapValidation.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/jquery-2.1.4.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/jQuery-plugin-progressbar.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/jquery.basictable.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/jquery.nicescroll.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/light.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/modernizr.custom.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/monthly.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/pie.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/prettymaps.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/radar.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/screenfull.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/scripts.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/serial.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/skycons.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/valida.2.1.6.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/validator.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/js/xy.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/main-page.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/maps.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/signin.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/signup.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/table.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/typo.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/validation.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="web3/w3layouts-License.txt">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/css/style.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/images/bg.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/images/img1.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/js/jquery-2.1.4.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/js/skycons.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webhava/w3layouts-License.txt">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/css/main.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/css/util.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/css/font-awesome.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/HELP-US-OUT.txt">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/animated.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/bordered-pulled.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/core.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/fixed-width.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/font-awesome.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/icons.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/larger.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/list.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/mixins.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/path.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/rotated-flipped.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/screen-reader.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/stacked.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/less/variables.less">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/font-awesome.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_animated.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_core.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_fixed-width.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_icons.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_larger.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_list.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_mixins.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_path.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_screen-reader.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_stacked.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/font-awesome-4.7.0/scss/_variables.scss">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Black.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-BlackItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Bold.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-BoldItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-ExtraBold.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-ExtraLight.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-ExtraLightItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Italic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Light.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-LightItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Medium.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-MediumItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Regular.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-SemiBold.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-SemiBoldItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-Thin.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/Montserrat-ThinItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/montserrat/OFL.txt">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Black.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-BlackItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Bold.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-BoldItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-ExtraBold.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-ExtraBoldItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-ExtraLight.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-ExtraLightItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Italic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Light.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-LightItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Medium.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-MediumItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Regular.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-SemiBold.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-SemiBoldItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-Thin.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/fonts/poppins/Poppins-ThinItalic.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/images/bg-01.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/images/icons/favicon.ico">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/images/icons/icon-google.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/images/icons/map-marker.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/images/icons/symbol-01.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/js/main.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/animate/animate.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/animsition/css/animsition.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/animsition/css/animsition.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/animsition/js/animsition.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/animsition/js/animsition.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-grid.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-reboot.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/css/bootstrap.min.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/js/popper.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/js/popper.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/bootstrap/js/tooltip.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/countdowntime/countdowntime.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/css-hamburgers/hamburgers.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/css-hamburgers/hamburgers.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/daterangepicker/daterangepicker.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/daterangepicker/daterangepicker.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/daterangepicker/moment.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/daterangepicker/moment.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/jquery/jquery-3.2.1.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/perfect-scrollbar/perfect-scrollbar.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/perfect-scrollbar/perfect-scrollbar.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/select2/select2.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/select2/select2.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/select2/select2.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="weblogin/vendor/select2/select2.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/.gitignore">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/.travis.yml">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/css/default-profile.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/css/kitap.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/css/logo-p.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/css/megaphone.png">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/css/simple-sidebar.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/gulpfile.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/LICENSE">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/package-lock.json">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/package.json">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/adminlte.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/adminlte.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/all.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/bootstrap.bundle.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/demo.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/icheck-bootstrap.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/jquery.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/summernote-bs4.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/Profil/summernote-bs4.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/README.md">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-grid.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-reboot.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/css/bootstrap.min.css.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.bundle.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/bootstrap/js/bootstrap.min.js.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/jquery/jquery.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/jquery/jquery.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/jquery/jquery.min.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/jquery/jquery.slim.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/jquery/jquery.slim.min.js">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webpanel/vendor/jquery/jquery.slim.min.map">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/css/font-awesome.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/css/style.css">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/fontawesome-webfont.eot">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/fontawesome-webfont.svg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/fontawesome-webfont.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/fontawesome-webfont.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/FontAwesome.otf">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/images/bg.jpg">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/index.html">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+    <File Include="webregister/w3layouts-License.txt">
+      <publishTime>05/08/2021 15:48:40</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

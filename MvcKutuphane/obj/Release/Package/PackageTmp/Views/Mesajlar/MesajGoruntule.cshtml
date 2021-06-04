@@ -1,0 +1,118 @@
+﻿
+@model MvcKutuphane.Models.EntityFramework.TBLMESAJ
+@{
+    ViewBag.Title = "MesajGoruntule";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Mesaj Detay</title>
+    <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- Navbar -->
+    <!-- Main content -->
+
+    <section class="content mt-5">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                @Html.Action("Partial1")
+                <!-- /.col -->
+
+                <div class="col-md-9">
+
+
+                    <div class="card card-primary card-outline">
+
+                        <div class="card-header">
+
+                            <h3 class="card-title">Mesaj Detay</h3>
+
+                        </div>
+
+                        <!-- /.card-header -->
+
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                @Html.Label("Alıcı :")
+                                @Html.TextBoxFor(x => x.ALICI, new { @class = "form-control", @readonly = "" })
+
+                            </div>
+                            <div class="form-group">
+
+                                @Html.Label("Gönderen :")
+                                @Html.TextBoxFor(x => x.GONDEREN, new { @class = "form-control", @readonly = "" })
+
+                            </div>
+                            <div class="form-group">
+
+                                @Html.Label("Konu :")
+                                @Html.TextBoxFor(x => x.KONU, new { @class = "form-control", @readonly = "" })
+
+                            </div>
+                            <div class="form-group">
+
+                                @Html.Label("Tarih :")
+                                @Html.TextBoxFor(x => x.TARIH,"{0:dd MMM yyyy }", new { @class = "form-control", @readonly = "" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.Label("Mesaj :")
+                                @Html.TextAreaFor(x => x.ICERIK, new { id = "compose-textarea", @class = "form-control", style = "height: 300px" })
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <!-- /.card-body -->
+
+                
+                   
+                    <!-- /.card-footer -->
+                    <!-- /.card -->
+
+                </div>
+
+                <!-- /.col -->
+
+            </div>
+
+            <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
+    <script>
+        $(function () {
+
+            //Add text editor
+
+            $('#compose-textarea').summernote()
+
+        })</script>
+
+</body>
+
+</html>
+
+

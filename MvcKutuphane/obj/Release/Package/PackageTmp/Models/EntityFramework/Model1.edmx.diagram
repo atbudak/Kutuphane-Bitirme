@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63c44e3c9c97464bae8b24b76c41ddd9" Name="Diagram1">
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLCEZALAR" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLDUYURULAR" Width="1.5" PointX="7.75" PointY="8.625" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLHAKKIMIZDA" Width="1.5" PointX="8.75" PointY="1.625" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLHAREKET" Width="1.5" PointX="6" PointY="3.75" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLILETISIM" Width="1.5" PointX="8.75" PointY="4.625" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLKASA" Width="1.5" PointX="9.75" PointY="8.625" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLKATEGORI" Width="1.5" PointX="1.5" PointY="8.25" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLKITAP" Width="1.5" PointX="3.75" PointY="9" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLMESAJ" Width="1.5" PointX="10.75" PointY="1.625" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLPERSONEL" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLRESIMLER" Width="1.5" PointX="10.75" PointY="5.625" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLUYELER" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DBLIBRARYModel.TBLYAZAR" Width="1.5" PointX="1.5" PointY="10.875" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLCEZALAR_TBLHAREKET" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLCEZALAR_TBLUYELER" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLKITAP" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLPERSONEL" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLHAREKET_TBLUYELER" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLKITAP_TBLKATEGORI" />
+        <AssociationConnector Association="DBLIBRARYModel.FK_TBLKITAP_TBLYAZAR" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

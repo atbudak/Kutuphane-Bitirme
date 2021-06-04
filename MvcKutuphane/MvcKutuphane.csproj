@@ -305,7 +305,7 @@
     <Content Include="sidebar-01\css\bootstrap\utilities\_stretched-link.css" />
     <Content Include="sidebar-01\css\bootstrap\_media.css" />
     <Content Include="sidebar-01\css\style.css" />
-    <Content Include="sidebar-01\images\logo.jpg" />
+    <Content Include="sidebar-01\images\logo.png" />
     <Content Include="sidebar-01\index.html" />
     <Content Include="sidebar-01\js\bootstrap.min.js" />
     <Content Include="sidebar-01\js\jquery.min.js" />

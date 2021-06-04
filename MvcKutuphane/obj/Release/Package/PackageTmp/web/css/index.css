@@ -1,0 +1,19 @@
+﻿.slidehizala{
+    margin-top:104px;
+    max-height:1000px;
+}
+
+@media only screen and (max-width:1024px){
+    .slidehizala {
+        margin-top: 74px;
+    }
+}
+
+.hakkimizdaresim {
+    background-image: url('../img/hakkimizda.jpg');
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+

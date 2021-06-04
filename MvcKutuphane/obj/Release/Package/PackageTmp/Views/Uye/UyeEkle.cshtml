@@ -1,0 +1,65 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLUYELER
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Üye Ekle</h1>
+</div>
+
+<div class="flex_container" style="max-width:1300px">
+    <div class="flex_col_0">
+        <a href="/Uye/Index" class="btn btn-primary mt-2 ml-2 pl-4 pr-4 float-lg-right">Üyeler</a>
+    </div>
+</div>
+
+<form method="post">
+    <div class="flex_container" style="width:1300px;">
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Adı</label>
+            @Html.TextBoxFor(x => x.AD, new { @class = "form-control", placeholder = "adı giriniz...", required = "required" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Soyadı</label>
+            @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control", placeholder = "soyadını giriniz...", required = "required" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Mail Adresi</label>
+            @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control", placeholder = "mail adresi giriniz...", required = "required", type = "email" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Kullanıcı Adı</label>
+            @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control", placeholder = "kullanıcı adı giriniz..." })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Şifre</label>
+            @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control", placeholder = "şifre giriniz...", required = "required", minlength = "6", maxlength = "20" })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Telefon</label>
+            @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control", placeholder = "telefon giriniz..." })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Okul</label>
+            @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control", placeholder = "okul giriniz..." })
+            <br />
+        </div>
+        <div class="flex_col_1">
+            <label style="margin-bottom:10px;">Fotoğraf Linki</label>
+            @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control", placeholder = "resim linkini buraya yapıştırınız..." })
+            <br />
+        </div>
+
+        <div class="flex_col_0">
+            <button class="btn btn-success mt-2 pl-4 pr-4 float-lg-right" style="margin:10px 0">Ekle</button>
+            <div />
+        </div>
+    </div>
+</form>

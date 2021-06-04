@@ -1,0 +1,41 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLHAREKET
+@{
+    ViewBag.Title = "OduncIade";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Kitap Teslim Sayfası</h1>
+</div>
+@using (Html.BeginForm("OduncGuncelle", "Odunc", FormMethod.Post))
+{
+    <br />
+    @Html.HiddenFor(x => x.ID)
+    <br />
+    @Html.Label("Kitap Adı")
+    @Html.TextBoxFor(x => x.TBLKITAP.AD, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Üye Adı")
+    @Html.TextBoxFor(x => x.TBLUYELER.AD, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Üye Soyadı")
+    @Html.TextBoxFor(x => x.TBLUYELER.SOYAD, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Personel")
+    @Html.TextBoxFor(x => x.TBLPERSONEL.PERSONEL, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Alış Tarihi")
+    @Html.TextBoxFor(x => x.ALISTARIHI, "{0:MM.dd.yyyy}", new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Normal İade Tarihi")
+    @Html.TextBoxFor(x => x.IADETARIH, "{0:MM.dd.yyyy}", new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.Label("Üyenin Getirdiği Tarih")
+    <input type="text" class="form-control" name="UYEGETIRTARIH" readonly="readonly" value="@DateTime.Now.ToShortDateString()" />
+    <br />
+    <label>Geç Gelen Gün Sayısı</label>
+    <input type="text" class="form-control" id="gecinput" value="@ViewBag.dgr" readonly/>
+    <br />
+    <button class="btn btn-info">Teslim Et</button>
+
+}

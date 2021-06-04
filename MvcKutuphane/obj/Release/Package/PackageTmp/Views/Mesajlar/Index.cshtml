@@ -1,0 +1,346 @@
+﻿@using MvcKutuphane.Models.EntityFramework
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<TBLMESAJ>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/PanelLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- Main Sidebar Container -->
+    <!-- Main content -->
+
+    <section class="content mt-5">
+
+        <div class="row">
+
+            @Html.Action("Partial1")
+
+            <!-- /.col -->
+
+            <div class="col-md-9">
+
+                <div class="card card-primary card-outline">
+
+                    <div class="card-header">
+
+                        <h3 class="card-title">Gelen Kutusu</h3>
+
+                        <div class="card-tools">
+
+                            @using (@Html.BeginForm("Index", "Mesajlar", FormMethod.Get))
+                            {
+
+                                <div class="input-group input-group-sm">
+
+                                    @Html.TextBox("search", "", new { placeholder = "Gönderene göre ara..", @class = "form-control", style = "margin-right:5px" })
+
+                                    <div class="input-group-append">
+
+                                        <input type="submit" class="btn btn-primary btn-group-lg" value="Ara">
+
+                                    </div>
+
+                                </div>
+                            }
+
+                        </div>
+
+                        <!-- /.card-tools -->
+
+                    </div>
+
+                    <!-- /.card-header -->
+
+                    <div class="card-body p-0">
+
+                        <div class="mailbox-controls">
+
+                            <!-- Check all button -->
+                            @*<button type="button" class="btn btn-default btn-sm checkbox-toggle">
+
+                                    <i class="fa fa-square"></i>
+
+
+                                </button>
+
+                                <div class="btn-group">
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+
+                                </div>*@
+
+                            <!-- /.btn-group -->
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh" onclick="document.location.reload(true);"></i></button>
+
+                            <style>
+                                .pagination {
+                                    display: inline-block;
+                                    padding-left: 0;
+                                    margin: 0;
+                                    border-radius: 4px;
+                                }
+
+                                    .pagination > li > a,
+                                    .pagination > li > span {
+                                        position: relative;
+                                        float: left;
+                                        padding: 3px 12px;
+                                        margin-left: -1px;
+                                        line-height: 1.428571429;
+                                        text-decoration: none;
+                                        background-color: #ffffff;
+                                        border: 1px solid #dddddd;
+                                    }
+
+                                    .pagination > .active > a,
+                                    .pagination > .active > span,
+                                    .pagination > .active > a:hover,
+                                    .pagination > .active > span:hover,
+                                    .pagination > .active > a:focus,
+                                    .pagination > .active > span:focus {
+                                        z-index: 2;
+                                        color: #212529;
+                                        cursor: default;
+                                        background-color: #f7f7f7;
+                                        border-color: #cccbcb;
+                                    }
+
+                                .hrefcolor a {
+                                    color: #212529;
+                                }
+                            </style>
+                            <div class="float-right hrefcolor">
+                                @Html.PagedListPager((IPagedList)Model, page => Url.Action("Giden", new { page }))
+                            </div>
+
+                            <!-- /.float-right -->
+
+                        </div>
+
+                        <div class="table-responsive mailbox-messages">
+
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>Sil</th>
+                                        <th>Taslak</th>
+                                        <th>Önemli</th>
+                                        <th>Gönderen</th>
+                                        <th>Konu</th>
+                                        <th>Tarih</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+
+                                            @*<td>
+
+                                                <div class="icheck-primary">
+
+                                                        <input type="checkbox" value="" id="check2">
+
+                                                        <label for="check2"></label>
+
+                                                    </div>
+
+                                            </td>*@
+                                            <td>
+                                                <a href="/Mesajlar/Trash/@x.ID" title="Mesajı Sil"><i class="fa fa-trash text-danger"></i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/Mesajlar/Taslak/@x.ID" title="Taslağa Kaydet"><i class="fa fa-file"></i></a>
+                                            </td>
+                                           
+                                            <td class="mailbox-star">
+                                                <a href="/Mesajlar/Important/@x.ID">
+                                                    @if (x.G_DURUM == "1")
+                                                    {<i class="fa fa-star text-warning"></i>}
+                                                    else
+                                                    {<i class="fa fa-star-o text-warning"></i>}
+                                                </a>
+                                            </td>
+
+                                            <td class="mailbox-name"><a href="/Mesajlar/MesajGoruntule/@x.ID">@x.GONDEREN</a></td>
+
+                                            <td class="mailbox-subject">
+
+                                                <b>@x.KONU</b>
+
+                                            </td>
+
+
+                                            <td class="mailbox-date">@Convert.ToDateTime(x.TARIH).ToString("dd.MM.yyyy")</td>
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+
+                            </table>
+
+                            <!-- /.table -->
+
+                        </div>
+
+                        <!-- /.mail-box-messages -->
+
+                    </div>
+
+                    <!-- /.card-body -->
+
+                    <div class="card-footer p-0">
+
+                        <div class="mailbox-controls">
+
+                            <!-- Check all button -->
+                            @*<button type="button" class="btn btn-default btn-sm checkbox-toggle">
+
+                                    <i class="fa fa-square"></i>
+
+                                </button>
+
+                                <div class="btn-group">
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+
+                                </div>*@
+
+                            <!-- /.btn-group -->
+
+                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh" onclick="document.location.reload(true);"></i></button>
+
+                            <div class="float-right hrefcolor">
+                                @Html.PagedListPager((IPagedList)Model, page => Url.Action("Giden", new { page }))
+                            </div>
+
+                            <!-- /.float-right -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- /.card -->
+
+            </div>
+
+            <!-- /.col -->
+
+        </div>
+
+        <!-- /.row -->
+
+    </section>
+
+    <!-- /.content -->
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+
+    <aside class="control-sidebar control-sidebar-dark">
+
+        <!-- Control sidebar content goes here -->
+
+    </aside>
+
+    <!-- /.control-sidebar -->
+    <!-- Page Script -->
+
+    <script>
+        $(function () {
+
+            //Enable check and uncheck all functionality
+
+            $('.checkbox-toggle').click(function () {
+
+                var clicks = $(this).data('clicks')
+
+                if (clicks) {
+
+                    //Uncheck all checkboxes
+
+                    $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
+
+                    $('.checkbox-toggle .fa.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
+
+                } else {
+
+                    //Check all checkboxes
+
+                    $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
+
+                    $('.checkbox-toggle .fa.fa-square').removeClass('fa-square').addClass('fa-check-square')
+
+                }
+
+                $(this).data('clicks', !clicks)
+
+            })
+
+
+
+            //Handle starring for glyphicon and font awesome
+
+            $('.mailbox-star').click(function (e) {
+
+                e.preventDefault()
+
+                //detect type
+
+                var $this = $(this).find('a > i')
+
+                var glyph = $this.hasClass('glyphicon')
+
+                var fa = $this.hasClass('fa')
+
+
+
+                //Switch states
+
+                if (glyph) {
+
+                    $this.toggleClass('glyphicon-star')
+
+                    $this.toggleClass('glyphicon-star-empty')
+
+                }
+
+
+
+                if (fa) {
+
+                    $this.toggleClass('fa-star')
+
+                    $this.toggleClass('fa-star-o')
+
+                }
+
+            })
+
+        })</script>
+
+
+</body>
+
+</html>
+

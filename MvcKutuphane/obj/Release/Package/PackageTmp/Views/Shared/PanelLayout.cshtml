@@ -1,0 +1,252 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Öğrenci Dashboard</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/webpanel/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <!-- icheck bootstrap -->
+    <link href="~/webpanel/Profil/icheck-bootstrap.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/webpanel/Profil/adminlte.css" rel="stylesheet" />
+    <!-- summernote -->
+    <link href="~/webpanel/Profil/summernote-bs4.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    @RenderSection("styles", false)
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+
+    <div class="wrapper">
+
+        <!-- Main Sidebar Container -->
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <div class="sidebar">
+
+                <!-- Sidebar user panel (optional) -->
+                <div style="max-width:180px; margin: 20px auto;">
+                    <a href="/Panel/Profil"><img src="~/webpanel/css/kitap.jpg" class="img-circle" style="max-width: 180px;" alt="Üye Paneli" /></a>
+                </div>
+
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+
+                    <div class="info">
+
+                        <a href="#" class="d-block">Öğrenci Paneli</a>
+
+                    </div>
+
+                </div>
+
+                <!-- Sidebar Menu -->
+
+                <nav class="mt-2">
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+
+                        @{ if (Request.IsAuthenticated && User.IsInRole("Yetkili"))
+                            {
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="nav-icon fa fa-headphones"></i><p>Canlı Destek Hattı</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Index" class="nav-link"><i class="nav-icon fa fa-user"></i><p>Hesabım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Vitrin/Index" target="_blank" class="nav-link"><i class="nav-icon fa fa-image"></i><p>Vitrin</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Logout" class="nav-link"><i class="nav-icon fa fa-sign-out"></i><p>Çıkış</p></a>
+                                </li>
+                            }
+                            else
+                            {
+                                if (User.IsInRole("Admin"))
+                                {
+                                    <li class="nav-item">
+                                        <a href="/Istatistik/Index" class="nav-link"><i class="nav-icon fa fa-angle-double-up"></i><p>Admin Panel</p></a>
+                                    </li>
+                                }
+                                <li class="nav-item">
+                                    <a href="/Panel/Profil" class="nav-link"><i class="nav-icon fa fa-user-circle-o"></i><p>Profilim</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Mesajlar/Index" class="nav-link"><i class="nav-icon fa fa-envelope"></i><p>Mesajlar</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Mesajlar/YeniMesaj" class="nav-link"><i class="nav-icon fa fa-envelope-open-o"></i><p>Yeni Mesaj</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Duyurular" class="nav-link"><i class="nav-icon fa fa-anchor"></i><p>Duyurular</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Kitaplarim" class="nav-link"><i class="nav-icon fa fa-book"></i><p>Kitaplarım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Vitrin/Index" target="_blank" class="nav-link"><i class="nav-icon fa fa-image"></i><p>Vitrin</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Index" class="nav-link"><i class="nav-icon fa fa-user"></i><p>Hesabım</p></a>
+                                </li>
+                                <li class="nav-item" data-toggle="modal" data-target="#portfolioModal1">
+                                    <a href="#" class="nav-link"><i class="nav-icon fa fa-wrench"></i><p>Yardım</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Panel/Logout" class="nav-link"><i class="nav-icon fa fa-sign-out"></i><p>Çıkış</p></a>
+                                </li>
+                            }
+                        }
+
+                    </ul>
+
+                </nav>
+
+                <!-- /.sidebar-menu -->
+
+            </div>
+
+            <!-- /.sidebar -->
+
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+
+        <div class="content-wrapper">
+
+            <!-- Content Header (Page header) -->
+
+            <div class="content">
+
+                <div class="container-fluid">
+
+                    <div class="row mb-2">
+
+
+
+
+
+                    </div><!-- /.row -->
+
+                </div><!-- /.container-fluid -->
+
+            </div>
+
+            <!-- /.content-header -->
+            <!-- Main content -->
+
+            <section class="content">
+
+                <div class="container-fluid">
+
+                    @RenderBody()
+
+
+
+                </div><!-- /.container-fluid -->
+
+            </section>
+
+            <!-- /.content -->
+
+        </div>
+
+    </div>
+
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+
+    <script src="~/webpanel/Profil/demo.js"></script>
+    <!-- jQuery -->
+
+    <script src="~/webpanel/Profil/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+
+    <script src="~/webpanel/Profil/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+
+    <script src="~/webpanel/Profil/adminlte.min.js"></script>
+
+    <!-- Summernote -->
+
+    <script src="/webpanel/Profil/summernote-bs4.min.js"></script>
+
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+    <script>
+
+        $.widget.bridge('uibutton', $.ui.button)
+
+    </script>
+
+    @RenderSection("scripts", false)
+
+
+    <!--pop-up-->
+
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="fa fa-times"></i>
+                    </span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Yardım Menüsü</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="~/web/img/portfolio/cabin.png" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">Öğrenci paneli sayfamızda almış olduğunuz kitapları takip edebilir, kütüphane personeli ya da diğer kullanıcılarımızla iletişime geçebilirsiniz.Vitrin kısmından kütüphanemizde halihazırda bulunan ve ödünçte bulunan kitapları görüntüleyebilirsiniz.Kütüphanemizde bulunan kitapların tamamı Galeri sayfasından ulaşabilirsiniz.</p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                                    <i class="fa fa-times fa-fw"></i>
+                                    Ekranı Kapat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pop-up-->
+
+</body>
+
+</html>
+

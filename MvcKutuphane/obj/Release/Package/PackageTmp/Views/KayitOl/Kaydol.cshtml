@@ -1,0 +1,109 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLUYELER
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Kaydol</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <!-- css files -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="~/webregister/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- //css files -->
+
+    <link rel="stylesheet" href="~/webregister/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+
+</head>
+<!-- body starts -->
+<body>
+    <!-- section -->
+    <section class="register">
+        <div class="register-full">
+            <div class="register-left">
+                <div class="register">
+                    <div class="logo">
+                        <a href="#"><span class="fa fa-graduation-cap" aria-hidden="true"></span></a>
+                    </div>
+                    <h1>Kütüphane Yönetim Sistemi</h1>
+                    <p>
+                        Kütüphanemize hoşgeldiniz. Kayıt olmak için sağ taraftaki paneldeki bilgileri
+                        eksiksiz doldurarak kaydınızı gerçekleştirebilirsiniz.Giriş yaparken mail adresi
+                        ve şifrenizi kullanacağınızdan bu bilgileri dikkatle seçmenizi tavsiye ederiz.
+                    </p>
+                    <div class="content3">
+                        <ul>
+                            <li><a class="" href="/Vitrin/Index"> Anasayfa</a></li>
+                            <li><a class="read" href="/Login/GirisYap"> Giriş Yap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="register-right">
+                <div class="register-in">
+                    <h2><span class="fa fa-pencil"></span> Kayıt Paneli</h2>
+                    <div class="register-form">
+                        <form method="post">
+                            <div class="fields-grid">
+                                <div class="styled-input agile-styled-input-top">
+                                    <input type="text" name="AD" required="">
+                                    <label>Adınız</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input agile-styled-input-top">
+                                    <input type="text" name="SOYAD" required="">
+                                    <label>Soyadınız</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    <input type="email" name="MAIL" required="">
+                                    <label>Mail Adresi</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    <input type="tel" name="TELEFON" required="">
+                                    <label>Telefon Numarası</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input agile-styled-input-top">
+                                    <input type="text" name="KULLANICIADI" required="">
+                                    <label>Kullanıcı Adı</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    <input type="password" name="SIFRE" required="">
+                                    <label>Şifre</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input agile-styled-input-top">
+                                    <input type="text" name="OKUL" required="">
+                                    <label>Okul</label>
+                                    <span></span>
+                                </div>                            
+                                <div class="clear"> </div>
+                                <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Şartları okudum, <a href="#">Kabul Ediyorum.</a></label>
+                            </div>
+                            <input type="submit" value="Kayıt Ol">
+                        </form>
+                    </div>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <!-- copyright -->
+        <p class="agile-copyright">© @DateTime.Now.ToString("yyyy") Bütün Hakları Kütüphane Yönetimi Tarafından Saklıdır. </p>
+        <!-- //copyright -->
+    </section>
+    <!-- //section -->
+</body>
+<!-- //body ends -->
+</html>

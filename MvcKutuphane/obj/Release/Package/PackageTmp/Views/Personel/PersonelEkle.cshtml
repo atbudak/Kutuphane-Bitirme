@@ -1,0 +1,28 @@
+﻿@model MvcKutuphane.Models.EntityFramework.TBLPERSONEL
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="mw-500 text-center bg-transparent mb-4">
+    <h1 class="sketchy text-center">Personel Ekleme Sayfası</h1>
+</div>
+
+<div class="flex_container" style="max-width:1300px">
+    <div class="flex_col_0">
+        <a href="/Personel/Index" class="btn btn-primary mt-2 ml-2 pl-4 pr-4 float-lg-right">Personeller</a>
+    </div>
+</div>
+
+<form method="post">
+    <div class="flex_container" style="max-width:1300px">
+        <div class="flex_col_0">
+            <label style="margin-bottom:10px;">Personel</label>
+            <input type="text" name="PERSONEL" class="form-control form-control" placeholder="personeli giriniz.." required="required" /><br />
+            <br />
+        </div>
+        <div class="flex_col_0">
+            <button class="btn btn-success mt-2 pl-4 pr-4 float-lg-right">Ekle</button>
+        </div>
+    </div>
+</form>
